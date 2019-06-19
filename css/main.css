@@ -1834,7 +1834,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #f4855d;
+  background: #8f0145;
 }
 .feed-link,
 .chat {
@@ -3105,6 +3105,21 @@ ul.breadcrumb li+li:last-child {
 }
 .with-love {
   color: #ff71a8;
+}
+body {
+  background: url("https://source.unsplash.com/random/1600x900");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+}
+body {
+  background: url("https://source.unsplash.com/random/1600x900");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 50% 50%;
+}
+.content-wrap {
+  opacity: 0.86;
 }
 @-moz-keyframes heartAnimate {
   0%, 100% {
