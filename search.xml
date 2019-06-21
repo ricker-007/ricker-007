@@ -6,13 +6,16 @@
     <content type="text"></content>
   </entry>
   <entry>
-    <title><![CDATA[linux基础]]></title>
-    <url>%2Funcategorized%2Flinux%E5%9F%BA%E7%A1%80%2F</url>
-    <content type="text"><![CDATA[一、国内CentOS的镜像站点阿里: Writing网易: Writing搜狐: Writing]]></content>
+    <title><![CDATA[linux：SSH]]></title>
+    <url>%2FLinux%E5%9F%BA%E7%A1%80%2Flinux%E5%9F%BA%E7%A1%80%2F</url>
+    <content type="text"><![CDATA[一、国内CentOS的镜像站点阿里镜像网易镜像搜狐镜像 二、远程连接1、SSH远程连接12345ss -tnl #查看SSH端口是否打开ip addr list #查看IP地址iptables -L -n #确认防火墙状态systemctl disable firewalld.service #关闭防火墙，重启生效systemctl stop firewalld.service #关闭防火墙，重启不生效 三、终端设备串行终端：ttyS伪终端：tty]]></content>
+      <categories>
+        <category>Linux基础</category>
+      </categories>
   </entry>
   <entry>
     <title><![CDATA[模板]]></title>
     <url>%2Funcategorized%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[持续更新中。。。 标题一标题二标题三标题四标题五标题六1这是一个bash 外链: Writing]]></content>
+    <content type="text"><![CDATA[持续更新中。。。 标题一标题二标题三标题四标题五标题六1这是一个bash 外链: Writing 斜体粗体加粗斜体删除线 文字引用 行内代码 ​123多行代码多行代码​ $$数学公式$$ 分割线方法一：— 方法二：+++ 方法三：*** 列表 有序列表项 无序列表项 无序列表项 无序列表项 表格表头1|表头2-|-|-内容11|内容12内容21|内容22 图片例如：]]></content>
   </entry>
 </search>
