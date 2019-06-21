@@ -6,9 +6,9 @@
     <content type="text"></content>
   </entry>
   <entry>
-    <title><![CDATA[linux：SSH]]></title>
+    <title><![CDATA[linux基础（1）]]></title>
     <url>%2FLinux%E5%9F%BA%E7%A1%80%2Flinux%E5%9F%BA%E7%A1%80%2F</url>
-    <content type="text"><![CDATA[一、国内CentOS的镜像站点阿里镜像网易镜像搜狐镜像 二、远程连接1、SSH远程连接12345ss -tnl #查看SSH端口是否打开ip addr list #查看IP地址iptables -L -n #确认防火墙状态systemctl disable firewalld.service #关闭防火墙，重启生效systemctl stop firewalld.service #关闭防火墙，重启不生效 三、终端设备串行终端：ttyS伪终端：tty 查看终端设备和接口程序12ttyecho $SHELL 用户类型#：管理员账号$：普通用户 注意：建议使用非管理员账号登录]]></content>
+    <content type="text"><![CDATA[镜像、SSH、终端 一、国内CentOS的镜像站点阿里镜像网易镜像搜狐镜像 二、远程连接1、SSH远程连接12345ss -tnl #查看SSH端口是否打开ip addr list #查看IP地址iptables -L -n #确认防火墙状态systemctl disable firewalld.service #关闭防火墙，重启生效systemctl stop firewalld.service #关闭防火墙，重启不生效 三、终端设备串行终端：ttyS伪终端：tty 查看终端设备和接口程序12ttyecho $SHELL 用户类型#：管理员账号$：普通用户 注意：建议使用非管理员账号登录 几个基础命令tty：查看当前的终端设备ip addr list：查看活动接口的IP地址echo：回显 1234basename /PATH/TO/SOMEFILESOMEFILEdirname /PATH/TO/SOMEFILE/PATH/TO linux的哲学思想： 一切皆文件 由众多功能单一的程序组成 尽量避免与用户交互 使用文本文件保存配置信息]]></content>
       <categories>
         <category>Linux基础</category>
       </categories>
