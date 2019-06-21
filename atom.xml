@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-06-20T03:11:56.999Z</updated>
+  <updated>2019-06-21T09:14:14.877Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>linux基础（2）</title>
+    <link href="http://yoursite.com/Linux%E5%9F%BA%E7%A1%80/linux%E5%9F%BA%E7%A1%80%EF%BC%882%EF%BC%89/"/>
+    <id>http://yoursite.com/Linux基础/linux基础（2）/</id>
+    <published>2019-06-21T07:33:09.000Z</published>
+    <updated>2019-06-21T09:14:14.877Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>程序的组成部分：二进制程序文件、库文件、配置文件、帮助文件；<br>二进制、库文件是可执行文件<br>库文件不能单独执行，只能被调用时执行<br>配置文件、帮助文件：可被查看其内容的文件</p></blockquote><h2 id="Linux基础知识"><a href="#Linux基础知识" class="headerlink" title="Linux基础知识"></a>Linux基础知识</h2><h3 id="命令的语法通用格式"><a href="#命令的语法通用格式" class="headerlink" title="命令的语法通用格式"></a>命令的语法通用格式</h3><p><em>COMMAND OPTIONS ARGUMENTS</em><br>例如</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -l /etc</span><br></pre></td></tr></table></figure><p>命令本身也是可执行程序文件。多数系统程序文件都存放在：<em>/bin,/sbin,/usr/bin,/usr/local/bin,/usr/local/sbin</em><br>普通命令：<em>/bin,/usr/bin,/usr/local/bin</em><br>管理命令：<em>/sbin,/usr/sbin,/usr/local/sbin</em></p><p>命令必须遵循特定格式规范：exe，msi，ELF（linux）</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">file /bin/ls</span><br></pre></td></tr></table></figure><h4 id="环境变量"><a href="#环境变量" class="headerlink" title="环境变量"></a>环境变量</h4><p><strong>PATH</strong>：查找该路径下是否有用户输入的命令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="variable">$PATH</span></span><br><span class="line">/usr/<span class="built_in">local</span>/sbin:/usr/<span class="built_in">local</span>/bin:/usr/sbin:/usr/bin:usr/lib64/erlang/bin:/usr/lib/rabbitmq/lib/rabbitmq_server-3.4.2/sbin:/root/bin</span><br></pre></td></tr></table></figure><p><em>type COMMEND</em>：查看命令类型</p><h3 id="获取命令使用帮助"><a href="#获取命令使用帮助" class="headerlink" title="获取命令使用帮助"></a>获取命令使用帮助</h3><p><strong>内部命令</strong><br><code>help COMMAND</code><br><strong>外部命令</strong><br><code>COMMAND --help</code><br><strong>使用手册</strong>：manual<br><code>man COMMAND</code></p><h4 id="SYNOPSIS命令的options"><a href="#SYNOPSIS命令的options" class="headerlink" title="SYNOPSIS命令的options"></a>SYNOPSIS命令的options</h4><p><code>[]:可选内容&lt;&gt;：必须提供的内容a|b|c：多选一...：同类内容可出现多个</code></p><p><strong>查看命令是否有手册</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">whatis COMMAND</span><br></pre></td></tr></table></figure><p><strong>更新数据库</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">makewhatis</span><br></pre></td></tr></table></figure><p><strong>翻屏</strong><br>`空格键：向文件尾翻一屏<br>b：向文件首部翻一屏<br>Ctrl+d：向文件尾部翻半屏<br>Ctrl+u：向文件首部翻半屏<br>回车：向文件尾部翻一行<br>k：向文件首部翻一行<br>G：跳转至最后一行</p><p>#G：跳转至指定行<br>1G：跳转至文件首部<code>**文本搜索**</code>/keyword:从文件首部向文件尾部依次查找<br>?keyword：从文件尾部向文件首部依次查找<br>n：下一个<br>N：上一个`</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;程序的组成部分：二进制程序文件、库文件、配置文件、帮助文件；&lt;br&gt;二进制、库文件是可执行文件&lt;br&gt;库文件不能单独执行，只能被调用时执行&lt;br&gt;配置文件、帮助文件：可被查看其内容的文件&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;Linu
+      
+    
+    </summary>
+    
+      <category term="Linux基础" scheme="http://yoursite.com/categories/Linux%E5%9F%BA%E7%A1%80/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Hello Welcome</title>
@@ -35,16 +61,15 @@
     <link href="http://yoursite.com/Linux%E5%9F%BA%E7%A1%80/linux%E5%9F%BA%E7%A1%80/"/>
     <id>http://yoursite.com/Linux基础/linux基础/</id>
     <published>2019-06-19T09:20:44.000Z</published>
-    <updated>2019-06-21T07:29:14.320Z</updated>
+    <updated>2019-06-21T07:33:22.607Z</updated>
     
-    <content type="html"><![CDATA[<p>镜像、SSH、终端</p><h2 id="一、国内CentOS的镜像站点"><a href="#一、国内CentOS的镜像站点" class="headerlink" title="一、国内CentOS的镜像站点"></a>一、国内CentOS的镜像站点</h2><p><a href="http://mirrors.aliyun.com" target="_blank" rel="noopener">阿里镜像</a><br><a href="http://mirrors.163.com" target="_blank" rel="noopener">网易镜像</a><br><a href="http://mirrors.sohu.com" target="_blank" rel="noopener">搜狐镜像</a></p><h2 id="二、远程连接"><a href="#二、远程连接" class="headerlink" title="二、远程连接"></a>二、远程连接</h2><h3 id="1、SSH远程连接"><a href="#1、SSH远程连接" class="headerlink" title="1、SSH远程连接"></a>1、SSH远程连接</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ss -tnl  <span class="comment">#查看SSH端口是否打开</span></span><br><span class="line">ip addr list  <span class="comment">#查看IP地址</span></span><br><span class="line">iptables -L -n  <span class="comment">#确认防火墙状态</span></span><br><span class="line">systemctl <span class="built_in">disable</span> firewalld.service  <span class="comment">#关闭防火墙，重启生效</span></span><br><span class="line">systemctl stop firewalld.service  <span class="comment">#关闭防火墙，重启不生效</span></span><br></pre></td></tr></table></figure><h2 id="三、终端设备"><a href="#三、终端设备" class="headerlink" title="三、终端设备"></a>三、终端设备</h2><p><strong>串行终端</strong>：ttyS<br><strong>伪终端</strong>：tty</p><h3 id="查看终端设备和接口程序"><a href="#查看终端设备和接口程序" class="headerlink" title="查看终端设备和接口程序"></a>查看终端设备和接口程序</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tty</span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$SHELL</span></span><br></pre></td></tr></table></figure><h3 id="用户类型"><a href="#用户类型" class="headerlink" title="用户类型"></a>用户类型</h3><p><strong>#：管理员账号</strong><br><strong>$：普通用户</strong></p><p><em>注意：建议使用非管理员账号登录</em></p><h3 id="几个基础命令"><a href="#几个基础命令" class="headerlink" title="几个基础命令"></a>几个基础命令</h3><p><strong>tty</strong>：查看当前的终端设备<br><strong>ip addr list</strong>：查看活动接口的IP地址<br><strong>echo</strong>：回显</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">basename /PATH/TO/SOMEFILE</span><br><span class="line">SOMEFILE</span><br><span class="line">dirname /PATH/TO/SOMEFILE</span><br><span class="line">/PATH/TO</span><br></pre></td></tr></table></figure><h3 id="linux的哲学思想："><a href="#linux的哲学思想：" class="headerlink" title="linux的哲学思想："></a>linux的哲学思想：</h3><ol><li>一切皆文件</li><li>由众多功能单一的程序组成</li><li>尽量避免与用户交互</li><li>使用文本文件保存配置信息</li></ol>]]></content>
+    <content type="html"><![CDATA[<h2 id="一、国内CentOS的镜像站点"><a href="#一、国内CentOS的镜像站点" class="headerlink" title="一、国内CentOS的镜像站点"></a>一、国内CentOS的镜像站点</h2><p><a href="http://mirrors.aliyun.com" target="_blank" rel="noopener">阿里镜像</a><br><a href="http://mirrors.163.com" target="_blank" rel="noopener">网易镜像</a><br><a href="http://mirrors.sohu.com" target="_blank" rel="noopener">搜狐镜像</a></p><h2 id="二、远程连接"><a href="#二、远程连接" class="headerlink" title="二、远程连接"></a>二、远程连接</h2><h3 id="1、SSH远程连接"><a href="#1、SSH远程连接" class="headerlink" title="1、SSH远程连接"></a>1、SSH远程连接</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ss -tnl  <span class="comment">#查看SSH端口是否打开</span></span><br><span class="line">ip addr list  <span class="comment">#查看IP地址</span></span><br><span class="line">iptables -L -n  <span class="comment">#确认防火墙状态</span></span><br><span class="line">systemctl <span class="built_in">disable</span> firewalld.service  <span class="comment">#关闭防火墙，重启生效</span></span><br><span class="line">systemctl stop firewalld.service  <span class="comment">#关闭防火墙，重启不生效</span></span><br></pre></td></tr></table></figure><h2 id="三、终端设备"><a href="#三、终端设备" class="headerlink" title="三、终端设备"></a>三、终端设备</h2><p><strong>串行终端</strong>：ttyS<br><strong>伪终端</strong>：tty</p><h3 id="查看终端设备和接口程序"><a href="#查看终端设备和接口程序" class="headerlink" title="查看终端设备和接口程序"></a>查看终端设备和接口程序</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tty</span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$SHELL</span></span><br></pre></td></tr></table></figure><h3 id="用户类型"><a href="#用户类型" class="headerlink" title="用户类型"></a>用户类型</h3><p><strong>#：管理员账号</strong><br><strong>$：普通用户</strong></p><p><em>注意：建议使用非管理员账号登录</em></p><h3 id="几个基础命令"><a href="#几个基础命令" class="headerlink" title="几个基础命令"></a>几个基础命令</h3><p><strong>tty</strong>：查看当前的终端设备<br><strong>ip addr list</strong>：查看活动接口的IP地址<br><strong>echo</strong>：回显</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">basename /PATH/TO/SOMEFILE</span><br><span class="line">SOMEFILE</span><br><span class="line">dirname /PATH/TO/SOMEFILE</span><br><span class="line">/PATH/TO</span><br></pre></td></tr></table></figure><h3 id="linux的哲学思想："><a href="#linux的哲学思想：" class="headerlink" title="linux的哲学思想："></a>linux的哲学思想：</h3><ol><li>一切皆文件</li><li>由众多功能单一的程序组成</li><li>尽量避免与用户交互</li><li>使用文本文件保存配置信息</li></ol>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;镜像、SSH、终端&lt;/p&gt;
-&lt;h2 id=&quot;一、国内CentOS的镜像站点&quot;&gt;&lt;a href=&quot;#一、国内CentOS的镜像站点&quot; class=&quot;headerlink&quot; title=&quot;一、国内CentOS的镜像站点&quot;&gt;&lt;/a&gt;一、国内CentOS的镜像站点&lt;/h2&gt;&lt;p&gt;&lt;
+        &lt;h2 id=&quot;一、国内CentOS的镜像站点&quot;&gt;&lt;a href=&quot;#一、国内CentOS的镜像站点&quot; class=&quot;headerlink&quot; title=&quot;一、国内CentOS的镜像站点&quot;&gt;&lt;/a&gt;一、国内CentOS的镜像站点&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;http://mi
       
     
     </summary>

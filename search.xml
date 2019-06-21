@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[linux基础（2）]]></title>
+    <url>%2FLinux%E5%9F%BA%E7%A1%80%2Flinux%E5%9F%BA%E7%A1%80%EF%BC%882%EF%BC%89%2F</url>
+    <content type="text"><![CDATA[程序的组成部分：二进制程序文件、库文件、配置文件、帮助文件；二进制、库文件是可执行文件库文件不能单独执行，只能被调用时执行配置文件、帮助文件：可被查看其内容的文件 Linux基础知识命令的语法通用格式COMMAND OPTIONS ARGUMENTS例如 1ls -l /etc 命令本身也是可执行程序文件。多数系统程序文件都存放在：/bin,/sbin,/usr/bin,/usr/local/bin,/usr/local/sbin普通命令：/bin,/usr/bin,/usr/local/bin管理命令：/sbin,/usr/sbin,/usr/local/sbin 命令必须遵循特定格式规范：exe，msi，ELF（linux） 1file /bin/ls 环境变量PATH：查找该路径下是否有用户输入的命令 12echo $PATH/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:usr/lib64/erlang/bin:/usr/lib/rabbitmq/lib/rabbitmq_server-3.4.2/sbin:/root/bin type COMMEND：查看命令类型 获取命令使用帮助内部命令help COMMAND外部命令COMMAND --help使用手册：manualman COMMAND SYNOPSIS命令的options[]:可选内容 &lt;&gt;：必须提供的内容 a|b|c：多选一 ...：同类内容可出现多个 查看命令是否有手册 1whatis COMMAND 更新数据库 1makewhatis 翻屏`空格键：向文件尾翻一屏b：向文件首部翻一屏Ctrl+d：向文件尾部翻半屏Ctrl+u：向文件首部翻半屏回车：向文件尾部翻一行k：向文件首部翻一行G：跳转至最后一行 #G：跳转至指定行1G：跳转至文件首部**文本搜索**/keyword:从文件首部向文件尾部依次查找?keyword：从文件尾部向文件首部依次查找n：下一个N：上一个`]]></content>
+      <categories>
+        <category>Linux基础</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[Hello Welcome]]></title>
     <url>%2Funcategorized%2F%E4%BD%A0%E5%A5%BD%2F</url>
     <content type="text"></content>
@@ -8,7 +16,7 @@
   <entry>
     <title><![CDATA[linux基础（1）]]></title>
     <url>%2FLinux%E5%9F%BA%E7%A1%80%2Flinux%E5%9F%BA%E7%A1%80%2F</url>
-    <content type="text"><![CDATA[镜像、SSH、终端 一、国内CentOS的镜像站点阿里镜像网易镜像搜狐镜像 二、远程连接1、SSH远程连接12345ss -tnl #查看SSH端口是否打开ip addr list #查看IP地址iptables -L -n #确认防火墙状态systemctl disable firewalld.service #关闭防火墙，重启生效systemctl stop firewalld.service #关闭防火墙，重启不生效 三、终端设备串行终端：ttyS伪终端：tty 查看终端设备和接口程序12ttyecho $SHELL 用户类型#：管理员账号$：普通用户 注意：建议使用非管理员账号登录 几个基础命令tty：查看当前的终端设备ip addr list：查看活动接口的IP地址echo：回显 1234basename /PATH/TO/SOMEFILESOMEFILEdirname /PATH/TO/SOMEFILE/PATH/TO linux的哲学思想： 一切皆文件 由众多功能单一的程序组成 尽量避免与用户交互 使用文本文件保存配置信息]]></content>
+    <content type="text"><![CDATA[一、国内CentOS的镜像站点阿里镜像网易镜像搜狐镜像 二、远程连接1、SSH远程连接12345ss -tnl #查看SSH端口是否打开ip addr list #查看IP地址iptables -L -n #确认防火墙状态systemctl disable firewalld.service #关闭防火墙，重启生效systemctl stop firewalld.service #关闭防火墙，重启不生效 三、终端设备串行终端：ttyS伪终端：tty 查看终端设备和接口程序12ttyecho $SHELL 用户类型#：管理员账号$：普通用户 注意：建议使用非管理员账号登录 几个基础命令tty：查看当前的终端设备ip addr list：查看活动接口的IP地址echo：回显 1234basename /PATH/TO/SOMEFILESOMEFILEdirname /PATH/TO/SOMEFILE/PATH/TO linux的哲学思想： 一切皆文件 由众多功能单一的程序组成 尽量避免与用户交互 使用文本文件保存配置信息]]></content>
       <categories>
         <category>Linux基础</category>
       </categories>
