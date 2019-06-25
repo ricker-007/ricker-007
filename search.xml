@@ -2,8 +2,11 @@
 <search>
   <entry>
     <title><![CDATA[用户、组和权限管理]]></title>
-    <url>%2Funcategorized%2F%E7%94%A8%E6%88%B7%E3%80%81%E7%BB%84%E5%92%8C%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%2F</url>
-    <content type="text"></content>
+    <url>%2FLinux%E5%9F%BA%E7%A1%80%2F%E7%94%A8%E6%88%B7%E3%80%81%E7%BB%84%E5%92%8C%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%2F</url>
+    <content type="text"><![CDATA[/etc/passwd：用户的信息库 name:passwd:UID:GID:GECOS:directory:shellname：用户名password：可以是加密的密码，也可是占位符xUID：GID：用户所属的主组的ID号GECOS：注释信息directory：用户的家目录shell：用户的默认shell，登录时默认shell程序 /etc/shadow：用户密码 用户名：加密的密码，最近一次修改密码的时间：最短使用期限：最长使用期限：警告期段：过期期段：保留字段/etc/group：组的信息库 group_name：password：GID：user_list uesr_list：该组的用户成员，以此组为附加组的用户的用户列表相关命令：useradd,userdel,usermod,passwd,groupadd,groupdel,groupmod,gpasswd,chage,chsh,id,su]]></content>
+      <categories>
+        <category>Linux基础</category>
+      </categories>
   </entry>
   <entry>
     <title><![CDATA[bash的基础特性]]></title>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-06-25T07:17:11.017Z</updated>
+  <updated>2019-06-25T09:46:02.626Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -18,14 +18,23 @@
   
   <entry>
     <title>用户、组和权限管理</title>
-    <link href="http://yoursite.com/uncategorized/%E7%94%A8%E6%88%B7%E3%80%81%E7%BB%84%E5%92%8C%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86/"/>
-    <id>http://yoursite.com/uncategorized/用户、组和权限管理/</id>
+    <link href="http://yoursite.com/Linux%E5%9F%BA%E7%A1%80/%E7%94%A8%E6%88%B7%E3%80%81%E7%BB%84%E5%92%8C%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86/"/>
+    <id>http://yoursite.com/Linux基础/用户、组和权限管理/</id>
     <published>2019-06-25T07:17:10.000Z</published>
-    <updated>2019-06-25T07:17:11.017Z</updated>
+    <updated>2019-06-25T09:46:02.626Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="etc-passwd：用户的信息库"><a href="#etc-passwd：用户的信息库" class="headerlink" title="/etc/passwd：用户的信息库"></a>/etc/passwd：用户的信息库</h3><blockquote><p>name:passwd:UID:GID:GECOS:directory:shell<br>name：用户名<br>password：可以是加密的密码，也可是占位符x<br>UID：<br>GID：用户所属的主组的ID号<br>GECOS：注释信息<br>directory：用户的家目录<br>shell：用户的默认shell，登录时默认shell程序</p></blockquote><p>/etc/shadow：用户密码<br>    用户名：加密的密码，最近一次修改密码的时间：最短使用期限：最长使用期限：警告期段：过期期段：保留字段<br>/etc/group：组的信息库<br>    group_name：password：GID：user_list<br>        uesr_list：该组的用户成员，以此组为附加组的用户的用户列表<br>相关命令：<br><code>useradd,userdel,usermod,passwd,groupadd,groupdel,groupmod,gpasswd,chage,chsh,id,su</code></p>]]></content>
     
     <summary type="html">
     
+      
+      
+        &lt;h3 id=&quot;etc-passwd：用户的信息库&quot;&gt;&lt;a href=&quot;#etc-passwd：用户的信息库&quot; class=&quot;headerlink&quot; title=&quot;/etc/passwd：用户的信息库&quot;&gt;&lt;/a&gt;/etc/passwd：用户的信息库&lt;/h3&gt;&lt;blockquote
+      
+    
     </summary>
+    
+      <category term="Linux基础" scheme="http://yoursite.com/categories/Linux%E5%9F%BA%E7%A1%80/"/>
     
     
   </entry>
