@@ -107,7 +107,7 @@
 <meta property="og:site_name" content="啊雷雷&amp;啊玉玉">
 <meta property="og:description" content="/etc/passwd：用户的信息库 name:passwd:UID:GID:GECOS:directory:shellname：用户名password：可以是加密的密码，也可是占位符xUID：GID：用户所属的主组的ID号GECOS：注释信息directory：用户的家目录shell：用户的默认shell，登录时默认shell程序  /etc/shadow：用户密码 用户名：加密的密码：最近一次">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-14T01:50:15.820Z">
+<meta property="og:updated_time" content="2019-09-17T13:18:33.570Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="用户、组和权限管理">
 <meta name="twitter:description" content="/etc/passwd：用户的信息库 name:passwd:UID:GID:GECOS:directory:shellname：用户名password：可以是加密的密码，也可是占位符xUID：GID：用户所属的主组的ID号GECOS：注释信息directory：用户的家目录shell：用户的默认shell，登录时默认shell程序  /etc/shadow：用户密码 用户名：加密的密码：最近一次">
@@ -450,7 +450,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-08-14 09:50:15" itemprop="dateModified" datetime="2019-08-14T09:50:15+08:00">2019-08-14</time>
+                <time title="修改时间：2019-09-17 21:18:33" itemprop="dateModified" datetime="2019-09-17T21:18:33+08:00">2019-09-17</time>
               
             
           </span>
@@ -546,6 +546,45 @@
 <blockquote>
 <p>命令总结：groupadd，groupmod，groupdel，useradd，usermod，userdel，passwd，gpasswd，newgrp，id，su</p>
 </blockquote>
+<h3 id="权限管理"><a href="#权限管理" class="headerlink" title="权限管理"></a>权限管理</h3><h4 id="权限"><a href="#权限" class="headerlink" title="权限"></a>权限</h4><ul>
+<li><p>r：readable，读</p>
+</li>
+<li><p>w：writable，写</p>
+</li>
+<li><p>x：excutable，执行</p>
+<p>  文件</p>
+<pre><code>* r：可获取文件数据
+* w：可修改文件的数据
+* x：可将此文件运行为进行</code></pre><p>  目录</p>
+<pre><code>* r：可使用ls命令获取其下的所有文件列表
+* w：可修改此目录下的文件列表，即创建或删除文件
+* x：可cd至此目录中，且可使用ls -l来获取所有文件的详细属性信息</code></pre><p>权限组合机制</p>
+<ul>
+<li>— 000 0</li>
+<li>–x 001 1</li>
+<li>-w- 010 2</li>
+<li>-wx 011 3</li>
+<li>r– 100 4</li>
+<li>r-x 101 5</li>
+<li>rw- 110 6</li>
+<li>rwx 111 7</li>
+</ul>
+</li>
+</ul>
+<h3 id="权限管理命令"><a href="#权限管理命令" class="headerlink" title="权限管理命令"></a>权限管理命令</h3><h4 id="chmod命令"><a href="#chmod命令" class="headerlink" title="chmod命令"></a>chmod命令</h4><ol>
+<li>chmod [OPTION]… MODE[,MODE]…FILE…<br>三类用户：u（属主）g（属组）o（其他）a（所有）<br> MODE表示法：<pre><code>赋权表示法：直接操作一类用户的所有权限位
+    u=
+    g=
+    o=
+    a=
+授权表示法：直接操作一类用户的一个权限位r，w，x
+    u+，u-
+    g+，g-
+    o+，o-
+    a+，a-</code></pre></li>
+<li>chmod [OPTION] … OCTAL-MODE FILE… 八进制表示法</li>
+<li>chmod [OPTION] … –reference=RFILE FILE…<br>选项：<br> -R，–recursive：递归修改</li>
+</ol>
 
       
     </div>
@@ -774,7 +813,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#etc-passwd：用户的信息库"><span class="nav-number">1.</span> <span class="nav-text">/etc/passwd：用户的信息库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#etc-shadow：用户密码"><span class="nav-number">2.</span> <span class="nav-text">/etc/shadow：用户密码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#etc-group：组的信息库"><span class="nav-number">3.</span> <span class="nav-text">/etc/group：组的信息库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加组删除组命令"><span class="nav-number">4.</span> <span class="nav-text">添加组删除组命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建、删除用户"><span class="nav-number">5.</span> <span class="nav-text">创建、删除用户</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#useradd命令：添加用户"><span class="nav-number">5.1.</span> <span class="nav-text">useradd命令：添加用户</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#usermod命令：修改用户属性"><span class="nav-number">5.2.</span> <span class="nav-text">usermod命令：修改用户属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#userdel命令：删除用户"><span class="nav-number">5.3.</span> <span class="nav-text">userdel命令：删除用户</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#passwd命令"><span class="nav-number">5.4.</span> <span class="nav-text">passwd命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#gpasswd命令"><span class="nav-number">5.5.</span> <span class="nav-text">gpasswd命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#newgrp命令：临时切换指定的组为基本组"><span class="nav-number">5.6.</span> <span class="nav-text">newgrp命令：临时切换指定的组为基本组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#chage命令：更改用户名密码过期信息"><span class="nav-number">5.7.</span> <span class="nav-text">chage命令：更改用户名密码过期信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#id命令：显示用户的真实有效ID"><span class="nav-number">5.8.</span> <span class="nav-text">id命令：显示用户的真实有效ID</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#su命令：switch-user"><span class="nav-number">5.9.</span> <span class="nav-text">su命令：switch user</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#etc-passwd：用户的信息库"><span class="nav-number">1.</span> <span class="nav-text">/etc/passwd：用户的信息库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#etc-shadow：用户密码"><span class="nav-number">2.</span> <span class="nav-text">/etc/shadow：用户密码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#etc-group：组的信息库"><span class="nav-number">3.</span> <span class="nav-text">/etc/group：组的信息库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加组删除组命令"><span class="nav-number">4.</span> <span class="nav-text">添加组删除组命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建、删除用户"><span class="nav-number">5.</span> <span class="nav-text">创建、删除用户</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#useradd命令：添加用户"><span class="nav-number">5.1.</span> <span class="nav-text">useradd命令：添加用户</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#usermod命令：修改用户属性"><span class="nav-number">5.2.</span> <span class="nav-text">usermod命令：修改用户属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#userdel命令：删除用户"><span class="nav-number">5.3.</span> <span class="nav-text">userdel命令：删除用户</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#passwd命令"><span class="nav-number">5.4.</span> <span class="nav-text">passwd命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#gpasswd命令"><span class="nav-number">5.5.</span> <span class="nav-text">gpasswd命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#newgrp命令：临时切换指定的组为基本组"><span class="nav-number">5.6.</span> <span class="nav-text">newgrp命令：临时切换指定的组为基本组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#chage命令：更改用户名密码过期信息"><span class="nav-number">5.7.</span> <span class="nav-text">chage命令：更改用户名密码过期信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#id命令：显示用户的真实有效ID"><span class="nav-number">5.8.</span> <span class="nav-text">id命令：显示用户的真实有效ID</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#su命令：switch-user"><span class="nav-number">5.9.</span> <span class="nav-text">su命令：switch user</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#权限管理"><span class="nav-number">6.</span> <span class="nav-text">权限管理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#权限"><span class="nav-number">6.1.</span> <span class="nav-text">权限</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#权限管理命令"><span class="nav-number">7.</span> <span class="nav-text">权限管理命令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#chmod命令"><span class="nav-number">7.1.</span> <span class="nav-text">chmod命令</span></a></li></ol></li></ol></div>
             
 
           </div>
