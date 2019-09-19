@@ -100,17 +100,17 @@
 
 
 
-  <meta name="description" content="持续更新中。。。 标题一标题二标题三标题四标题五标题六1这是一个bash  外链: Writing 斜体粗体加粗斜体删除线  文字引用  行内代码 ​123多行代码多行代码​ $$数学公式$$ 分割线方法一：— 方法二：+++ 方法三：*** 列表 有序列表项   无序列表项   无序列表项   无序列表项  表格表头1|表头2-|-|-内容11|内容12内容21|内容22 图片">
+  <meta name="description" content="bash特性及bash脚本编程初步bash的特性命令行展开：~,{} 命令别名：alias，unalias 命令历史：history 文件名通配：glob 快捷键：Ctrl+a，e，u，k，l 命令补全：$PATH 路径补全bash特性之：命令hash 缓存此前命令的查找结果：key-value（key：搜索键，value：值）  1234hash命令	hash：列出	hash -d COMMAN">
 <meta property="og:type" content="article">
-<meta property="og:title" content="模板">
-<meta property="og:url" content="http://yoursite.com/uncategorized/hello-world/index.html">
+<meta property="og:title" content="shell脚本基础">
+<meta property="og:url" content="http://yoursite.com/shell脚本/shell脚本基础/index.html">
 <meta property="og:site_name" content="啊雷雷&amp;啊玉玉">
-<meta property="og:description" content="持续更新中。。。 标题一标题二标题三标题四标题五标题六1这是一个bash  外链: Writing 斜体粗体加粗斜体删除线  文字引用  行内代码 ​123多行代码多行代码​ $$数学公式$$ 分割线方法一：— 方法二：+++ 方法三：*** 列表 有序列表项   无序列表项   无序列表项   无序列表项  表格表头1|表头2-|-|-内容11|内容12内容21|内容22 图片">
+<meta property="og:description" content="bash特性及bash脚本编程初步bash的特性命令行展开：~,{} 命令别名：alias，unalias 命令历史：history 文件名通配：glob 快捷键：Ctrl+a，e，u，k，l 命令补全：$PATH 路径补全bash特性之：命令hash 缓存此前命令的查找结果：key-value（key：搜索键，value：值）  1234hash命令	hash：列出	hash -d COMMAN">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-21T06:04:47.163Z">
+<meta property="og:updated_time" content="2019-09-19T07:08:02.204Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="模板">
-<meta name="twitter:description" content="持续更新中。。。 标题一标题二标题三标题四标题五标题六1这是一个bash  外链: Writing 斜体粗体加粗斜体删除线  文字引用  行内代码 ​123多行代码多行代码​ $$数学公式$$ 分割线方法一：— 方法二：+++ 方法三：*** 列表 有序列表项   无序列表项   无序列表项   无序列表项  表格表头1|表头2-|-|-内容11|内容12内容21|内容22 图片">
+<meta name="twitter:title" content="shell脚本基础">
+<meta name="twitter:description" content="bash特性及bash脚本编程初步bash的特性命令行展开：~,{} 命令别名：alias，unalias 命令历史：history 文件名通配：glob 快捷键：Ctrl+a，e，u，k，l 命令补全：$PATH 路径补全bash特性之：命令hash 缓存此前命令的查找结果：key-value（key：搜索键，value：值）  1234hash命令	hash：列出	hash -d COMMAN">
 
 
 
@@ -120,7 +120,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/uncategorized/hello-world/">
+  <link rel="canonical" href="http://yoursite.com/shell脚本/shell脚本基础/">
 
 
 
@@ -130,7 +130,7 @@
   };
 </script>
 
-  <title>模板 | 啊雷雷&啊玉玉</title>
+  <title>shell脚本基础 | 啊雷雷&啊玉玉</title>
   
 
 
@@ -389,7 +389,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/uncategorized/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/shell脚本/shell脚本基础/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CLX">
@@ -406,7 +406,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">模板
+          <h1 class="post-title" itemprop="name headline">shell脚本基础
 
               
             
@@ -433,7 +433,7 @@
                 
               
 
-              <time title="创建时间：2019-08-22 17:14:52" itemprop="dateCreated datePublished" datetime="2019-08-22T17:14:52+08:00">2019-08-22</time>
+              <time title="创建时间：2019-09-18 10:35:00" itemprop="dateCreated datePublished" datetime="2019-09-18T10:35:00+08:00">2019-09-18</time>
             
 
             
@@ -450,11 +450,29 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-06-21 14:04:47" itemprop="dateModified" datetime="2019-06-21T14:04:47+08:00">2019-06-21</time>
+                <time title="修改时间：2019-09-19 15:08:02" itemprop="dateModified" datetime="2019-09-19T15:08:02+08:00">2019-09-19</time>
               
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/shell脚本/" itemprop="url" rel="index"><span itemprop="name">shell脚本</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -491,34 +509,81 @@
       
 
       
-        <p>持续更新中。。。</p>
-<h1 id="标题一"><a href="#标题一" class="headerlink" title="标题一"></a>标题一</h1><h2 id="标题二"><a href="#标题二" class="headerlink" title="标题二"></a>标题二</h2><h3 id="标题三"><a href="#标题三" class="headerlink" title="标题三"></a>标题三</h3><h4 id="标题四"><a href="#标题四" class="headerlink" title="标题四"></a>标题四</h4><h5 id="标题五"><a href="#标题五" class="headerlink" title="标题五"></a>标题五</h5><h6 id="标题六"><a href="#标题六" class="headerlink" title="标题六"></a>标题六</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">这是一个bash</span><br></pre></td></tr></table></figure>
-
-<p>外链: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<p><em>斜体</em><br><strong>粗体</strong><br><strong><em>加粗斜体</em></strong><br><del>删除线</del></p>
-<blockquote>
-<p>文字引用</p>
+        <h2 id="bash特性及bash脚本编程初步"><a href="#bash特性及bash脚本编程初步" class="headerlink" title="bash特性及bash脚本编程初步"></a>bash特性及bash脚本编程初步</h2><h3 id="bash的特性"><a href="#bash的特性" class="headerlink" title="bash的特性"></a>bash的特性</h3><pre><code>命令行展开：~,{}
+命令别名：alias，unalias
+命令历史：history
+文件名通配：glob
+快捷键：Ctrl+a，e，u，k，l
+命令补全：$PATH
+路径补全</code></pre><h4 id="bash特性之：命令hash"><a href="#bash特性之：命令hash" class="headerlink" title="bash特性之：命令hash"></a>bash特性之：命令hash</h4><blockquote>
+<p>缓存此前命令的查找结果：key-value（key：搜索键，value：值）</p>
 </blockquote>
-<p><code>行内代码</code></p>
-<p>​<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">多行代码</span><br><span class="line">多行代码</span><br><span class="line">​</span><br></pre></td></tr></table></figure></p>
-<p>$$<br>数学公式<br>$$</p>
-<h3 id="分割线"><a href="#分割线" class="headerlink" title="分割线"></a>分割线</h3><p>方法一：—</p>
-<p>方法二：+++</p>
-<p>方法三：***</p>
-<h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><ol>
-<li>有序列表项</li>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">hash</span>命令</span><br><span class="line">	<span class="built_in">hash</span>：列出</span><br><span class="line">	<span class="built_in">hash</span> -d COMMAND：删除</span><br><span class="line">	<span class="built_in">hash</span> -r ：请客</span><br></pre></td></tr></table></figure>
+
+<h4 id="bash的特性之：变量"><a href="#bash的特性之：变量" class="headerlink" title="bash的特性之：变量"></a>bash的特性之：变量</h4><blockquote>
+<p>程序：指令+数据<br>    指令：由程序文件提供<br>    数据：IO设备、文件、管道、变量<br>程序：算法+数据结构<br>变量名+指向的内存空间，变量赋值 name=value，name指向存储value的内存空间<br><strong>变量类型</strong>：存储格式、表示数据范围、参与的运算<br><strong>编程语言</strong>：
+    强类型变量<br>    弱类型变量：<br>        bash把所有变量统统视作字符类型<br>        bash中的变量无需事先声明，相当于把声明和赋值过程同时实现<br>            声明：类型，变量名<br><strong>变量替换</strong>：把变量名出现的位置替换位其所指向的内存空间中的数据<br><strong>变量引用</strong>：${var_name},$var_name<br><strong>变量名</strong>：变量名只能包含数字、字母和下划线、而且不能以数字开头，见名知义，命名机制遵循某种法则</p>
+</blockquote>
+<h5 id="bash变量类型："><a href="#bash变量类型：" class="headerlink" title="bash变量类型："></a>bash变量类型：</h5><pre><code>本地变量：作用域范围仅为当前shell进程
+环境变量：作用域为当前shell进程及其子进程
+局部变量：作用域仅为某代码片段（函数上下文）
+位置参数变量：当执行脚本的shell进程传递的参数
+特殊变量：shell内置的有特殊功用的变量
+    $?： 0，成功；1-255，失败</code></pre><p><strong>本地变量</strong>：</p>
+<ul>
+<li>变量赋值：name-value</li>
+<li>变量引用：${name}，$name</li>
+<li>“”：变量名会替换为其值</li>
+<li>‘’：变量名不会替换为其值</li>
+<li>查看变量：set</li>
+<li>撤销变量：unset name</li>
+</ul>
+<p><strong>环境变量</strong><br><strong>变量赋值</strong></p>
+<ol>
+<li>exprot name=value</li>
+<li>name=value   export name</li>
+<li>declare -x name=vlaue</li>
+<li>name=value   declare -x name</li>
 </ol>
-<ul>
-<li>无序列表项</li>
-</ul>
-<ul>
-<li>无序列表项</li>
-</ul>
-<ul>
-<li>无序列表项</li>
-</ul>
-<h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><p>表头1|表头2<br>-|-|-<br>内容11|内容12<br>内容21|内容22</p>
-<h3 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h3>
+<p><strong>变量引用</strong>：${name}，$name<br><em>注：bash内嵌了许多环境变量（通常为全大写字符），用于定义bash的工作环境</em><br><del>PAHT,HISTFILE,HISTSIZE,HISTCONTROL,SHELL,HOME,UID,PWD,OLDPWD</del><br><strong>查看环境变量</strong>：export，declare -x ，printenv，env<br><strong>撤销环境变量</strong>：unset name<br><strong>只读变量</strong>：</p>
+<ol>
+<li>declare -r name</li>
+<li>readonly name</li>
+</ol>
+<p><em>注：只读变量无法重新赋值，并且不支持撤销，存活时间为当前shell进程的生命周期，随shell进程终止而终止</em></p>
+<h4 id="bash特性之多命令执行"><a href="#bash特性之多命令执行" class="headerlink" title="bash特性之多命令执行"></a>bash特性之多命令执行</h4><p>COMMAND1;COMMAND2;COMMAND3;….<br>逻辑运算：<br>    运算数：<br>        真（true，yes，on，1）<br>        假（false，no，off，0）<br>    与：<br>    1 &amp;&amp; 1 = 1<br>    1 &amp;&amp; 0 = 0<br>    0 &amp;&amp; 1 = 0<br>    0 &amp;&amp; 0 = 0<br>    或<br>    1 || 1 = 1<br>    1 || 0 = 1<br>    0 || 1 = 1<br>    0 || 0 = 0<br>    非<br>    ！1 = 0<br>    ！0 = 1</p>
+<figure class="highlight plain"><figcaption><span>&& COMMAND2```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">COMMAND1为“假”，则COMMAND2不会再执行</span><br><span class="line">否则，COMMAND1为“真”，则COMMAND2必须执行</span><br><span class="line">``` COMMAND1 || COMMAND2</span><br></pre></td></tr></table></figure>
+
+<p>COMMAND1为“假”，则COMMAND2必须执行<br>否则，COMMAND1为“真”，则COMMAND2不会再执行<br>示例： id $username || useradd $username</p>
+<h3 id="shell脚本编程"><a href="#shell脚本编程" class="headerlink" title="shell脚本编程"></a>shell脚本编程</h3><p><strong>编程语言的分类</strong>：根据运行方式<br>    编译运行：源代码-&gt;编译器（编译）-&gt;程序文件<br>    解释运行：源代码-&gt;运行时启动解释器，由解释器边解释边运行<br>根据其编程过程中功能的实现是调用库还是调用外部的程序文件：<br><strong>shell脚本编程</strong>：利用系统上的命令及编程组件进行编程<br><strong>完整编程</strong>：利用库编程组件进行编程；<br><strong>编程模型</strong>：过程式编程语言，面向对象的编程语言<br>    程序=指令+数据<br>        过程式：以指令为中心来组织代码，数据是服务于代码；<br>            顺序执行<br>            选择执行<br>            循环执行<br>        对象式：以数据为中心来组织代码，围绕数据来组织指令；<br>            类（class）：实例化对象，method<br><strong>shell脚本编程</strong>：过程式编程，解释运行，依赖于外部程序文件运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">如何写shell脚本</span><br><span class="line">	脚本文件的第一行，顶格：给出shebang，解释器路径，用于指明解释执行当前脚本的解释器程序文件</span><br><span class="line"></span><br><span class="line">	常见的解释器：</span><br><span class="line">	#!/bin/bash</span><br><span class="line">	#!/usr/bin/python</span><br><span class="line">	#!/usr/bin/perl</span><br></pre></td></tr></table></figure>
+
+<p><strong>shell脚本</strong>：命令的堆积；但很多命令不具有幂等性，需要用程序逻辑来判断运行条件是否满足，以避免其运行中发生错误；<br><strong>运行脚本</strong>：</p>
+<ol>
+<li>赋予执行权限，并直接运行此程序文件： chmod +x file </li>
+<li>直接运行解释器，将脚本以命令行参数传递给解释器程序 bash file</li>
+</ol>
+<p><em>注：脚本中的空白行会被解释器忽略；脚本中，除了shebang，余下的所有以#开头的行，都会呗视作注释而被忽略；此即为注释行。shell叫的运行是通过运行一个子shell进程实现的</em></p>
+<p>练习<br>1、显示etc下面的所有p和P开头的文件和文件夹<br>2、把var目录下的所有文件和文件加以大写显示出来<br>3、创建临时文件夹/tmp/file.xxxx</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ls -d /etc/[pP]*</span><br><span class="line">ls -d /var/* | tr <span class="string">'a-z'</span> <span class="string">'A-Z'</span></span><br><span class="line">mktemp /tmp/file.xxx</span><br></pre></td></tr></table></figure>
+
+<h4 id="bash的配置文件"><a href="#bash的配置文件" class="headerlink" title="bash的配置文件"></a>bash的配置文件</h4><p><strong>两类</strong>：
+    profile类：为交互式登陆的shell提供配置<br>    bashrc类：非交互式登陆的shell进程提供配置<br><strong>登陆类型</strong>：
+    交互式登陆shell进程：<br>        直接通过某终端输入账号和密码后登录打开的shell进程<br>        使用su命令：su - USERNAME，或者使用 su -l USERNAME执行的登陆切换<br>    非交互式登陆shell进程<br>        su USERNAME执行的登陆切换<br>        图形界面下打开的终端<br>        运行脚本<br><strong>profile类</strong>：
+    全局：对所有用户都生效<br>        /etc/profile<br>        /etc/profild.d/<br>    用户个人:仅对当前用户有效<br>        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">**bashrc类**：</span><br><span class="line">**全局**：/etc/bashrc</span><br><span class="line">**用户个人**：```~/.bashrc</span><br></pre></td></tr></table></figure></p>
+<p><strong>功用</strong><br>1、定义本地变量<br>2、定义命令别名<br><em>注：仅管理员可以修改全局配置文件</em>    </p>
+<p><strong>交互式登陆shell进程</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">**非交互式登陆shell进程**</span><br><span class="line">```~/.bashrc--&gt;/etc/bashrc--&gt;/etc/profile.d*</span><br></pre></td></tr></table></figure>
+
+<p>命令行中定义的特性，例如变量和别名作用域为当前shell进程的生命周期<br>配置文件顶的特性，只对随后新启动的shell进程有效</p>
+<p>让通过配置文件定义的特性立即生效：</p>
+<ol>
+<li>通过命令行重复定义一次</li>
+<li>让shell进程重读配置文件<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">~]# source /PATH/FROM/CONF_FILE</span><br><span class="line">~]# . /PATH/FROM?CONF_FILE</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+
       
     </div>
 
@@ -552,8 +617,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Linux基础/用户、组和权限管理/" rel="next" title="用户、组和权限管理">
-                <i class="fa fa-chevron-left"></i> 用户、组和权限管理
+              <a href="/uncategorized/hello-world/" rel="next" title="模板">
+                <i class="fa fa-chevron-left"></i> 模板
               </a>
             
           </div>
@@ -561,10 +626,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/shell脚本/shell脚本基础/" rel="prev" title="shell脚本基础">
-                shell脚本基础 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -748,7 +809,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#标题一"><span class="nav-number">1.</span> <span class="nav-text">标题一</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#标题二"><span class="nav-number">1.1.</span> <span class="nav-text">标题二</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#标题三"><span class="nav-number">1.1.1.</span> <span class="nav-text">标题三</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#标题四"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">标题四</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#标题五"><span class="nav-number">1.1.1.1.1.</span> <span class="nav-text">标题五</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#标题六"><span class="nav-number">1.1.1.1.1.1.</span> <span class="nav-text">标题六</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分割线"><span class="nav-number">1.1.2.</span> <span class="nav-text">分割线</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#列表"><span class="nav-number">1.1.3.</span> <span class="nav-text">列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#表格"><span class="nav-number">1.1.4.</span> <span class="nav-text">表格</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图片"><span class="nav-number">1.1.5.</span> <span class="nav-text">图片</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#bash特性及bash脚本编程初步"><span class="nav-number">1.</span> <span class="nav-text">bash特性及bash脚本编程初步</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#bash的特性"><span class="nav-number">1.1.</span> <span class="nav-text">bash的特性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#bash特性之：命令hash"><span class="nav-number">1.1.1.</span> <span class="nav-text">bash特性之：命令hash</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#bash的特性之：变量"><span class="nav-number">1.1.2.</span> <span class="nav-text">bash的特性之：变量</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#bash变量类型："><span class="nav-number">1.1.2.1.</span> <span class="nav-text">bash变量类型：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#bash特性之多命令执行"><span class="nav-number">1.1.3.</span> <span class="nav-text">bash特性之多命令执行</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#shell脚本编程"><span class="nav-number">1.2.</span> <span class="nav-text">shell脚本编程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#bash的配置文件"><span class="nav-number">1.2.1.</span> <span class="nav-text">bash的配置文件</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -936,7 +997,7 @@
   
     <script>
   window.livereOptions = {
-    refer: 'uncategorized/hello-world/'
+    refer: 'shell脚本/shell脚本基础/'
   };
   (function(d, s) {
     var j, e = d.getElementsByTagName(s)[0];
