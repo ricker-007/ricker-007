@@ -107,7 +107,7 @@
 <meta property="og:site_name" content="啊雷雷&amp;啊玉玉">
 <meta property="og:description" content="bash特性及bash脚本编程初步bash的特性命令行展开：~,{} 命令别名：alias，unalias 命令历史：history 文件名通配：glob 快捷键：Ctrl+a，e，u，k，l 命令补全：$PATH 路径补全bash特性之：命令hash 缓存此前命令的查找结果：key-value（key：搜索键，value：值）  1234hash命令	hash：列出	hash -d COMMAN">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-19T07:17:26.168Z">
+<meta property="og:updated_time" content="2019-09-19T07:19:40.230Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="shell脚本基础">
 <meta name="twitter:description" content="bash特性及bash脚本编程初步bash的特性命令行展开：~,{} 命令别名：alias，unalias 命令历史：history 文件名通配：glob 快捷键：Ctrl+a，e，u，k，l 命令补全：$PATH 路径补全bash特性之：命令hash 缓存此前命令的查找结果：key-value（key：搜索键，value：值）  1234hash命令	hash：列出	hash -d COMMAN">
@@ -450,7 +450,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-09-19 15:17:26" itemprop="dateModified" datetime="2019-09-19T15:17:26+08:00">2019-09-19</time>
+                <time title="修改时间：2019-09-19 15:19:40" itemprop="dateModified" datetime="2019-09-19T15:19:40+08:00">2019-09-19</time>
               
             
           </span>
@@ -552,7 +552,10 @@
 </ol>
 <p><em>注：只读变量无法重新赋值，并且不支持撤销，存活时间为当前shell进程的生命周期，随shell进程终止而终止</em></p>
 <h4 id="bash特性之多命令执行"><a href="#bash特性之多命令执行" class="headerlink" title="bash特性之多命令执行"></a>bash特性之多命令执行</h4><p>COMMAND1;COMMAND2;COMMAND3;….<br>逻辑运算：<br>    运算数：<br>        真（true，yes，on，1）<br>        假（false，no，off，0）<br>    与：<br>    1 &amp;&amp; 1 = 1<br>    1 &amp;&amp; 0 = 0<br>    0 &amp;&amp; 1 = 0<br>    0 &amp;&amp; 0 = 0<br>    或<br>    1 || 1 = 1<br>    1 || 0 = 1<br>    0 || 1 = 1<br>    0 || 0 = 0<br>    非<br>    ！1 = 0<br>    ！0 = 1</p>
-<figure class="highlight plain"><figcaption><span>&& COMMAND2```</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">COMMAND1为“假”，则COMMAND2不会再执行</span><br><span class="line">否则，COMMAND1为“真”，则COMMAND2必须执行</span><br><span class="line">```COMMAND1 || COMMAND2</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">COMMAND1 &amp;&amp; COMMAND2</span><br></pre></td></tr></table></figure>
+
+<p>COMMAND1为“假”，则COMMAND2不会再执行<br>否则，COMMAND1为“真”，则COMMAND2必须执行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">COMMAND1 || COMMAND2</span><br></pre></td></tr></table></figure>
 
 <p>COMMAND1为“假”，则COMMAND2必须执行<br>否则，COMMAND1为“真”，则COMMAND2不会再执行<br>示例： id $username || useradd $username</p>
 <h3 id="shell脚本编程"><a href="#shell脚本编程" class="headerlink" title="shell脚本编程"></a>shell脚本编程</h3><p><strong>编程语言的分类</strong>：根据运行方式<br>    编译运行：源代码-&gt;编译器（编译）-&gt;程序文件<br>    解释运行：源代码-&gt;运行时启动解释器，由解释器边解释边运行<br>根据其编程过程中功能的实现是调用库还是调用外部的程序文件：<br><strong>shell脚本编程</strong>：利用系统上的命令及编程组件进行编程<br><strong>完整编程</strong>：利用库编程组件进行编程；<br><strong>编程模型</strong>：过程式编程语言，面向对象的编程语言<br>    程序=指令+数据<br>        过程式：以指令为中心来组织代码，数据是服务于代码；<br>            顺序执行<br>            选择执行<br>            循环执行<br>        对象式：以数据为中心来组织代码，围绕数据来组织指令；<br>            类（class）：实例化对象，method<br><strong>shell脚本编程</strong>：过程式编程，解释运行，依赖于外部程序文件运行</p>
