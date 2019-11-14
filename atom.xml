@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-11-14T06:33:50.594Z</updated>
+  <updated>2019-11-14T09:56:22.057Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>文件查找命令</title>
+    <link href="http://yoursite.com/Linux%E5%9F%BA%E7%A1%80/%E6%96%87%E4%BB%B6%E6%9F%A5%E6%89%BE%E5%91%BD%E4%BB%A4/"/>
+    <id>http://yoursite.com/Linux基础/文件查找命令/</id>
+    <published>2019-11-14T06:30:58.000Z</published>
+    <updated>2019-11-14T09:56:22.057Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>文件查找，在文件系统上查找符合条件的文件，实现工具locate，find</p></blockquote><h1 id="locate"><a href="#locate" class="headerlink" title="locate"></a>locate</h1><p><strong>依赖于事先构建好的索引库，该索引库系统自动实现（周期性任务），手动更新数据库（updatedb）</strong></p><h2 id="工作特性"><a href="#工作特性" class="headerlink" title="工作特性"></a>工作特性</h2><ul><li>查找速度快</li><li>模糊查找</li><li>非实时查找</li></ul><h2 id="locate命令"><a href="#locate命令" class="headerlink" title="locate命令"></a>locate命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">locate [OPTION]...PATTERN...</span><br><span class="line">-b <span class="comment">#只匹配路径中的基名</span></span><br><span class="line">-c <span class="comment">#统计出共有多少个符合条件的文件</span></span><br><span class="line">-r <span class="comment">#BRE</span></span><br></pre></td></tr></table></figure><p><em>注意：索引构建过程需要遍历整个根文件系统，极消耗资源</em></p><h1 id="find"><a href="#find" class="headerlink" title="find"></a>find</h1><p><strong>实时查找工具，通过遍历指定起始路径下文件系统层极结构完成文件查找</strong></p><h2 id="工作特性-1"><a href="#工作特性-1" class="headerlink" title="工作特性"></a>工作特性</h2><ul><li>查找速度略慢</li><li>精确查找</li><li>实时查找</li></ul><p>##用法</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find [OPTIONS] [查找起始路径] [查找条件] [处理动作]</span><br></pre></td></tr></table></figure><ul><li>查找起始路径：指定具体搜索目标起始路径；默认为当前目录</li><li>查找条件：指定的查找标准，可以根据文件名、大小、类型、从属关系、权限等等标准进行，默认为找出指定路径下的所有文件</li><li>处理动作：对符合查找条件的文件做出的操作，例如删除等操作，默认为输出至标准输出</li></ul><h2 id="查找条件"><a href="#查找条件" class="headerlink" title="查找条件"></a>查找条件</h2><p>表达式：选项和测试</p><h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><ul><li><p>根据文件名查找**</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-name <span class="string">"pattern"</span></span><br><span class="line">-iname <span class="string">"pattern"</span></span><br><span class="line">支持glob风格的通配符：*,?,[],[^]</span><br><span class="line">-regex pattern：基于正则表达式查找文件，匹配是整个路径，而非其名</span><br></pre></td></tr></table></figure></li><li><p>根据文件从属关系查找</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">-user USERNAME ：查找属主指定用户的所有文件</span><br><span class="line">-group GRPNAME ：查找属组指定的GID的所有文件</span><br><span class="line">-uid UID：查找属主指定用户的所有文件</span><br><span class="line">-gid GID：查找属组指定的GID的所有文件</span><br><span class="line">-nouser 查找没有属主的文件</span><br><span class="line">-nogroup 查找没有属组的文件</span><br></pre></td></tr></table></figure></li><li><p>根据文件的类型查找：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">-<span class="built_in">type</span> TYPE:</span><br><span class="line">f ：普通文件</span><br><span class="line">d ：目录文件</span><br><span class="line">i ：符号链接文件</span><br><span class="line">b ：块设备文件</span><br><span class="line">c ：字符设备文件</span><br><span class="line">p ：管道文件</span><br><span class="line">s ：套接字文件</span><br></pre></td></tr></table></figure></li><li><p>组合测试</p><ul><li>与：-a，默认组合逻辑</li><li>或：-o</li><li>非：-not，!</li></ul></li><li><p>根据文件的大小查找</p></li><li><p>size [+|-]#UNIT，常用单位k，M，G，#UNIT：（#-1，#）区间，-#UNIT：（0，#-1）区间，+#UNIT（#，无穷大）</p></li><li><p>根据时间戳查找<br>以“天”为单位：</p><ul><li>-atime[+|-]#<ul><li>#：[#,#-1)</li><li>-#:(#,0]</li><li>+#:(无限大，#-1]</li></ul></li><li>-mtime</li><li>-ctime<br>以“分钟为单位”</li><li>-amin</li><li>-mmin</li><li>-cmin</li></ul></li><li><p>根据权限查找</p><ul><li>-perm [/|-]mode<ul><li>mode：精确权限匹配</li><li>/mode：任何一类用户（u，g，o）的权限中的任何一位（r，w，x）符合条件即满足；9位权限之间存在“或”关系</li><li>-mode：每一类用户（u，g，o）的权限中的每一位（r，w，x）同时符合条件即满足；9位权限之间存在“与”关系</li></ul></li></ul></li><li><p>处理动作</p><ul><li>-print：输出至标准输出；默认的动作；</li><li>-ls：类似于对查找到的文件执行“ls -l”命令，输出文件的详细信息</li><li>-delete：删除查找到的文件</li><li>-fls /PATH/TO/SOMEFILE：把查找到的所有文件的长格式信息保存至指定文件中</li><li>-ok COMMAND {} ;：对查找到的每一个文件执行由COMMAND表示的命令，每次操作都由用户进行确认</li><li>-exec COMMAND {} ;：对查找到的每一个文件执行由COMMAND表示的命令</li></ul></li></ul><p><em>注意：find传递查找到的文件路径至后面的命令时，是先查找出所有符合条件的文件路径，并一次性传递给后面的命令；但是有些命令不能接受过长的阐述，此时命令执行会失败；另一种方式可规避此问题：find | xargs COMMAND</em></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;文件查找，在文件系统上查找符合条件的文件，实现工具locate，find&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;locate&quot;&gt;&lt;a href=&quot;#locate&quot; class=&quot;headerlink&quot; title=&quot;locate&quot;&gt;&lt;
+      
+    
+    </summary>
+    
+      <category term="Linux基础" scheme="http://yoursite.com/categories/Linux%E5%9F%BA%E7%A1%80/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>vim编辑器</title>

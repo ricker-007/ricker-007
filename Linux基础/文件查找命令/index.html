@@ -100,17 +100,17 @@
 
 
 
-  <meta name="description" content="常用命令12345678910111213pwd #显示工作目录cd  #change directoryecho $PWD #当前工作目录环境变量echo $OLDPWD #上次的工作目录环境变量ls #列出指定目录下的内容ls -ld 目录 #查看目录自身属性cat -n #文本文件查看,-n表示给文本文件添加行编号tac #同上，但是逆序显示file #查看文件类型echo -e #让转义符">
+  <meta name="description" content="文件查找，在文件系统上查找符合条件的文件，实现工具locate，find  locate依赖于事先构建好的索引库，该索引库系统自动实现（周期性任务），手动更新数据库（updatedb） 工作特性 查找速度快 模糊查找 非实时查找  locate命令1234locate [OPTION]...PATTERN...	-b #只匹配路径中的基名	-c #统计出共有多少个符合条件的文件	-r #BRE">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux常用命令">
-<meta property="og:url" content="http://yoursite.com/Linux基础/Linux常用命令/index.html">
+<meta property="og:title" content="文件查找命令">
+<meta property="og:url" content="http://yoursite.com/Linux基础/文件查找命令/index.html">
 <meta property="og:site_name" content="啊雷雷&amp;啊玉玉">
-<meta property="og:description" content="常用命令12345678910111213pwd #显示工作目录cd  #change directoryecho $PWD #当前工作目录环境变量echo $OLDPWD #上次的工作目录环境变量ls #列出指定目录下的内容ls -ld 目录 #查看目录自身属性cat -n #文本文件查看,-n表示给文本文件添加行编号tac #同上，但是逆序显示file #查看文件类型echo -e #让转义符">
+<meta property="og:description" content="文件查找，在文件系统上查找符合条件的文件，实现工具locate，find  locate依赖于事先构建好的索引库，该索引库系统自动实现（周期性任务），手动更新数据库（updatedb） 工作特性 查找速度快 模糊查找 非实时查找  locate命令1234locate [OPTION]...PATTERN...	-b #只匹配路径中的基名	-c #统计出共有多少个符合条件的文件	-r #BRE">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-24T08:41:04.114Z">
+<meta property="og:updated_time" content="2019-11-14T09:56:22.057Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux常用命令">
-<meta name="twitter:description" content="常用命令12345678910111213pwd #显示工作目录cd  #change directoryecho $PWD #当前工作目录环境变量echo $OLDPWD #上次的工作目录环境变量ls #列出指定目录下的内容ls -ld 目录 #查看目录自身属性cat -n #文本文件查看,-n表示给文本文件添加行编号tac #同上，但是逆序显示file #查看文件类型echo -e #让转义符">
+<meta name="twitter:title" content="文件查找命令">
+<meta name="twitter:description" content="文件查找，在文件系统上查找符合条件的文件，实现工具locate，find  locate依赖于事先构建好的索引库，该索引库系统自动实现（周期性任务），手动更新数据库（updatedb） 工作特性 查找速度快 模糊查找 非实时查找  locate命令1234locate [OPTION]...PATTERN...	-b #只匹配路径中的基名	-c #统计出共有多少个符合条件的文件	-r #BRE">
 
 
 
@@ -120,7 +120,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/Linux基础/Linux常用命令/">
+  <link rel="canonical" href="http://yoursite.com/Linux基础/文件查找命令/">
 
 
 
@@ -130,7 +130,7 @@
   };
 </script>
 
-  <title>Linux常用命令 | 啊雷雷&啊玉玉</title>
+  <title>文件查找命令 | 啊雷雷&啊玉玉</title>
   
 
 
@@ -389,7 +389,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Linux基础/Linux常用命令/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Linux基础/文件查找命令/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CLX">
@@ -406,7 +406,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Linux常用命令
+          <h1 class="post-title" itemprop="name headline">文件查找命令
 
               
             
@@ -433,7 +433,7 @@
                 
               
 
-              <time title="创建时间：2019-06-24 09:54:26 / 修改时间：16:41:04" itemprop="dateCreated datePublished" datetime="2019-06-24T09:54:26+08:00">2019-06-24</time>
+              <time title="创建时间：2019-11-14 14:30:58 / 修改时间：17:56:22" itemprop="dateCreated datePublished" datetime="2019-11-14T14:30:58+08:00">2019-11-14</time>
             
 
             
@@ -497,54 +497,91 @@
       
 
       
-        <h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">pwd</span> <span class="comment">#显示工作目录</span></span><br><span class="line"><span class="built_in">cd</span>  <span class="comment">#change directory</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$PWD</span> <span class="comment">#当前工作目录环境变量</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$OLDPWD</span> <span class="comment">#上次的工作目录环境变量</span></span><br><span class="line">ls <span class="comment">#列出指定目录下的内容</span></span><br><span class="line">ls -ld 目录 <span class="comment">#查看目录自身属性</span></span><br><span class="line">cat -n <span class="comment">#文本文件查看,-n表示给文本文件添加行编号</span></span><br><span class="line">tac <span class="comment">#同上，但是逆序显示</span></span><br><span class="line">file <span class="comment">#查看文件类型</span></span><br><span class="line"><span class="built_in">echo</span> -e <span class="comment">#让转义符生效，例如\n换行</span></span><br><span class="line">shutdown <span class="comment">#关机 -h 关机 -r 重启</span></span><br><span class="line">shutdown -c <span class="comment">#取消关机</span></span><br><span class="line">wall <span class="comment">#向所有人的终端发送消息</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="ls-l结果"><a href="#ls-l结果" class="headerlink" title="ls -l结果"></a>ls -l结果</h3><blockquote>
-<p>-rw-r–r–   1 root     root          85374 Jun 23 19:06 dump.rdb</p>
+        <blockquote>
+<p>文件查找，在文件系统上查找符合条件的文件，实现工具locate，find</p>
 </blockquote>
-<p><strong>-</strong>:文件类型，-，d，b，c，l，s，p<br><strong>rw-</strong>：文件属主的权限<br><strong>r–</strong>：文件属组的权限<br><strong>r–</strong>：其他用户（非属主、属组）的权限<br><strong>1</strong>：表示硬链接次数<br><strong>root</strong>：文件属主<br><strong>root</strong>：文件属组<br><strong>85374</strong>：表示文件的大小，单位字节<br><strong>Jun 23 19:06</strong>：文件最后一次被修改的时间<br><strong>dump.rdb</strong>：文件名</p>
-<h4 id="文件类型"><a href="#文件类型" class="headerlink" title="文件类型"></a>文件类型</h4><p>-：常规文件，即f<br>d：directory，目录文件<br>b：block device，块设备文件，支持以“block”为单位进行随机访问<br>c：character device，字符设备文件，支持以“character”为单位进行线性访问<br>    major number：主设备号，用于识别设备类型，进而确定要加载的驱动程序<br>    minor number：次设备号，用于标识同一类型中的不同的设备<br>l：符号链接文件，类似快捷方式<br>p：pipe，命名管道<br>s：socket，套接字文件</p>
-<h3 id="echo-OPTION-…-STRING-…"><a href="#echo-OPTION-…-STRING-…" class="headerlink" title="echo [OPTION]…[STRING]…"></a>echo [OPTION]…[STRING]…</h3><p>STRING可以使用引号，’’、””<br>单引号：强引用，变量引用不执行替换<br>双引号：弱引用，变量引用执行替换</p>
-<h3 id="日期相关的命令"><a href="#日期相关的命令" class="headerlink" title="日期相关的命令"></a>日期相关的命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">date [OPTION]... [+FORMAT] <span class="comment">#显示时间 </span></span><br><span class="line">date +%F 显示日期 +%H 显示小时 +%T 显示准确时间 <span class="comment"># Y年 m月 d日 H时 M分 S秒 s从1970.1.1日0点0分0秒到现在经过多少秒</span></span><br><span class="line">date [MMDDhhmm[[CC]YY][.ss]] <span class="comment">#设定日期时间</span></span><br><span class="line">date 101008082013.08 <span class="comment">#设定日期2013年10月10日8点8分8秒</span></span><br><span class="line">clock，hwclock <span class="comment">#显示硬件时钟 -s 把硬件时间设置为系统时间 -w 把系统时间设置为硬件时间</span></span><br><span class="line">cal 2019 <span class="comment">#日历指定月份年份</span></span><br></pre></td></tr></table></figure>
+<h1 id="locate"><a href="#locate" class="headerlink" title="locate"></a>locate</h1><p><strong>依赖于事先构建好的索引库，该索引库系统自动实现（周期性任务），手动更新数据库（updatedb）</strong></p>
+<h2 id="工作特性"><a href="#工作特性" class="headerlink" title="工作特性"></a>工作特性</h2><ul>
+<li>查找速度快</li>
+<li>模糊查找</li>
+<li>非实时查找</li>
+</ul>
+<h2 id="locate命令"><a href="#locate命令" class="headerlink" title="locate命令"></a>locate命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">locate [OPTION]...PATTERN...</span><br><span class="line">	-b <span class="comment">#只匹配路径中的基名</span></span><br><span class="line">	-c <span class="comment">#统计出共有多少个符合条件的文件</span></span><br><span class="line">	-r <span class="comment">#BRE</span></span><br></pre></td></tr></table></figure>
 
-<h3 id="FHS-Filesystem-Hierarchy-Standard"><a href="#FHS-Filesystem-Hierarchy-Standard" class="headerlink" title="FHS:Filesystem Hierarchy Standard"></a>FHS:Filesystem Hierarchy Standard</h3><pre><code>/bin：所有用户可用的基本命令程序文件
-/sbin：供系统管理使用的工具程序
-/boot：引导加载器必须用到的各静态文件：kernel，initramfs(initrd),grub等
-/dev：存储特殊文件或设备文件：设备文件有两种类型：字符设备（线性设备）、块设备（随机设备）
-/etc：系统程序的配置文件，只能为静态
-/home：普通用户的家目录的集中位置，一般每个普通用户的家目录默认为此目录下与用户名同名的子目录，/home/USERNAME
-/root：管理员的家目录
-/lib：为系统启动或根文件系统上的应用程序（/bin,/sbin等）提供共享库，以及为内核提供内核模块
-    libc.so.*：动态链接C库
-    ld*：运行时链接器/加载器
-    modules：用于存储内核模块的目录
-/lib64:64位系统特有的存放64位共享库路径
-/media：便携式设备挂载点，cdrom，floppy等：
-/mnt：其它文件系统的临时挂载点
-/opt：附加应用程序的安装位置：可选路径：
-/srv：当前主机为服务提供的数据
-/tmp：为那些会产生临时文件的程序提供用于存储临时文件的目录，可供所有用户执行写入操作，有特殊权限
-/usr：全局共享的只读数据路径
-    bin，sbin
-    lib，lib64
-/usr/local：让系统管理员安装本地软件
-/var：存储经常发生变化的数据目录
-/proc：内核及进程存储其相关信息，它们多为内核参数，例如net.ipv4.ip_forward,虚拟为net/ipv4/ip_forward,存储于/proc/sys/，因此其完整路径为/proc/sys/net/ipv4/ip_forward
-/sys：sysfs虚拟文件系统提供了一种比proc更为理想的访问内核数据的途径：其主要作用在于为管理Linux设备提供一种统一模型的接口</code></pre><h3 id="基本命令"><a href="#基本命令" class="headerlink" title="基本命令"></a>基本命令</h3><h4 id="命令类型"><a href="#命令类型" class="headerlink" title="命令类型"></a>命令类型</h4><p><strong>外部命令</strong><br><strong>内部命令</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">type</span> COMMAND</span><br><span class="line">	<span class="comment">#内部：builtin</span></span><br><span class="line">	<span class="comment">#外部：显示为命令文件路径</span></span><br></pre></td></tr></table></figure>
+<p><em>注意：索引构建过程需要遍历整个根文件系统，极消耗资源</em></p>
+<h1 id="find"><a href="#find" class="headerlink" title="find"></a>find</h1><p><strong>实时查找工具，通过遍历指定起始路径下文件系统层极结构完成文件查找</strong></p>
+<h2 id="工作特性-1"><a href="#工作特性-1" class="headerlink" title="工作特性"></a>工作特性</h2><ul>
+<li>查找速度略慢</li>
+<li>精确查找</li>
+<li>实时查找</li>
+</ul>
+<p>##用法</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">find [OPTIONS] [查找起始路径] [查找条件] [处理动作]</span><br></pre></td></tr></table></figure>
 
-<p><em>注意：命令可以有别名，别名可以与原名相同，此时原名被隐藏，此时如果要运行原命令，则使用\COMMAND</em></p>
-<p><strong>命令别名</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">alias</span> <span class="comment">#获取所有可用别名的定义</span></span><br><span class="line"><span class="built_in">alias</span> NAME=<span class="string">'COMMAND'</span> <span class="comment">#定义别名</span></span><br><span class="line"><span class="built_in">unalias</span> NAME <span class="comment">#撤销别名</span></span><br></pre></td></tr></table></figure>
-
-<p><em>注意：仅对当前shell进程有效</em></p>
-<h4 id="which命令"><a href="#which命令" class="headerlink" title="which命令"></a>which命令</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wihick [options] programename</span><br><span class="line">	--skip-alias:忽略别名</span><br></pre></td></tr></table></figure>
-
-<h4 id="whereis命令"><a href="#whereis命令" class="headerlink" title="whereis命令"></a>whereis命令</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">whereis [options] name</span><br><span class="line">	-b:仅搜索二进制程序路径</span><br><span class="line">	-m：仅搜索使用手册文件路径</span><br></pre></td></tr></table></figure>
-
-<h4 id="who命令"><a href="#who命令" class="headerlink" title="who命令"></a>who命令</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">who [options]</span><br><span class="line">	-b：系统此次启动的时间：</span><br><span class="line">	-r：运行级别</span><br></pre></td></tr></table></figure>
-
-<p>who查看目前谁登陆了</p>
+<ul>
+<li>查找起始路径：指定具体搜索目标起始路径；默认为当前目录</li>
+<li>查找条件：指定的查找标准，可以根据文件名、大小、类型、从属关系、权限等等标准进行，默认为找出指定路径下的所有文件</li>
+<li>处理动作：对符合查找条件的文件做出的操作，例如删除等操作，默认为输出至标准输出</li>
+</ul>
+<h2 id="查找条件"><a href="#查找条件" class="headerlink" title="查找条件"></a>查找条件</h2><p>表达式：选项和测试</p>
+<h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><ul>
+<li><p>根据文件名查找**</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-name <span class="string">"pattern"</span></span><br><span class="line">-iname <span class="string">"pattern"</span></span><br><span class="line">支持glob风格的通配符：*,?,[],[^]</span><br><span class="line">-regex pattern：基于正则表达式查找文件，匹配是整个路径，而非其名</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>根据文件从属关系查找</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">-user USERNAME ：查找属主指定用户的所有文件</span><br><span class="line">-group GRPNAME ：查找属组指定的GID的所有文件</span><br><span class="line">-uid UID：查找属主指定用户的所有文件</span><br><span class="line">-gid GID：查找属组指定的GID的所有文件</span><br><span class="line">-nouser 查找没有属主的文件</span><br><span class="line">-nogroup 查找没有属组的文件</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>根据文件的类型查找：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">-<span class="built_in">type</span> TYPE:</span><br><span class="line">f ：普通文件</span><br><span class="line">d ：目录文件</span><br><span class="line">i ：符号链接文件</span><br><span class="line">b ：块设备文件</span><br><span class="line">c ：字符设备文件</span><br><span class="line">p ：管道文件</span><br><span class="line">s ：套接字文件</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>组合测试</p>
+<ul>
+<li>与：-a，默认组合逻辑</li>
+<li>或：-o</li>
+<li>非：-not，!</li>
+</ul>
+</li>
+<li><p>根据文件的大小查找</p>
+</li>
+<li><p>size [+|-]#UNIT，常用单位k，M，G，#UNIT：（#-1，#）区间，-#UNIT：（0，#-1）区间，+#UNIT（#，无穷大）</p>
+</li>
+<li><p>根据时间戳查找<br>以“天”为单位：</p>
+<ul>
+<li>-atime[+|-]#<ul>
+<li>#：[#,#-1)</li>
+<li>-#:(#,0]</li>
+<li>+#:(无限大，#-1]</li>
+</ul>
+</li>
+<li>-mtime</li>
+<li>-ctime<br>以“分钟为单位”</li>
+<li>-amin</li>
+<li>-mmin</li>
+<li>-cmin</li>
+</ul>
+</li>
+<li><p>根据权限查找</p>
+<ul>
+<li>-perm [/|-]mode<ul>
+<li>mode：精确权限匹配</li>
+<li>/mode：任何一类用户（u，g，o）的权限中的任何一位（r，w，x）符合条件即满足；9位权限之间存在“或”关系</li>
+<li>-mode：每一类用户（u，g，o）的权限中的每一位（r，w，x）同时符合条件即满足；9位权限之间存在“与”关系</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>处理动作</p>
+<ul>
+<li>-print：输出至标准输出；默认的动作；</li>
+<li>-ls：类似于对查找到的文件执行“ls -l”命令，输出文件的详细信息</li>
+<li>-delete：删除查找到的文件</li>
+<li>-fls /PATH/TO/SOMEFILE：把查找到的所有文件的长格式信息保存至指定文件中</li>
+<li>-ok COMMAND {} ;：对查找到的每一个文件执行由COMMAND表示的命令，每次操作都由用户进行确认</li>
+<li>-exec COMMAND {} ;：对查找到的每一个文件执行由COMMAND表示的命令</li>
+</ul>
+</li>
+</ul>
+<p><em>注意：find传递查找到的文件路径至后面的命令时，是先查找出所有符合条件的文件路径，并一次性传递给后面的命令；但是有些命令不能接受过长的阐述，此时命令执行会失败；另一种方式可规避此问题：find | xargs COMMAND</em></p>
 
       
     </div>
@@ -579,8 +616,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Linux基础/linux基础（2）/" rel="next" title="linux基础（2）">
-                <i class="fa fa-chevron-left"></i> linux基础（2）
+              <a href="/Linux基础/vim编辑器/" rel="next" title="vim编辑器">
+                <i class="fa fa-chevron-left"></i> vim编辑器
               </a>
             
           </div>
@@ -588,10 +625,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/Linux基础/bash的基础特性/" rel="prev" title="bash的基础特性">
-                bash的基础特性 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -775,7 +808,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#常用命令"><span class="nav-number">1.</span> <span class="nav-text">常用命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ls-l结果"><span class="nav-number">1.1.</span> <span class="nav-text">ls -l结果</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#文件类型"><span class="nav-number">1.1.1.</span> <span class="nav-text">文件类型</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#echo-OPTION-…-STRING-…"><span class="nav-number">1.2.</span> <span class="nav-text">echo [OPTION]…[STRING]…</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#日期相关的命令"><span class="nav-number">1.3.</span> <span class="nav-text">日期相关的命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#FHS-Filesystem-Hierarchy-Standard"><span class="nav-number">1.4.</span> <span class="nav-text">FHS:Filesystem Hierarchy Standard</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本命令"><span class="nav-number">1.5.</span> <span class="nav-text">基本命令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#命令类型"><span class="nav-number">1.5.1.</span> <span class="nav-text">命令类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#which命令"><span class="nav-number">1.5.2.</span> <span class="nav-text">which命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#whereis命令"><span class="nav-number">1.5.3.</span> <span class="nav-text">whereis命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#who命令"><span class="nav-number">1.5.4.</span> <span class="nav-text">who命令</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#locate"><span class="nav-number">1.</span> <span class="nav-text">locate</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#工作特性"><span class="nav-number">1.1.</span> <span class="nav-text">工作特性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#locate命令"><span class="nav-number">1.2.</span> <span class="nav-text">locate命令</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#find"><span class="nav-number">2.</span> <span class="nav-text">find</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#工作特性-1"><span class="nav-number">2.1.</span> <span class="nav-text">工作特性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查找条件"><span class="nav-number">2.2.</span> <span class="nav-text">查找条件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#测试"><span class="nav-number">2.2.1.</span> <span class="nav-text">测试</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -963,7 +996,7 @@
   
     <script>
   window.livereOptions = {
-    refer: 'Linux基础/Linux常用命令/'
+    refer: 'Linux基础/文件查找命令/'
   };
   (function(d, s) {
     var j, e = d.getElementsByTagName(s)[0];
