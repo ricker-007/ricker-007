@@ -100,17 +100,17 @@
 
 
 
-  <meta name="description" content="vim编辑器文本编辑器，文本有纯文本、ASCII text、Unicode文本编辑种类  行编辑器：sed 全屏编辑器：nano，vi，vim  vim模式化的编辑器基本模式：编辑模式，命令模式，输入模式，末行模式（内置的命令行接口） 打开文件123vim [OPTION]...[FILE...]+n #打开文件后，直接让光标处于第n行行首+/PATTERN #打开文件后，直接让光标处于第一个被P">
+  <meta name="description" content="Linux的哲学思想：一切皆文件设备类型块（block）：随机访问，数据交换单位是“块”字符（character）：线性访问，数据交换单位是“字符” 设备文件：FHS/dev设备文件：关联至设备的驱动程序；设备的访问入口设备号：  major：主设备好，区分设备类型，用于标明设备所需要的驱动程序 minor：次设备号，区分同种类型下的不同的设备；是特定设备的访问入口  mknod命令 make b">
 <meta property="og:type" content="article">
-<meta property="og:title" content="vim编辑器">
-<meta property="og:url" content="http://yoursite.com/Linux基础/vim编辑器/index.html">
+<meta property="og:title" content="Linux磁盘及文件系统管理">
+<meta property="og:url" content="http://yoursite.com/Linux系统管理/磁盘的使用及文件系统/index.html">
 <meta property="og:site_name" content="啊雷雷&amp;啊玉玉">
-<meta property="og:description" content="vim编辑器文本编辑器，文本有纯文本、ASCII text、Unicode文本编辑种类  行编辑器：sed 全屏编辑器：nano，vi，vim  vim模式化的编辑器基本模式：编辑模式，命令模式，输入模式，末行模式（内置的命令行接口） 打开文件123vim [OPTION]...[FILE...]+n #打开文件后，直接让光标处于第n行行首+/PATTERN #打开文件后，直接让光标处于第一个被P">
+<meta property="og:description" content="Linux的哲学思想：一切皆文件设备类型块（block）：随机访问，数据交换单位是“块”字符（character）：线性访问，数据交换单位是“字符” 设备文件：FHS/dev设备文件：关联至设备的驱动程序；设备的访问入口设备号：  major：主设备好，区分设备类型，用于标明设备所需要的驱动程序 minor：次设备号，区分同种类型下的不同的设备；是特定设备的访问入口  mknod命令 make b">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-14T06:33:50.594Z">
+<meta property="og:updated_time" content="2019-11-20T05:44:10.701Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="vim编辑器">
-<meta name="twitter:description" content="vim编辑器文本编辑器，文本有纯文本、ASCII text、Unicode文本编辑种类  行编辑器：sed 全屏编辑器：nano，vi，vim  vim模式化的编辑器基本模式：编辑模式，命令模式，输入模式，末行模式（内置的命令行接口） 打开文件123vim [OPTION]...[FILE...]+n #打开文件后，直接让光标处于第n行行首+/PATTERN #打开文件后，直接让光标处于第一个被P">
+<meta name="twitter:title" content="Linux磁盘及文件系统管理">
+<meta name="twitter:description" content="Linux的哲学思想：一切皆文件设备类型块（block）：随机访问，数据交换单位是“块”字符（character）：线性访问，数据交换单位是“字符” 设备文件：FHS/dev设备文件：关联至设备的驱动程序；设备的访问入口设备号：  major：主设备好，区分设备类型，用于标明设备所需要的驱动程序 minor：次设备号，区分同种类型下的不同的设备；是特定设备的访问入口  mknod命令 make b">
 
 
 
@@ -120,7 +120,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/Linux基础/vim编辑器/">
+  <link rel="canonical" href="http://yoursite.com/Linux系统管理/磁盘的使用及文件系统/">
 
 
 
@@ -130,7 +130,7 @@
   };
 </script>
 
-  <title>vim编辑器 | 啊雷雷&啊玉玉</title>
+  <title>Linux磁盘及文件系统管理 | 啊雷雷&啊玉玉</title>
   
 
 
@@ -389,7 +389,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Linux基础/vim编辑器/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Linux系统管理/磁盘的使用及文件系统/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CLX">
@@ -406,7 +406,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">vim编辑器
+          <h1 class="post-title" itemprop="name headline">Linux磁盘及文件系统管理
 
               
             
@@ -433,7 +433,7 @@
                 
               
 
-              <time title="创建时间：2019-11-13 09:53:17" itemprop="dateCreated datePublished" datetime="2019-11-13T09:53:17+08:00">2019-11-13</time>
+              <time title="创建时间：2019-11-18 16:16:58" itemprop="dateCreated datePublished" datetime="2019-11-18T16:16:58+08:00">2019-11-18</time>
             
 
             
@@ -450,7 +450,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-11-14 14:33:50" itemprop="dateModified" datetime="2019-11-14T14:33:50+08:00">2019-11-14</time>
+                <time title="修改时间：2019-11-20 13:44:10" itemprop="dateModified" datetime="2019-11-20T13:44:10+08:00">2019-11-20</time>
               
             
           </span>
@@ -467,7 +467,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Linux基础/" itemprop="url" rel="index"><span itemprop="name">Linux基础</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Linux系统管理/" itemprop="url" rel="index"><span itemprop="name">Linux系统管理</span></a></span>
 
                 
                 
@@ -509,201 +509,222 @@
       
 
       
-        <h1 id="vim编辑器"><a href="#vim编辑器" class="headerlink" title="vim编辑器"></a>vim编辑器</h1><p><strong>文本编辑器，文本有纯文本、ASCII text、Unicode</strong><br><strong>文本编辑种类</strong></p>
+        <h1 id="Linux的哲学思想：一切皆文件"><a href="#Linux的哲学思想：一切皆文件" class="headerlink" title="Linux的哲学思想：一切皆文件"></a>Linux的哲学思想：一切皆文件</h1><h2 id="设备类型"><a href="#设备类型" class="headerlink" title="设备类型"></a>设备类型</h2><p><strong>块（block）</strong>：随机访问，数据交换单位是“块”<br><strong>字符（character）</strong>：线性访问，数据交换单位是“字符”</p>
+<h2 id="设备文件：FHS"><a href="#设备文件：FHS" class="headerlink" title="设备文件：FHS"></a>设备文件：FHS</h2><h3 id="dev"><a href="#dev" class="headerlink" title="/dev"></a>/dev</h3><p><strong>设备文件</strong>：关联至设备的驱动程序；设备的访问入口<br><strong>设备号：</strong></p>
 <ul>
-<li>行编辑器：sed</li>
-<li>全屏编辑器：nano，vi，vim</li>
+<li>major：主设备好，区分设备类型，用于标明设备所需要的驱动程序</li>
+<li>minor：次设备号，区分同种类型下的不同的设备；是特定设备的访问入口</li>
 </ul>
-<h2 id="vim"><a href="#vim" class="headerlink" title="vim"></a>vim</h2><p><em>模式化的编辑器</em><br><strong>基本模式</strong>：编辑模式，命令模式，输入模式，末行模式（内置的命令行接口）</p>
-<h3 id="打开文件"><a href="#打开文件" class="headerlink" title="打开文件"></a>打开文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">vim [OPTION]...[FILE...]</span><br><span class="line">+n <span class="comment">#打开文件后，直接让光标处于第n行行首</span></span><br><span class="line">+/PATTERN <span class="comment">#打开文件后，直接让光标处于第一个被PATTERN匹配到的行的行首</span></span><br></pre></td></tr></table></figure>
+<p><strong>mknod命令</strong></p>
+<p><em>make block or character special files</em></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mknod [OPTION]... NAME TYPE [MAJOR MINOR]</span><br><span class="line">-m MODE ：创建后的设备文件的访问权限</span><br></pre></td></tr></table></figure>
 
-<h3 id="模式转换"><a href="#模式转换" class="headerlink" title="模式转换"></a>模式转换</h3><ul>
-<li>编辑模式：默认模式</li>
-</ul>
+<h3 id="设备文件名：ICANN"><a href="#设备文件名：ICANN" class="headerlink" title="设备文件名：ICANN"></a>设备文件名：ICANN</h3><p><strong>磁盘</strong></p>
 <ul>
-<li>编辑模式–&gt;输入模式    <ul>
-<li>i：insert，在光标处输入</li>
-<li>a：append，在光标处后方输入</li>
-<li>o：在光标所在处的下方打开一个新行</li>
-<li>I：在光标所在行的行首输入</li>
-<li>A：在光标所在行的行尾输入</li>
-<li>O：在光标所在处的上方打开一个新行</li>
+<li>IDE：/dev/hd[a-z] 例如：/dev/hda,/dev/hdb</li>
+<li>SCSI,SATA,USB,SAS：/dev/sd[a-z]</li>
+</ul>
+<p><strong>分区</strong>：/dev/sda#<br><em>注意：Centos 6和7统统将硬盘设备文件标识为/dev/sd[a-z]#</em></p>
+<p><strong>引用设备的方式</strong></p>
+<ul>
+<li>设备文件名</li>
+<li>卷标</li>
+<li>UUID</li>
+</ul>
+<h3 id="磁盘分区：MBR，GPT"><a href="#磁盘分区：MBR，GPT" class="headerlink" title="磁盘分区：MBR，GPT"></a>磁盘分区：MBR，GPT</h3><p><strong>MBR</strong>：Master Boot Record<br><strong>分为三部分</strong></p>
+<ul>
+<li>446bytes：bootloader，程序，引导启动操作系统的程序</li>
+<li>64bytes：分区表，每16bytes标识一个分区，一共只能有4个分区<ul>
+<li>4主分区</li>
+<li>3主1扩展，n逻辑分区</li>
 </ul>
 </li>
-<li>输入模式–&gt;编辑模式<ul>
-<li>ESC</li>
+<li>2bytes：MBR区域的有效性标识：55AA为有效<br>主分区和扩展分区标识[1-4]<br>逻辑分区：[5+]</li>
+</ul>
+<h3 id="fdisk命令"><a href="#fdisk命令" class="headerlink" title="fdisk命令"></a>fdisk命令</h3><ol>
+<li><p>查看磁盘的分区信息</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fdisk -l [-u] [device...] ：列出指定磁盘设备上的分区情况</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>管理分区</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fdisk device</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>fdisk提供了一个交互式接口来管理分区，它有许多子命令，分别用于不同的管理功能；所有的操作均在内存中完成，没有直接同步到磁盘；直到使用w命令保存至磁盘上</p>
+<p><strong>常用命令</strong></p>
+<ul>
+<li>n：创建新分区</li>
+<li>d：删除已有分区</li>
+<li>t：修改分区类型</li>
+<li>l：查看所有已知ID</li>
+<li>w：保存并退出</li>
+<li>q：不保存并退出</li>
+<li>m：查看帮助信息</li>
+<li>p：显示现有分区信息</li>
+</ul>
+<p><em>注意：在已经分区并且已经挂载其中某个分区的磁盘设备上创建的新分区，内核可能在创建完成后无法直接识别</em><br><strong>查看系统识别到的分区</strong>：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /proc/partitons</span><br></pre></td></tr></table></figure>
+
+<p><strong>通知内核强制重读磁盘分区表</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">partx -a [device]</span><br><span class="line">kpartx -af [device]</span><br></pre></td></tr></table></figure>
+
+<p><strong>分区创建工具</strong>：parted，sfdisk</p>
+<h2 id="创建文件系统"><a href="#创建文件系统" class="headerlink" title="创建文件系统"></a>创建文件系统</h2><p><strong>格式化</strong>：低级格式化（分区之前进行，划分磁道）、高级格式化（分区之后对分区进行创建文件系统）</p>
+<h3 id="元数据区"><a href="#元数据区" class="headerlink" title="元数据区"></a>元数据区</h3><p><strong>文件元数据inode（index node）</strong>：大小、权限、属主属组、时间戳、数据块指针</p>
+<p><strong>符号链接文件</strong>：存储数据指针的空间当中存储的是真实文件的访问路径；<br><strong>设备文件</strong>：存储数据指针空间当中存储的是设备号（major，minor）<br>bitmap index：位图索引</p>
+<h3 id="VFS：Virtual-File-System"><a href="#VFS：Virtual-File-System" class="headerlink" title="VFS：Virtual File System"></a>VFS：Virtual File System</h3><ul>
+<li>Linux的文件系统：ext2(无日志功能)，ext3，ext4，xfs，reiserfs，btrfs</li>
+<li>光盘：iso9660</li>
+<li>网络文件系统：nfs，cifs</li>
+<li>集群文件系统：gfs2，ocfs2</li>
+<li>内核级分布式文件系统：ceph</li>
+<li>windows的文件系统：vfat，ntfs</li>
+<li>伪文件系统：proc，sysfs，tmpfs，hugepagefs</li>
+<li>Unix的文件系统：UFS，FFS，JFS</li>
+<li>交换文件系统：swap</li>
+<li>用户空间的分布式文件系统：mogilefs，moosefs，glusterfs</li>
+</ul>
+<h3 id="文件系统管理工具"><a href="#文件系统管理工具" class="headerlink" title="文件系统管理工具"></a>文件系统管理工具</h3><ul>
+<li>创建文件系统工具<ul>
+<li>mkfs：mkfs.ext2,mkfs.ext3,mkfs.ext4,mkfs.xfs,mkfs.vfat,…</li>
 </ul>
 </li>
-<li>编辑模式–&gt;末行模式<ul>
-<li>：</li>
+<li>检测及修复文件系统的工具<ul>
+<li>fsck：fsck.ext2,fsck.ext3,…</li>
 </ul>
 </li>
-<li>末行模式–&gt;编辑模式<ul>
-<li>ESC</li>
+<li>查看其属性的工具<ul>
+<li>dumpe2fs,tune2fs</li>
+</ul>
+</li>
+<li>调整文件系统特征<ul>
+<li>tune2fs</li>
 </ul>
 </li>
 </ul>
-<h3 id="关闭文件"><a href="#关闭文件" class="headerlink" title="关闭文件"></a>关闭文件</h3><ul>
-<li>ZZ：保存并退出</li>
-<li>：q 退出</li>
-<li>：q! 强制退出，不保存此前的操作</li>
-<li>：wq 保存并退出</li>
-<li>：x 保存并退出</li>
-<li>：w /PATH/TO/SOMEFILE</li>
-</ul>
-<h3 id="光标跳转"><a href="#光标跳转" class="headerlink" title="光标跳转"></a>光标跳转</h3><p><strong>字符间跳转</strong>：h（向左跳转），l（向右跳转），j（向下跳转），k（向上跳转）</p>
-<p><strong>单词间跳转</strong>：w（下一个单词的词首），e（当前或后一个单词的词尾），b（当前或前一个单词的词首）</p>
-<p><strong>行首行尾跳转</strong></p>
+<h3 id="链接文件：访问同一个文件不同路径"><a href="#链接文件：访问同一个文件不同路径" class="headerlink" title="链接文件：访问同一个文件不同路径"></a>链接文件：访问同一个文件不同路径</h3><ul>
+<li><p>硬链接：指向同一个inode的多个文件路径</p>
 <ul>
-<li>^：跳转至行首的第一个非空白字符</li>
-<li>0：跳转至行首</li>
-<li>$：跳转至行尾</li>
+<li>特性<ol>
+<li>目录不支持硬链接</li>
+<li>硬链接不能跨文件系统</li>
+<li>创建硬链接会增加inode引用计数<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln src link_file</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
 </ul>
-<p><strong>行间跳转</strong></p>
+</li>
+<li><p>符号链接：指向一个文件路径的另一个文件路径</p>
 <ul>
-<li>#G：跳转至由#指定的行</li>
-<li>1G，gg：跳转至第一行</li>
-<li>G：跳转至最后一行</li>
+<li>特性<ol>
+<li>符号链接与文件是两个各自独立的文件，各有自己的inode，对源文件创建符号链接不会增加引用计数</li>
+<li>支持对目录创建符号链接，可以跨文件系统</li>
+<li>删除符号链接不影响源文件，但删除源文件，符号指定的路径即不存在，此时会变成无效链接</li>
+<li>符号链接文件的大小是其指定文件的路径字符串的字节数<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s src link_file</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+</li>
 </ul>
-<p><strong>句间跳转</strong></p>
+</li>
+</ul>
+<h2 id="磁盘和文件系统管理"><a href="#磁盘和文件系统管理" class="headerlink" title="磁盘和文件系统管理"></a>磁盘和文件系统管理</h2><h3 id="内核文件系统的组成部分"><a href="#内核文件系统的组成部分" class="headerlink" title="内核文件系统的组成部分"></a>内核文件系统的组成部分</h3><ul>
+<li>文件系统驱动：由内核提供</li>
+<li>文件系统管理工具：由用户空间的应用程序提供</li>
+</ul>
+<h3 id="ext系列文件系统的管理工具"><a href="#ext系列文件系统的管理工具" class="headerlink" title="ext系列文件系统的管理工具"></a>ext系列文件系统的管理工具</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkfs.ext2,mkfs.ext3,mkfs.ext4</span><br></pre></td></tr></table></figure>
+
+<p>mkfs -t ext2=mkfs.ext2</p>
+<p>ext系列文件系统专用管理工具：mke2fs</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">mke2fs [OPTIONS] device</span><br><span class="line">	-t &#123;ext2|ext3|ext4&#125;：指明要创建的文件系统类型</span><br><span class="line">	mkfs.ext4=mkfs -t ext4=mke2fs -t ext4</span><br><span class="line">	-b &#123;1024|2048|4096&#125;：指明文件系统的块大小</span><br><span class="line">	-L LABEL：指明卷标</span><br><span class="line">	-j ：创建有日志功能的文件系统ext3</span><br><span class="line">	mke2fs -j=mke2fs -t ext3=mkfs -t ext3=mkfs.ext3</span><br><span class="line">	-i N：bytes-per-inode，指明inode与字节的比率；即每多少字节创建一个Inode</span><br><span class="line">	-N N：直接指明要给此文件系统创建的inode的数量</span><br><span class="line">	-m N：指定预留的空间，百分比</span><br><span class="line">	-O [^]FEATURE ：以指定的特性创建目标文件系统</span><br></pre></td></tr></table></figure>
+
+<p>e2label命令：卷标的查看与设定</p>
 <ul>
-<li>)</li>
-<li>(</li>
+<li>查看：e2label device</li>
+<li>设定：e2label device LABEL</li>
 </ul>
-<p><strong>段间跳转</strong></p>
-<ul>
-<li>{</li>
-<li>}</li>
-</ul>
-<h3 id="翻屏"><a href="#翻屏" class="headerlink" title="翻屏"></a>翻屏</h3><ul>
-<li>Ctrl+f：向文件尾部翻一屏</li>
-<li>Ctrl+b：向文件首部翻一屏</li>
-<li>Ctrl+d：向文件尾部翻半屏</li>
-<li>Ctrl+u：向文件首部翻半屏</li>
-<li>Enter：按行向后翻</li>
-</ul>
-<h3 id="vim的编辑命令"><a href="#vim的编辑命令" class="headerlink" title="vim的编辑命令"></a>vim的编辑命令</h3><ul>
-<li>字符编辑<br>  #x：删除光标所在处开始的#个字符<br>  xp：交换光标所在处的字符与其后面字符的位置</li>
-<li>替换命令<br>  r：替换光标所在处的字符<br>  rCHAR</li>
-<li>删除命令<br>  d：删除命令，可结合光标跳转字符，实现范围删除<pre><code>d$
-d^
-dw
-de
-db
-dd：删除光标所在行</code></pre></li>
-<li>粘贴命令<br>  p：缓冲区中的内容如果为整行，则粘贴在当前光标所在行的下方；否则粘贴至当前光标所在处的后方<br>  P：缓冲区中的内容如果为整行，则粘贴在当前光标所在行的上方；否则粘贴至当前光标所在处的前方</li>
-<li>复制命令<br>  y：复制工作行为相似于d命令</li>
-<li>改变命令<br>  c：编辑模式–&gt;输入模式，实现删除操作<br>  用法同d</li>
-<li>可视化模式<br>  v：按字符选定<br>  V：按行选定<br>  结合命令：d，c，y</li>
-<li>撤销(undo)操作<br>  u：撤销此前的操作，默认可撤销最近50次操作，可结合数量</li>
-<li>撤销此前的撤销操作<br>  Ctrl+r</li>
-<li>重复执行前一个编辑操作<br>  .</li>
-</ul>
-<p><em>vim自带教程 ：vimtutor</em></p>
-<h3 id="vim末行模式"><a href="#vim末行模式" class="headerlink" title="vim末行模式"></a>vim末行模式</h3><p><em>内建的命令行接口</em></p>
+<p>tune2fs命令：查看或修改ext系列文件系统的某些属性<br><em>adjust tunable filesystem paramenters on ext2/ext3/ext4 filesystems</em><br>注意：块大小创建后不可修改</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">tune2fs [OPTIONS] device</span><br><span class="line">-l：查看超级块的内容</span><br><span class="line">修改制定文件系统的属性</span><br><span class="line">-j：ext2--&gt;ext3</span><br><span class="line">-L LABEL：修改卷标</span><br><span class="line">-m N ：调整预留空间百分比</span><br><span class="line">-O [^]FEATHER：开启或关闭某种特性</span><br><span class="line">-o [^]mount_options：开启或关闭某种默认挂载选项</span><br><span class="line">	acl</span><br><span class="line">	^acl</span><br></pre></td></tr></table></figure>
+
+<p>dempe2fs命令：显示ext系列文件系统的属性信息</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dumpe2fs [-h] device</span><br></pre></td></tr></table></figure>
+
+<p>用户实现文件系统检测的工具<br><em>因进程意外终止或系统崩溃等原因导致定稿操作非正常终止时，可能会造成文件损坏；此时，应该检测并修复文件系统；建议，离线进行</em></p>
+<p>ext系列文件系统的专用工具</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">e2fsck：check a linux ext2/ext3/ext4 file System</span><br><span class="line">e2fsck [OPTIONS] device</span><br><span class="line">	-y：对所有问题自动回答为yes</span><br><span class="line">	-f：即使文件系统处于clean状态，也要强制进行检测</span><br><span class="line"></span><br><span class="line">fsck： check and repair a linux file system </span><br><span class="line">	-t fstype：指明文件系统类型</span><br><span class="line">		fsck -t ext4=fsck.ext4</span><br><span class="line">	-a：无需交互而自动修复所有错误</span><br><span class="line">	-r：交互式修复</span><br></pre></td></tr></table></figure>
+
+<h3 id="swap文件系统"><a href="#swap文件系统" class="headerlink" title="swap文件系统"></a>swap文件系统</h3><p><em>linux上的交换分区必须使用独立的文件系统，且文件系统的system ID必须为82</em></p>
+<p>创建swap设备</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkswap [OPTIONS] device</span><br><span class="line">	-L LABEL：指明卷标</span><br><span class="line">	-f：强制</span><br></pre></td></tr></table></figure>
+
+<p>fat32(vfat)：linux和windows都支持的文件系统<br>mkfs.vfat device</p>
+<h3 id="文件系统的使用"><a href="#文件系统的使用" class="headerlink" title="文件系统的使用"></a>文件系统的使用</h3><p>挂载：mount<br>卸载：umount<br><em>根文件系统外的其他文件系统要想能够呗访问，都必须通过“关联”至根文件系统上的某个目录来实现，此关联操作即为“挂载”；</em></p>
+<p><strong>挂载点</strong>：mount_point,用于作为另一个文件系统的访问入口</p>
 <ol>
-<li>地址定界<ul>
-<li>start_pos[,end_pos]</li>
-<li>#：特定的第#行，例如5即第五行</li>
-<li>.：当前行</li>
-<li>$：最后一行</li>
-<li>#,#：指定行范围，左侧起始行，右侧结束行</li>
-<li>#,+#：指定行范围，左侧为起始行绝对编号，右侧为相对左侧行号的偏移量，例如：3,+7</li>
-<li>%：全文</li>
-<li>/pattern/：光标所在处开始第一次被模式所匹配到的行</li>
-<li>/pat1/,/pat2/：光标所在处开始第一个被pat1所匹配到的行，到第一个被pat2匹配到的行，中间的内容</li>
-<li>可同编辑命令一同使用，实现编辑操作，d，y，c<ul>
-<li>w /PATH/TO/SOMEFILE：将范围内的文本保存至指定的文件中</li>
-<li>r /PATH/FROM/SOMEFILE：将指定的文件中的文本读取并插入至指定位置</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>查找<ul>
-<li>/PATTERN：从当前光标所在处向文件尾部查找能够被当前模式匹配到的所有字符串</li>
-<li>?PATTERN：从当前光标所在处想文件首部查找能够被当前模式匹配到的所有字符串<ul>
-<li>n：下一个，与命令方向相同</li>
-<li>N：上一个，与命令方向相反</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>查找并替换<ul>
-<li>s：末行模式的命令；使用格式：</li>
-<li>s/要查找的内容/替换为的内容/修饰符<ul>
-<li>要查找的内容：可使用正则表达式</li>
-<li>替换为的内容：不能使用正则表达式，但可以引用</li>
-<li>如果“要查找的内容”部分在模式中使用分组符号：在“替换为的内容”中使用后向引用</li>
-<li>直接引用查找模式匹配到的全部文本，使用&amp;符号</li>
-<li>i：忽略大小写</li>
-<li>g：全局替换</li>
-</ul>
-</li>
-<li>分隔符可以用别的非常用符号：s@@@，s###</li>
-<li>示例<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">%s@\&lt;t\([[:alpha:]]\+\)\&gt;@T\1@g</span><br><span class="line">%s@\&lt;t[[:alpha:]]\+\&gt;@&amp;er@g</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-</li>
+<li>事先存在</li>
+<li>应该使用未被或不会被其他进程使用到的目录</li>
+<li>挂载点下原有的文件将会被隐藏</li>
 </ol>
-<h3 id="vim的多文件功能"><a href="#vim的多文件功能" class="headerlink" title="vim的多文件功能"></a>vim的多文件功能</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">vim FILE1 FILE2 ...</span><br><span class="line"></span><br><span class="line">文件间切换</span><br><span class="line">:next 下一个</span><br><span class="line">:prev 上一个</span><br><span class="line">:first 第一个</span><br><span class="line">:last 最后一个</span><br><span class="line"></span><br><span class="line">退出所有文件</span><br><span class="line">:wqall 保存所有文件并退出</span><br><span class="line">:wall </span><br><span class="line">:qall</span><br></pre></td></tr></table></figure>
+<h3 id="mount命令"><a href="#mount命令" class="headerlink" title="mount命令"></a>mount命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">mount [-fnrsvw] [-t vfstype] [-o options] device dir</span><br><span class="line">命令选项</span><br><span class="line">-r：<span class="built_in">readonly</span>，只读挂载</span><br><span class="line">-w：<span class="built_in">read</span> and write，读写挂载</span><br><span class="line">-n：默认情况下，设备挂载或卸载的操作会同步更新至/etc/mtab文件中； -n 用于禁止次特性</span><br><span class="line">-t vfstype：指明要挂载的设备上的文件系统的类型，多数情况下可省略，此时mount会通过blkid来判断要挂断的设备的文件系统类型</span><br><span class="line">-L LABEL：挂载时以卷标的方式指明设备</span><br><span class="line">mount -L LABEL dir</span><br><span class="line">-u UUID：挂载时以UUID的方式指明设备</span><br><span class="line">mount -U UUID dir</span><br><span class="line">-o options：挂载选项 </span><br><span class="line">	sync/async：同步/异步操作</span><br><span class="line">	atime/noatime：文件或目录在被访问时是否更新其访问时间戳</span><br><span class="line">	diratime/nodiratime：目录在被访问时是否更新其访问时间戳</span><br><span class="line">	remount：重新挂载</span><br><span class="line">	acl：支持使用facl功能</span><br><span class="line">		mount -o acl device dir</span><br><span class="line">		tune2fs -o acl device</span><br><span class="line">	ro：只读 </span><br><span class="line">	rw：读写</span><br><span class="line">	dev/nodev：此设备上是否允许创建设备文件</span><br><span class="line">	<span class="built_in">exec</span>/noexec：是否允许允许此设备上的程序文件</span><br><span class="line">	user/nouser：是否允许普通用户挂载此文件系统</span><br><span class="line">	suid/nosuid：是否允许程序文件上的suid和sgid特殊权限生效</span><br><span class="line">	default：use default options：rw，suid，dev，<span class="built_in">exec</span>，auto，nouser，async，and relatime</span><br></pre></td></tr></table></figure>
 
-<ul>
-<li>多窗口<ul>
-<li>-o：水平分割窗口</li>
-<li>-O：垂直分割窗口</li>
-<li>在窗口间切换：Ctrl+w，ARROW</li>
-<li>单个文件也可以分割为多个窗口进行查看<ul>
-<li>Ctrl+w，s：水平分割窗口</li>
-<li>Ctrl+w，v：垂直分割窗口</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="定制vim的工作特性"><a href="#定制vim的工作特性" class="headerlink" title="定制vim的工作特性"></a>定制vim的工作特性</h3><p><em>在末行模式下的设定，仅对当前vim进程有效</em><br><strong>永久有效：全局 /etc/vimrc；个人用户~/.vimrc</strong></p>
+<p><em>一个使用技巧：可以实现将目录绑定至另一个目录上，作为其临时访问入口</em></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mount --<span class="built_in">bind</span> 源目录 目标目录</span><br></pre></td></tr></table></figure>
+
+<h4 id="查看当前系统所有已挂载的设备"><a href="#查看当前系统所有已挂载的设备" class="headerlink" title="查看当前系统所有已挂载的设备"></a>查看当前系统所有已挂载的设备</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mount</span><br><span class="line">cat /etc/mtab</span><br><span class="line">cat /proc/mounts</span><br></pre></td></tr></table></figure>
+
+<h4 id="挂载光盘"><a href="#挂载光盘" class="headerlink" title="挂载光盘"></a>挂载光盘</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mount -r /dev/cdrom mount_options</span><br></pre></td></tr></table></figure>
+
+<p>光盘设备文件：/dev/cdrom，/dev/dvd</p>
+<h4 id="挂载U盘"><a href="#挂载U盘" class="headerlink" title="挂载U盘"></a>挂载U盘</h4><p>实现识别U盘的设备文件</p>
+<h4 id="挂载本地回环设备"><a href="#挂载本地回环设备" class="headerlink" title="挂载本地回环设备"></a>挂载本地回环设备</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">mount -o loop /PATH/TO/SOME_LOOP_FILE MOUNT_POINT</span><br><span class="line"></span><br><span class="line"><span class="comment">### umount命令</span></span><br><span class="line"></span><br><span class="line">```bash</span><br><span class="line">umount device | dir</span><br></pre></td></tr></table></figure>
+
+<p><em>注意：正在被进程访问到的挂载点无法被卸载</em></p>
+<p><strong>查看被那些进程所占用</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">lsof MOUNT_POINT</span><br><span class="line">fuser -v MOUNT_POINT</span><br><span class="line">终止所有正在访问某挂载点的进程</span><br><span class="line">fuser -km MOUNT_POINT</span><br></pre></td></tr></table></figure>
+
+<h3 id="交换分区的启用和禁用"><a href="#交换分区的启用和禁用" class="headerlink" title="交换分区的启用和禁用"></a>交换分区的启用和禁用</h3><p>创建交换分区的命令：mkswap</p>
+<h4 id="启用swapon"><a href="#启用swapon" class="headerlink" title="启用swapon"></a>启用swapon</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">swapon [OPTION] [DEVICE]</span><br><span class="line">-a :定义在/etc/fstab文件中的所有swap设备</span><br></pre></td></tr></table></figure>
+
+<h4 id="禁用swapoff"><a href="#禁用swapoff" class="headerlink" title="禁用swapoff"></a>禁用swapoff</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">swapoff DEVICE</span><br></pre></td></tr></table></figure>
+
+<h3 id="设定除根文件系统以外的其他文件系统能够开机时自动挂载：-etc-fstab文件"><a href="#设定除根文件系统以外的其他文件系统能够开机时自动挂载：-etc-fstab文件" class="headerlink" title="设定除根文件系统以外的其他文件系统能够开机时自动挂载：/etc/fstab文件"></a>设定除根文件系统以外的其他文件系统能够开机时自动挂载：/etc/fstab文件</h3><p>每行定义一个要挂载的文件系统及相关属性：<br>6个字段</p>
 <ol>
-<li>行号<ul>
-<li>显示：set number，简写为set nu</li>
-<li>取消显示：set nomber，简写set nonu</li>
+<li>要挂载的设备<ul>
+<li>设备文件</li>
+<li>LABEL</li>
+<li>UUID</li>
+<li>伪文件系统：如sysfs，proc，tmpfs</li>
 </ul>
 </li>
-<li>自动缩进<ul>
-<li>启用：set al</li>
-<li>禁用：set noal</li>
+<li>挂载点<ul>
+<li>swap类型的设备挂载点伪swap</li>
 </ul>
 </li>
-<li>高亮搜索<ul>
-<li>启用：set hlsearch</li>
-<li>禁用：set nohlsearch</li>
+<li>文件系统类型</li>
+<li>挂载选项<ul>
+<li>defaults：使用默认挂载选项</li>
+<li>如果要同时指明多个挂载选项，彼此间以逗号隔开；defaults，acl，noatime，noexec</li>
 </ul>
 </li>
-<li>语法高亮<ul>
-<li>启用：syntax on</li>
-<li>禁用：syntax off</li>
+<li>转储频率<ul>
+<li>0：从不备份</li>
+<li>1：每天备份</li>
+<li>2：每隔一天备份</li>
 </ul>
 </li>
-<li>忽略字符大小写<ul>
-<li>启用：set lc</li>
-<li>禁用：set nolc</li>
-</ul>
-</li>
-<li>获取帮助<ul>
-<li>:help</li>
-<li>:help subject</li>
+<li>自检次序<ul>
+<li>0：从不自检</li>
+<li>1：首先自检，通常只能是根文件系统可用1</li>
+<li>2：次级自检</li>
+<li>…</li>
 </ul>
 </li>
 </ol>
-<h3 id="bash脚本编程之算数运算"><a href="#bash脚本编程之算数运算" class="headerlink" title="bash脚本编程之算数运算"></a>bash脚本编程之算数运算</h3><ul>
-<li>算数运算格式<ol>
-<li>let VAR=算数运算表达式</li>
-<li>VAR=$[算数运算表达式]</li>
-<li>VAR=$((算数运算表达式))</li>
-<li>VAR=$(expor $ARG1 $OP $ARG2)</li>
-</ol>
-</li>
-</ul>
-<p><em>注意：乘法符号在有些场景中需要使用转义符</em></p>
+<p><em>mount -a ：可自动挂载定义在此文件中的所支持自动挂载的设备</em></p>
+<h2 id="df和du"><a href="#df和du" class="headerlink" title="df和du"></a>df和du</h2><h3 id="df命令"><a href="#df命令" class="headerlink" title="df命令"></a>df命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">df [OPTION]...[FILE]...</span><br><span class="line">	-l：仅显示本地文件的相关信息</span><br><span class="line">	-h：human-readable</span><br><span class="line">	-i：显示Inode的使用状态而非blocks</span><br></pre></td></tr></table></figure>
+
+<h3 id="du命令"><a href="#du命令" class="headerlink" title="du命令"></a>du命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">du [OPTION]...[FILE]...</span><br><span class="line">	-s：summary</span><br><span class="line">	-h：human-readable</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
@@ -738,8 +759,8 @@ dd：删除光标所在行</code></pre></li>
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/shell脚本/shell脚本基础/" rel="next" title="shell脚本基础">
-                <i class="fa fa-chevron-left"></i> shell脚本基础
+              <a href="/Linux基础/Linux系统特殊权限/" rel="next" title="Linux系统特殊权限">
+                <i class="fa fa-chevron-left"></i> Linux系统特殊权限
               </a>
             
           </div>
@@ -747,10 +768,6 @@ dd：删除光标所在行</code></pre></li>
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/Linux基础/文件查找命令/" rel="prev" title="文件查找命令">
-                文件查找命令 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -936,7 +953,7 @@ dd：删除光标所在行</code></pre></li>
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#vim编辑器"><span class="nav-number">1.</span> <span class="nav-text">vim编辑器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#vim"><span class="nav-number">1.1.</span> <span class="nav-text">vim</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#打开文件"><span class="nav-number">1.1.1.</span> <span class="nav-text">打开文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模式转换"><span class="nav-number">1.1.2.</span> <span class="nav-text">模式转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关闭文件"><span class="nav-number">1.1.3.</span> <span class="nav-text">关闭文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#光标跳转"><span class="nav-number">1.1.4.</span> <span class="nav-text">光标跳转</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#翻屏"><span class="nav-number">1.1.5.</span> <span class="nav-text">翻屏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vim的编辑命令"><span class="nav-number">1.1.6.</span> <span class="nav-text">vim的编辑命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vim末行模式"><span class="nav-number">1.1.7.</span> <span class="nav-text">vim末行模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vim的多文件功能"><span class="nav-number">1.1.8.</span> <span class="nav-text">vim的多文件功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定制vim的工作特性"><span class="nav-number">1.1.9.</span> <span class="nav-text">定制vim的工作特性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bash脚本编程之算数运算"><span class="nav-number">1.1.10.</span> <span class="nav-text">bash脚本编程之算数运算</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Linux的哲学思想：一切皆文件"><span class="nav-number">1.</span> <span class="nav-text">Linux的哲学思想：一切皆文件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#设备类型"><span class="nav-number">1.1.</span> <span class="nav-text">设备类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设备文件：FHS"><span class="nav-number">1.2.</span> <span class="nav-text">设备文件：FHS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#dev"><span class="nav-number">1.2.1.</span> <span class="nav-text">/dev</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设备文件名：ICANN"><span class="nav-number">1.2.2.</span> <span class="nav-text">设备文件名：ICANN</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#磁盘分区：MBR，GPT"><span class="nav-number">1.2.3.</span> <span class="nav-text">磁盘分区：MBR，GPT</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#fdisk命令"><span class="nav-number">1.2.4.</span> <span class="nav-text">fdisk命令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建文件系统"><span class="nav-number">1.3.</span> <span class="nav-text">创建文件系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#元数据区"><span class="nav-number">1.3.1.</span> <span class="nav-text">元数据区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#VFS：Virtual-File-System"><span class="nav-number">1.3.2.</span> <span class="nav-text">VFS：Virtual File System</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文件系统管理工具"><span class="nav-number">1.3.3.</span> <span class="nav-text">文件系统管理工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#链接文件：访问同一个文件不同路径"><span class="nav-number">1.3.4.</span> <span class="nav-text">链接文件：访问同一个文件不同路径</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#磁盘和文件系统管理"><span class="nav-number">1.4.</span> <span class="nav-text">磁盘和文件系统管理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#内核文件系统的组成部分"><span class="nav-number">1.4.1.</span> <span class="nav-text">内核文件系统的组成部分</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ext系列文件系统的管理工具"><span class="nav-number">1.4.2.</span> <span class="nav-text">ext系列文件系统的管理工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#swap文件系统"><span class="nav-number">1.4.3.</span> <span class="nav-text">swap文件系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文件系统的使用"><span class="nav-number">1.4.4.</span> <span class="nav-text">文件系统的使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mount命令"><span class="nav-number">1.4.5.</span> <span class="nav-text">mount命令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#查看当前系统所有已挂载的设备"><span class="nav-number">1.4.5.1.</span> <span class="nav-text">查看当前系统所有已挂载的设备</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#挂载光盘"><span class="nav-number">1.4.5.2.</span> <span class="nav-text">挂载光盘</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#挂载U盘"><span class="nav-number">1.4.5.3.</span> <span class="nav-text">挂载U盘</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#挂载本地回环设备"><span class="nav-number">1.4.5.4.</span> <span class="nav-text">挂载本地回环设备</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#交换分区的启用和禁用"><span class="nav-number">1.4.6.</span> <span class="nav-text">交换分区的启用和禁用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#启用swapon"><span class="nav-number">1.4.6.1.</span> <span class="nav-text">启用swapon</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#禁用swapoff"><span class="nav-number">1.4.6.2.</span> <span class="nav-text">禁用swapoff</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设定除根文件系统以外的其他文件系统能够开机时自动挂载：-etc-fstab文件"><span class="nav-number">1.4.7.</span> <span class="nav-text">设定除根文件系统以外的其他文件系统能够开机时自动挂载：/etc/fstab文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#df和du"><span class="nav-number">1.5.</span> <span class="nav-text">df和du</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#df命令"><span class="nav-number">1.5.1.</span> <span class="nav-text">df命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#du命令"><span class="nav-number">1.5.2.</span> <span class="nav-text">du命令</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -1124,7 +1141,7 @@ dd：删除光标所在行</code></pre></li>
   
     <script>
   window.livereOptions = {
-    refer: 'Linux基础/vim编辑器/'
+    refer: 'Linux系统管理/磁盘的使用及文件系统/'
   };
   (function(d, s) {
     var j, e = d.getElementsByTagName(s)[0];
