@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-06-21T06:04:47.163Z</updated>
+  <updated>2020-06-15T09:35:48.142Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>新电脑看看可以不</title>
+    <link href="http://yoursite.com/uncategorized/%E6%96%B0%E7%94%B5%E8%84%91%E7%9C%8B%E7%9C%8B%E5%8F%AF%E4%BB%A5%E4%B8%8D/"/>
+    <id>http://yoursite.com/uncategorized/新电脑看看可以不/</id>
+    <published>2020-06-15T09:35:48.000Z</published>
+    <updated>2020-06-15T09:35:48.142Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>模板</title>
