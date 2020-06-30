@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-06-21T06:04:47.163Z</updated>
+  <updated>2020-06-30T08:29:38.922Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,89 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux任务计划</title>
+    <link href="http://yoursite.com/uncategorized/Linux%E4%BB%BB%E5%8A%A1%E8%AE%A1%E5%88%92/"/>
+    <id>http://yoursite.com/uncategorized/Linux任务计划/</id>
+    <published>2020-06-30T08:29:38.000Z</published>
+    <updated>2020-06-30T08:29:38.922Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>bash脚本编程之用户交互</title>
+    <link href="http://yoursite.com/Linux%E5%9F%BA%E7%A1%80/bash%E8%84%9A%E6%9C%AC%E7%BC%96%E7%A8%8B%E4%B9%8B%E7%94%A8%E6%88%B7%E4%BA%A4%E4%BA%92/"/>
+    <id>http://yoursite.com/Linux基础/bash脚本编程之用户交互/</id>
+    <published>2020-06-30T08:05:22.000Z</published>
+    <updated>2020-06-30T08:29:43.800Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="bash脚本编程之用户交互"><a href="#bash脚本编程之用户交互" class="headerlink" title="bash脚本编程之用户交互"></a>bash脚本编程之用户交互</h1><h2 id="用户交互-read"><a href="#用户交互-read" class="headerlink" title="用户交互 read"></a>用户交互 read</h2><p><em>用户交互：通过键盘输入数据，从而完成变量赋值操作</em></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">read</span> [OPTION]... [name...]</span><br><span class="line">-p <span class="string">'PROMPT'</span></span><br><span class="line">-t TIMEOUT</span><br></pre></td></tr></table></figure><blockquote><p>bash -n /path/to/some_script</p></blockquote><p>检查脚本中的语法错误</p><blockquote><p>bash -x /path/to/some_script</p></blockquote><p>调试执行</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;bash脚本编程之用户交互&quot;&gt;&lt;a href=&quot;#bash脚本编程之用户交互&quot; class=&quot;headerlink&quot; title=&quot;bash脚本编程之用户交互&quot;&gt;&lt;/a&gt;bash脚本编程之用户交互&lt;/h1&gt;&lt;h2 id=&quot;用户交互-read&quot;&gt;&lt;a href=&quot;#
+      
+    
+    </summary>
+    
+      <category term="Linux基础" scheme="http://yoursite.com/categories/Linux%E5%9F%BA%E7%A1%80/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Linux压缩工具</title>
+    <link href="http://yoursite.com/Linux%E5%9F%BA%E7%A1%80/Linux%E5%8E%8B%E7%BC%A9%E5%B7%A5%E5%85%B7/"/>
+    <id>http://yoursite.com/Linux基础/Linux压缩工具/</id>
+    <published>2020-06-23T06:41:39.000Z</published>
+    <updated>2020-06-30T08:02:32.819Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="压缩和解压缩工具"><a href="#压缩和解压缩工具" class="headerlink" title="压缩和解压缩工具"></a>压缩和解压缩工具</h1><h2 id="压缩比"><a href="#压缩比" class="headerlink" title="压缩比"></a>压缩比</h2><p>目的：时间 换 空间；CPU的时间–&gt;磁盘空间</p><h2 id="压缩工具"><a href="#压缩工具" class="headerlink" title="压缩工具"></a>压缩工具</h2><p>compress/uncompress，.z</p><p>gzip/gunzip，.gz</p><p>bzip2/bunzip2，.bz2</p><p>xz/unxz，.xz</p><p>zip/unzip</p><p>lzma/unlzma，.lzma</p><p>tar，cpio</p><h3 id="gzip-gunzip-zcat"><a href="#gzip-gunzip-zcat" class="headerlink" title="gzip/gunzip/zcat"></a>gzip/gunzip/zcat</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">gzip [OPTION]... FILE..</span><br><span class="line">-d：压缩前，相当于gunzip</span><br><span class="line">-<span class="comment">#：指定压缩比，默认是6；数字越大压缩比越大（1-9）</span></span><br><span class="line">-c：将压缩结果输出至标准输出</span><br><span class="line">gzip -c FILE &gt; /PATH/TO/SOMEFILE.gz</span><br></pre></td></tr></table></figure><h3 id="bzip2-bunzip2-bzact"><a href="#bzip2-bunzip2-bzact" class="headerlink" title="bzip2/bunzip2/bzact"></a>bzip2/bunzip2/bzact</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">bzip2 [OPTION]...FILE...</span><br><span class="line">-d：解压缩</span><br><span class="line">-<span class="comment">#：指定压缩比，默认是6；数字越大压缩比越大（1-9）</span></span><br><span class="line">-k：keep，保留文件</span><br></pre></td></tr></table></figure><h3 id="xz-unxz-xzcat"><a href="#xz-unxz-xzcat" class="headerlink" title="xz/unxz/xzcat"></a>xz/unxz/xzcat</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">xz [OPTION]...FILE...</span><br><span class="line">-d：解压缩</span><br><span class="line">-<span class="comment">#：指定压缩比，默认是6；数字越大压缩比越大（1-9）</span></span><br><span class="line">-k：保留源文件</span><br></pre></td></tr></table></figure><h2 id="归档：tar，cpio"><a href="#归档：tar，cpio" class="headerlink" title="归档：tar，cpio"></a>归档：tar，cpio</h2><h2 id="tar命令"><a href="#tar命令" class="headerlink" title="tar命令"></a>tar命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">tar [OPTION]... FILE...</span><br><span class="line">创建归档 -cf /PATH/TO/SOMEFILE.tar FILE...</span><br><span class="line">展开归档 -xf /PATH/TO/SOMEFILE.tar</span><br><span class="line">查看归档文件的文件列表 -tf /PATH/TO/SOMEFILE.tar</span><br></pre></td></tr></table></figure><p><strong>归档完成后通常需要压缩，结果此前的压缩工具，就能实现压缩多个文件了</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">归档压缩</span><br><span class="line">-z：gzip2</span><br><span class="line">-zcf /PATH/TO/SOMEFILE.tar.gz FILE...</span><br><span class="line">解压缩并展开归档</span><br><span class="line">-zxf /PATH/TO/SOMEFILE.tar.gz</span><br><span class="line">-j：bzip2</span><br><span class="line">-jcf</span><br><span class="line">-jxf</span><br><span class="line">-J：xz</span><br><span class="line">-Jcf</span><br><span class="line">-Jxf</span><br></pre></td></tr></table></figure><h2 id="ZIP"><a href="#ZIP" class="headerlink" title="ZIP"></a>ZIP</h2><p>zip/unzip</p><p>后缀名：.zip</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;压缩和解压缩工具&quot;&gt;&lt;a href=&quot;#压缩和解压缩工具&quot; class=&quot;headerlink&quot; title=&quot;压缩和解压缩工具&quot;&gt;&lt;/a&gt;压缩和解压缩工具&lt;/h1&gt;&lt;h2 id=&quot;压缩比&quot;&gt;&lt;a href=&quot;#压缩比&quot; class=&quot;headerlink&quot; ti
+      
+    
+    </summary>
+    
+      <category term="Linux基础" scheme="http://yoursite.com/categories/Linux%E5%9F%BA%E7%A1%80/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>btrfs文件系统管理</title>
+    <link href="http://yoursite.com/Linux%E5%9F%BA%E7%A1%80/btrfs%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86/"/>
+    <id>http://yoursite.com/Linux基础/btrfs文件系统管理/</id>
+    <published>2020-06-23T01:50:20.000Z</published>
+    <updated>2020-06-23T03:40:49.631Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="btrfs文件系统"><a href="#btrfs文件系统" class="headerlink" title="btrfs文件系统"></a>btrfs文件系统</h1><h2 id="核心特性"><a href="#核心特性" class="headerlink" title="核心特性"></a>核心特性</h2><ul><li>多物理卷支持：btrfs可由多个底层物理卷组成；支持RAID，以联机“添加”、“移除”、“修改”；</li><li>写时复制更新机制（CoW）：复制、更新、及替换指针，而非“就地”更新</li><li>自卷：sub_volume</li><li>快照：支持快照的快照</li><li>透明压缩</li></ul><h2 id="文件系统创建"><a href="#文件系统创建" class="headerlink" title="文件系统创建"></a>文件系统创建</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">mkfs.btrfs</span><br><span class="line">-L <span class="string">'LABEL'</span></span><br><span class="line">-d &lt;<span class="built_in">type</span>&gt;：raid0,raid1,raid5,raid6,raid10,single</span><br><span class="line">-m &lt;profile&gt;：raid0,raid1,raid5,raid6,raid10,single，dup</span><br><span class="line">-O &lt;feature&gt;</span><br><span class="line">-O list-all：列出支持的所有feature</span><br><span class="line">属性查看：</span><br><span class="line">btrfs filesystem show</span><br><span class="line">挂载文件系统：</span><br><span class="line">mount -t btrfs /dev/sdb MOUNT_POINT</span><br><span class="line">透明压缩机制：</span><br><span class="line">mount -o compress=&#123;lzo|zlib&#125; DEVICE_POINT</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;btrfs文件系统&quot;&gt;&lt;a href=&quot;#btrfs文件系统&quot; class=&quot;headerlink&quot; title=&quot;btrfs文件系统&quot;&gt;&lt;/a&gt;btrfs文件系统&lt;/h1&gt;&lt;h2 id=&quot;核心特性&quot;&gt;&lt;a href=&quot;#核心特性&quot; class=&quot;headerli
+      
+    
+    </summary>
+    
+      <category term="Linux基础" scheme="http://yoursite.com/categories/Linux%E5%9F%BA%E7%A1%80/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>模板</title>
@@ -40,14 +123,24 @@
   
   <entry>
     <title>LVM2</title>
-    <link href="http://yoursite.com/uncategorized/LVM2/"/>
-    <id>http://yoursite.com/uncategorized/LVM2/</id>
+    <link href="http://yoursite.com/Linux%E5%9F%BA%E7%A1%80/LVM2/"/>
+    <id>http://yoursite.com/Linux基础/LVM2/</id>
     <published>2020-06-12T03:01:56.000Z</published>
-    <updated>2020-06-12T03:01:56.848Z</updated>
+    <updated>2020-06-23T01:50:44.049Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="LVM2"><a href="#LVM2" class="headerlink" title="LVM2"></a>LVM2</h1><p><em>LVM:logical Volume Manager,Version:2</em></p><p>dm:device mapper,将一个或多个底层块设备组织成一个逻辑设备的模块</p><p>/dev/dm-#</p><p>/dev/mapper/VG_NAME-LV_NAME</p><p>​    /dev/mapper/vo10-root</p><p>/dev/VG_NAME/LV_NAME</p><p>​    /dev/vo10/root</p><h2 id="pv管理工具"><a href="#pv管理工具" class="headerlink" title="pv管理工具"></a>pv管理工具</h2><ul><li><p>pvs：简要pv信息显示</p></li><li><p>pvdisplay：显示pv的详细信息</p></li><li><p>pvcreate：/dev/DEVICE：创建pv</p></li><li><p>pvremove</p></li></ul><h2 id="vg管理工具"><a href="#vg管理工具" class="headerlink" title="vg管理工具"></a>vg管理工具</h2><ul><li>vgs</li><li>vgdisplay</li><li>vgcreat</li><li>vgextend</li><li>vgreduce</li><li>vgremove<ul><li>先做pvmove</li></ul></li></ul><h2 id="lv管理工具"><a href="#lv管理工具" class="headerlink" title="lv管理工具"></a>lv管理工具</h2><ul><li><p>lvs</p></li><li><p>lvdisplay</p></li><li><p>lvcreate -L #[大小mMgGtT] -n NAME VolumeGroup</p></li><li><p>lvremove</p></li></ul><h2 id="扩展逻辑卷"><a href="#扩展逻辑卷" class="headerlink" title="扩展逻辑卷"></a>扩展逻辑卷</h2><ul><li>lvextend -L [+]#[mMgGtT] /dev/VG_NAME/LV_NAME</li><li>resize2fs /dev/VG_NAME/LV_NAME</li></ul><h2 id="缩减逻辑卷"><a href="#缩减逻辑卷" class="headerlink" title="缩减逻辑卷"></a>缩减逻辑卷</h2><ul><li>umount /dev/VG_NAME/LV_NAME</li><li>e2fsck -f /dev/VG_NAME/LV_NAME</li><li>resize2fs /dev/VG_NAME/LV_NAME</li><li>lvreduce -L [-]#[mMgGtT] /dev/VG_NAME/LV_NAME</li><li>mount</li></ul><h2 id="快照：snapshot"><a href="#快照：snapshot" class="headerlink" title="快照：snapshot"></a>快照：snapshot</h2><p>lvcreat -L #[mMgGtT] -p r -s snapshot_lv_name original_lv_name</p><h1 id="文件系统挂载使用"><a href="#文件系统挂载使用" class="headerlink" title="文件系统挂载使用"></a>文件系统挂载使用</h1><h2 id="挂载光盘设备："><a href="#挂载光盘设备：" class="headerlink" title="挂载光盘设备："></a>挂载光盘设备：</h2><ul><li>光盘设备文件<ul><li>IDE：/dev/hdc</li><li>SATA：/dev/sr0</li><li>符号链接文件<ul><li>/dev/cdrom</li><li>/dev/cdrw</li><li>/dev/dvd</li><li>/dev/dvdrw</li></ul></li></ul></li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mount -r /dev/cdrom /media/cdrom</span><br><span class="line">umount /dev/cdrom</span><br></pre></td></tr></table></figure><h2 id="dd命令"><a href="#dd命令" class="headerlink" title="dd命令"></a>dd命令</h2><p><em>convent and copy a file</em></p><p>用法：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dd <span class="keyword">if</span>=/PATH/FROM/SRC of=/PATH/TO/DEST</span><br><span class="line">bs=<span class="comment">#：block size ，复制单元大小</span></span><br><span class="line">count=<span class="comment">#：复制多少个bs</span></span><br></pre></td></tr></table></figure><p>磁盘拷贝：</p><blockquote><p>dd if=/dev/sda of=/dev/sdb</p></blockquote><p>备份MBR</p><blockquote><p>dd if=/dev/sda of=/tmp/mbr.bak bs=256 count=1</p></blockquote><p>破坏MBR中的bootloader：</p><blockquote><p>dd if=/dev/zero of=/dev/sda bs=256 count=1</p></blockquote><p>两个特殊设备：</p><p>/dev/null：数据黑洞</p><p>/dev/zero：吐零机</p>]]></content>
     
     <summary type="html">
     
+      
+      
+        &lt;h1 id=&quot;LVM2&quot;&gt;&lt;a href=&quot;#LVM2&quot; class=&quot;headerlink&quot; title=&quot;LVM2&quot;&gt;&lt;/a&gt;LVM2&lt;/h1&gt;&lt;p&gt;&lt;em&gt;LVM:logical Volume Manager,Version:2&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;dm:device
+      
+    
     </summary>
+    
+      <category term="Linux基础" scheme="http://yoursite.com/categories/Linux%E5%9F%BA%E7%A1%80/"/>
     
     
   </entry>

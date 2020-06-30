@@ -1,14 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Linux任务计划]]></title>
+    <url>%2Funcategorized%2FLinux%E4%BB%BB%E5%8A%A1%E8%AE%A1%E5%88%92%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[bash脚本编程之用户交互]]></title>
+    <url>%2FLinux%E5%9F%BA%E7%A1%80%2Fbash%E8%84%9A%E6%9C%AC%E7%BC%96%E7%A8%8B%E4%B9%8B%E7%94%A8%E6%88%B7%E4%BA%A4%E4%BA%92%2F</url>
+    <content type="text"><![CDATA[bash脚本编程之用户交互用户交互 read用户交互：通过键盘输入数据，从而完成变量赋值操作 123read [OPTION]... [name...]-p 'PROMPT'-t TIMEOUT bash -n /path/to/some_script 检查脚本中的语法错误 bash -x /path/to/some_script 调试执行]]></content>
+      <categories>
+        <category>Linux基础</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[Linux压缩工具]]></title>
+    <url>%2FLinux%E5%9F%BA%E7%A1%80%2FLinux%E5%8E%8B%E7%BC%A9%E5%B7%A5%E5%85%B7%2F</url>
+    <content type="text"><![CDATA[压缩和解压缩工具压缩比目的：时间 换 空间；CPU的时间–&gt;磁盘空间 压缩工具compress/uncompress，.z gzip/gunzip，.gz bzip2/bunzip2，.bz2 xz/unxz，.xz zip/unzip lzma/unlzma，.lzma tar，cpio gzip/gunzip/zcat12345gzip [OPTION]... FILE..-d：压缩前，相当于gunzip-#：指定压缩比，默认是6；数字越大压缩比越大（1-9）-c：将压缩结果输出至标准输出gzip -c FILE &gt; /PATH/TO/SOMEFILE.gz bzip2/bunzip2/bzact1234bzip2 [OPTION]...FILE...-d：解压缩-#：指定压缩比，默认是6；数字越大压缩比越大（1-9）-k：keep，保留文件 xz/unxz/xzcat1234xz [OPTION]...FILE...-d：解压缩-#：指定压缩比，默认是6；数字越大压缩比越大（1-9）-k：保留源文件 归档：tar，cpiotar命令1234tar [OPTION]... FILE...创建归档 -cf /PATH/TO/SOMEFILE.tar FILE...展开归档 -xf /PATH/TO/SOMEFILE.tar查看归档文件的文件列表 -tf /PATH/TO/SOMEFILE.tar 归档完成后通常需要压缩，结果此前的压缩工具，就能实现压缩多个文件了 1234567891011归档压缩-z：gzip2-zcf /PATH/TO/SOMEFILE.tar.gz FILE...解压缩并展开归档-zxf /PATH/TO/SOMEFILE.tar.gz-j：bzip2 -jcf -jxf-J：xz -Jcf -Jxf ZIPzip/unzip 后缀名：.zip]]></content>
+      <categories>
+        <category>Linux基础</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[btrfs文件系统管理]]></title>
+    <url>%2FLinux%E5%9F%BA%E7%A1%80%2Fbtrfs%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86%2F</url>
+    <content type="text"><![CDATA[btrfs文件系统核心特性 多物理卷支持：btrfs可由多个底层物理卷组成；支持RAID，以联机“添加”、“移除”、“修改”； 写时复制更新机制（CoW）：复制、更新、及替换指针，而非“就地”更新 自卷：sub_volume 快照：支持快照的快照 透明压缩 文件系统创建123456789101112mkfs.btrfs-L 'LABEL'-d &lt;type&gt;：raid0,raid1,raid5,raid6,raid10,single-m &lt;profile&gt;：raid0,raid1,raid5,raid6,raid10,single，dup-O &lt;feature&gt; -O list-all：列出支持的所有feature属性查看：btrfs filesystem show挂载文件系统：mount -t btrfs /dev/sdb MOUNT_POINT透明压缩机制：mount -o compress=&#123;lzo|zlib&#125; DEVICE_POINT]]></content>
+      <categories>
+        <category>Linux基础</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[模板]]></title>
     <url>%2Funcategorized%2Fhello-world%2F</url>
     <content type="text"><![CDATA[持续更新中。。。 标题一标题二标题三标题四标题五标题六1这是一个bash 外链: Writing 斜体粗体加粗斜体删除线 文字引用 行内代码 ​123多行代码多行代码​ $$数学公式$$ 分割线方法一：— 方法二：+++ 方法三：*** 列表 有序列表项 无序列表项 无序列表项 无序列表项 表格表头1|表头2-|-|-内容11|内容12内容21|内容22 图片]]></content>
   </entry>
   <entry>
     <title><![CDATA[LVM2]]></title>
-    <url>%2Funcategorized%2FLVM2%2F</url>
-    <content type="text"></content>
+    <url>%2FLinux%E5%9F%BA%E7%A1%80%2FLVM2%2F</url>
+    <content type="text"><![CDATA[LVM2LVM:logical Volume Manager,Version:2 dm:device mapper,将一个或多个底层块设备组织成一个逻辑设备的模块 /dev/dm-# /dev/mapper/VG_NAME-LV_NAME ​ /dev/mapper/vo10-root /dev/VG_NAME/LV_NAME ​ /dev/vo10/root pv管理工具 pvs：简要pv信息显示 pvdisplay：显示pv的详细信息 pvcreate：/dev/DEVICE：创建pv pvremove vg管理工具 vgs vgdisplay vgcreat vgextend vgreduce vgremove 先做pvmove lv管理工具 lvs lvdisplay lvcreate -L #[大小mMgGtT] -n NAME VolumeGroup lvremove 扩展逻辑卷 lvextend -L [+]#[mMgGtT] /dev/VG_NAME/LV_NAME resize2fs /dev/VG_NAME/LV_NAME 缩减逻辑卷 umount /dev/VG_NAME/LV_NAME e2fsck -f /dev/VG_NAME/LV_NAME resize2fs /dev/VG_NAME/LV_NAME lvreduce -L [-]#[mMgGtT] /dev/VG_NAME/LV_NAME mount 快照：snapshotlvcreat -L #[mMgGtT] -p r -s snapshot_lv_name original_lv_name 文件系统挂载使用挂载光盘设备： 光盘设备文件 IDE：/dev/hdc SATA：/dev/sr0 符号链接文件 /dev/cdrom /dev/cdrw /dev/dvd /dev/dvdrw 12mount -r /dev/cdrom /media/cdromumount /dev/cdrom dd命令convent and copy a file 用法： 123dd if=/PATH/FROM/SRC of=/PATH/TO/DESTbs=#：block size ，复制单元大小count=#：复制多少个bs 磁盘拷贝： dd if=/dev/sda of=/dev/sdb 备份MBR dd if=/dev/sda of=/tmp/mbr.bak bs=256 count=1 破坏MBR中的bootloader： dd if=/dev/zero of=/dev/sda bs=256 count=1 两个特殊设备： /dev/null：数据黑洞 /dev/zero：吐零机]]></content>
+      <categories>
+        <category>Linux基础</category>
+      </categories>
   </entry>
   <entry>
     <title><![CDATA[RAID]]></title>
