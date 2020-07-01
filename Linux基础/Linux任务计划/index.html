@@ -100,17 +100,17 @@
 
 
 
-  <meta name="description" content="CLX的个人站点，主要涉及Linux、K8S、docker等技术方面的学习">
+  <meta name="description" content="Linux任务计划、周期性执未来的某时间点执行一次某任务：at batch 周期性运行某任务crontab ​    执行结果会通过邮件发送给用户  netstat -tnlp 检查本地邮件服务是否开启  本地电子邮件服务smtp：simple mail transmission protocol pop3：post office protocol imap4：Internet Mail Acce">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux任务计划">
-<meta property="og:url" content="http://yoursite.com/uncategorized/Linux任务计划/index.html">
+<meta property="og:url" content="http://yoursite.com/Linux基础/Linux任务计划/index.html">
 <meta property="og:site_name" content="啊雷雷&amp;啊玉玉">
-<meta property="og:description" content="CLX的个人站点，主要涉及Linux、K8S、docker等技术方面的学习">
+<meta property="og:description" content="Linux任务计划、周期性执未来的某时间点执行一次某任务：at batch 周期性运行某任务crontab ​    执行结果会通过邮件发送给用户  netstat -tnlp 检查本地邮件服务是否开启  本地电子邮件服务smtp：simple mail transmission protocol pop3：post office protocol imap4：Internet Mail Acce">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-06-30T08:29:38.922Z">
+<meta property="og:updated_time" content="2020-07-01T07:22:22.283Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux任务计划">
-<meta name="twitter:description" content="CLX的个人站点，主要涉及Linux、K8S、docker等技术方面的学习">
+<meta name="twitter:description" content="Linux任务计划、周期性执未来的某时间点执行一次某任务：at batch 周期性运行某任务crontab ​    执行结果会通过邮件发送给用户  netstat -tnlp 检查本地邮件服务是否开启  本地电子邮件服务smtp：simple mail transmission protocol pop3：post office protocol imap4：Internet Mail Acce">
 
 
 
@@ -120,7 +120,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/uncategorized/Linux任务计划/">
+  <link rel="canonical" href="http://yoursite.com/Linux基础/Linux任务计划/">
 
 
 
@@ -389,7 +389,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/uncategorized/Linux任务计划/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Linux基础/Linux任务计划/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CLX">
@@ -437,8 +437,42 @@
             
 
             
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-07-01 15:22:22" itemprop="dateModified" datetime="2020-07-01T15:22:22+08:00">2020-07-01</time>
+              
+            
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Linux基础/" itemprop="url" rel="index"><span itemprop="name">Linux基础</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -475,7 +509,80 @@
       
 
       
-        
+        <h1 id="Linux任务计划、周期性执"><a href="#Linux任务计划、周期性执" class="headerlink" title="Linux任务计划、周期性执"></a>Linux任务计划、周期性执</h1><p>未来的某时间点执行一次某任务：at batch</p>
+<p>周期性运行某任务crontab</p>
+<p>​    执行结果会通过邮件发送给用户</p>
+<blockquote>
+<p>netstat -tnlp 检查本地邮件服务是否开启</p>
+</blockquote>
+<h2 id="本地电子邮件服务"><a href="#本地电子邮件服务" class="headerlink" title="本地电子邮件服务"></a>本地电子邮件服务</h2><p>smtp：simple mail transmission protocol</p>
+<p>pop3：post office protocol</p>
+<p>imap4：Internet Mail Access Protocol</p>
+<h3 id="mail命令"><a href="#mail命令" class="headerlink" title="mail命令"></a>mail命令</h3><p><em>mailx - send and receive Internet mail</em></p>
+<p><strong>MUA：Mail User Agent，用户收发邮件的工具程序</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mailx [-s <span class="string">'SUBJECT'</span>] username[@hostname]</span><br><span class="line">邮件正文的生成：</span><br><span class="line">1.交互式输入：‘.’单独成行可以表示正文结束；Ctrl+d提交亦可</span><br><span class="line">2.通过输入重定向</span><br><span class="line">3.通过管道</span><br></pre></td></tr></table></figure>
+
+<h3 id="at命令"><a href="#at命令" class="headerlink" title="at命令"></a>at命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">at [OPTION]... TIME</span><br><span class="line">TIME的表示方式 HH:MM [YYYY-mm-dd]</span><br><span class="line">			 noon，midnight，teatime，tomorrow</span><br><span class="line">			 now+(minutes,hours,days,days,weeks)</span><br><span class="line">at的作业有队列，用单个字母表示，默认都使用a队列</span><br><span class="line">常用选项</span><br><span class="line">-l：查看作业队列，相当于atq</span><br><span class="line">-f /PATH/FROM/SOMEFILE：从指定文件中读取作业任务，而不用再交互式输入</span><br><span class="line">-d：删除指定的作业，相当于atrm</span><br><span class="line">-c：查看指定作业的具体内容</span><br><span class="line">-q QUEUE：指明队列</span><br></pre></td></tr></table></figure>
+
+<p><em>注意：作业执行结果是以邮件发送给提交作业的用户</em></p>
+<h3 id="batch命令"><a href="#batch命令" class="headerlink" title="batch命令"></a>batch命令</h3><blockquote>
+<p>batch会让系统自行选择再系统资源较空闲的时间去执行指定的任务</p>
+</blockquote>
+<h2 id="周期性任务计划：cron"><a href="#周期性任务计划：cron" class="headerlink" title="周期性任务计划：cron"></a>周期性任务计划：cron</h2><h3 id="服务程序"><a href="#服务程序" class="headerlink" title="服务程序"></a>服务程序</h3><p>cronle：主程序包，提供了crond守护进程及相关辅助工具</p>
+<p>确保crond守护进程（daemon）</p>
+<blockquote>
+<p>systemctl status crond.service</p>
+<p>​    Active:active (running) … …</p>
+</blockquote>
+<p><em>向crond提交作业的方式不同于at，它需要使用专用的配置文件，此文件有固定格式，不建议使用文本编辑器直接编辑此文件；要使用crontab命令</em></p>
+<h3 id="cron任务分为两类"><a href="#cron任务分为两类" class="headerlink" title="cron任务分为两类"></a>cron任务分为两类</h3><ul>
+<li><p>系统cron任务：主要用于实现系统自身的维护</p>
+<ul>
+<li>手动编辑：/etc/crontab文件</li>
+</ul>
+</li>
+<li><p>用户cron任务</p>
+<ul>
+<li>命令：crontab命令</li>
+</ul>
+</li>
+</ul>
+<h3 id="系统cron的配置格式"><a href="#系统cron的配置格式" class="headerlink" title="系统cron的配置格式"></a>系统cron的配置格式</h3><p>/etc/crontab</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">SHELL=/bin/bash</span><br><span class="line">PATH=/sbin:/bin:/usr/sbin:/usr/bin</span><br><span class="line">MAILTO=root</span><br><span class="line"></span><br><span class="line"><span class="comment"># For details see man 4 crontabs</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Example of job definition:</span></span><br><span class="line"><span class="comment"># .---------------- minute (0 - 59)</span></span><br><span class="line"><span class="comment"># |  .------------- hour (0 - 23)</span></span><br><span class="line"><span class="comment"># |  |  .---------- day of month (1 - 31)</span></span><br><span class="line"><span class="comment"># |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...</span></span><br><span class="line"><span class="comment"># |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat</span></span><br><span class="line"><span class="comment"># |  |  |  |  |</span></span><br><span class="line"><span class="comment"># *  *  *  *  * user-name  command to be executed</span></span><br><span class="line">1.每一行定义一个周期性任务，共7个字段</span><br><span class="line">	*  *  *  *  *：定义周期性时间</span><br><span class="line">	user-name：运行任务的用户身份</span><br><span class="line">	<span class="built_in">command</span> to be executed：任务</span><br><span class="line">2.此处的环境变量不同于用户登录后获得的环境，因此，建议命令使用绝对路径，或者自定义PATH环境变量</span><br><span class="line">3.执行结果邮件发送给MAILTO指定用户</span><br></pre></td></tr></table></figure>
+
+<h3 id="用户cron的配置格式"><a href="#用户cron的配置格式" class="headerlink" title="用户cron的配置格式"></a>用户cron的配置格式</h3><p>/var/spool/cron/USERNAME</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">SHELL=/bin/bash</span><br><span class="line">PATH=/sbin:/bin:/usr/sbin:/usr/bin</span><br><span class="line">MAILTO=root</span><br><span class="line"></span><br><span class="line"><span class="comment"># For details see man 4 crontabs</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Example of job definition:</span></span><br><span class="line"><span class="comment"># .---------------- minute (0 - 59)</span></span><br><span class="line"><span class="comment"># |  .------------- hour (0 - 23)</span></span><br><span class="line"><span class="comment"># |  |  .---------- day of month (1 - 31)</span></span><br><span class="line"><span class="comment"># |  |  |  .------- month (1 - 12) OR jan,feb,mar,apr ...</span></span><br><span class="line"><span class="comment"># |  |  |  |  .---- day of week (0 - 6) (Sunday=0 or 7) OR sun,mon,tue,wed,thu,fri,sat</span></span><br><span class="line"><span class="comment"># |  |  |  |  |</span></span><br><span class="line"><span class="comment"># *  *  *  *  *  command to be executed</span></span><br><span class="line">1.每行定义一个cron任务，共6个字段</span><br><span class="line">2.此处的环境变量不同于用户登录后获得的环境，因此，建议命令使用绝对路径，或者自定义PATH环境变量</span><br><span class="line">3.邮件发送给当前用户</span><br></pre></td></tr></table></figure>
+
+<p>时间表示法：</p>
+<ol>
+<li>特定值：给定时间点有效取值范围内的值（ps：day of week和day of mounth一般不同时使用）</li>
+<li>*：给定时间点上有效取值范围内的所有值，表示“每..”</li>
+<li>离散取值：再时间点上使用逗号分隔的多个值 #,#,#</li>
+<li>连续取值：在时间点上使用“-”连接开头和结束 #-#</li>
+<li>在指定时间点上，定义步长，/#，#表示步长</li>
+<li>指定的时间点不能被步长整除时，其意义将不复存在</li>
+<li>最小时间单位为“分钟”，想完成“秒”级任务，需要额外借助于其他机制，定义成每分钟任务，利用脚本实现在每分钟之内，循环执行多次</li>
+</ol>
+<p>示例：</p>
+<ol>
+<li>3 * * * *：每小时第3分钟执行一次</li>
+<li>3 4 * * 5：每周五4点3分执行一次</li>
+<li>5 6 7 * *：每月7号6点5分执行一次</li>
+<li>7 8 9 10 *：每年10月9号8点7分执行一次</li>
+<li>9 8 * * 3,7：每周三和周日8点9分各执行一次</li>
+<li>0 8,20 * * 3,7：每周三和周日的早八点和晚八点各执行一次</li>
+<li>0 9-18 * * 1-5：周一到周五每天9点到18点每小时都执行一次</li>
+<li>*/5 * * * *：每5分钟执行一次</li>
+</ol>
+<h3 id="crontab命令"><a href="#crontab命令" class="headerlink" title="crontab命令"></a>crontab命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">crontab [-u user] [-l|-r|-e] [-i] [-s]</span><br><span class="line">-e：编辑任务</span><br><span class="line">-l：列出所有任务</span><br><span class="line">-r：移除所有任务，即删除/var/spool/cron/USERNAME文件</span><br><span class="line">-i：在使用-r选项移除所有任务时提示用户确认</span><br><span class="line">-u user：root用户可为指定用户管理cron任务</span><br></pre></td></tr></table></figure>
+
+<p>运行结果以邮件通知给当前用户，如果用户拒绝接收邮件</p>
+<blockquote>
+<p>COMMAND &gt; /dev/null</p>
+<p>COMMAND &amp;&gt; /dev/null</p>
+</blockquote>
+<p>定义COMMAND时，如果命令需要用到%，需要对其转义；放置于单引号中的%不用转义</p>
+
       
     </div>
 
@@ -566,8 +673,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -683,6 +799,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Linux任务计划、周期性执"><span class="nav-number">1.</span> <span class="nav-text">Linux任务计划、周期性执</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#本地电子邮件服务"><span class="nav-number">1.1.</span> <span class="nav-text">本地电子邮件服务</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#mail命令"><span class="nav-number">1.1.1.</span> <span class="nav-text">mail命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#at命令"><span class="nav-number">1.1.2.</span> <span class="nav-text">at命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#batch命令"><span class="nav-number">1.1.3.</span> <span class="nav-text">batch命令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#周期性任务计划：cron"><span class="nav-number">1.2.</span> <span class="nav-text">周期性任务计划：cron</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#服务程序"><span class="nav-number">1.2.1.</span> <span class="nav-text">服务程序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cron任务分为两类"><span class="nav-number">1.2.2.</span> <span class="nav-text">cron任务分为两类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#系统cron的配置格式"><span class="nav-number">1.2.3.</span> <span class="nav-text">系统cron的配置格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用户cron的配置格式"><span class="nav-number">1.2.4.</span> <span class="nav-text">用户cron的配置格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#crontab命令"><span class="nav-number">1.2.5.</span> <span class="nav-text">crontab命令</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -865,7 +998,7 @@
   
     <script>
   window.livereOptions = {
-    refer: 'uncategorized/Linux任务计划/'
+    refer: 'Linux基础/Linux任务计划/'
   };
   (function(d, s) {
     var j, e = d.getElementsByTagName(s)[0];
