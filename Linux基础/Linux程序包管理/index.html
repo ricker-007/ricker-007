@@ -100,17 +100,17 @@
 
 
 
-  <meta name="description" content="/etc/passwd：用户的信息库 name:passwd:UID:GID:GECOS:directory:shellname：用户名password：可以是加密的密码，也可是占位符xUID：GID：用户所属的主组的ID号GECOS：注释信息directory：用户的家目录shell：用户的默认shell，登录时默认shell程序  /etc/shadow：用户密码 用户名：加密的密码：最近一次">
+  <meta name="description" content="Linux程序包管理API：Application Program Interface ABI：Application Binary Interface 程序包管理器源代码–&amp;gt;目标二进制格式–&amp;gt;组织成为一个或有限几个“包“文件 安装、升级、卸载、查询、校验 程序包管理器debian：dpt，dpkg，”.deb“ redhat：redhat package manager（rpm），”">
 <meta property="og:type" content="article">
-<meta property="og:title" content="用户、组和权限管理">
-<meta property="og:url" content="http://yoursite.com/Linux基础/用户、组和权限管理/index.html">
+<meta property="og:title" content="Linux程序包管理">
+<meta property="og:url" content="http://yoursite.com/Linux基础/Linux程序包管理/index.html">
 <meta property="og:site_name" content="啊雷雷&amp;啊玉玉">
-<meta property="og:description" content="/etc/passwd：用户的信息库 name:passwd:UID:GID:GECOS:directory:shellname：用户名password：可以是加密的密码，也可是占位符xUID：GID：用户所属的主组的ID号GECOS：注释信息directory：用户的家目录shell：用户的默认shell，登录时默认shell程序  /etc/shadow：用户密码 用户名：加密的密码：最近一次">
+<meta property="og:description" content="Linux程序包管理API：Application Program Interface ABI：Application Binary Interface 程序包管理器源代码–&amp;gt;目标二进制格式–&amp;gt;组织成为一个或有限几个“包“文件 安装、升级、卸载、查询、校验 程序包管理器debian：dpt，dpkg，”.deb“ redhat：redhat package manager（rpm），”">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-18T02:33:31.658Z">
+<meta property="og:updated_time" content="2020-07-02T07:32:38.847Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="用户、组和权限管理">
-<meta name="twitter:description" content="/etc/passwd：用户的信息库 name:passwd:UID:GID:GECOS:directory:shellname：用户名password：可以是加密的密码，也可是占位符xUID：GID：用户所属的主组的ID号GECOS：注释信息directory：用户的家目录shell：用户的默认shell，登录时默认shell程序  /etc/shadow：用户密码 用户名：加密的密码：最近一次">
+<meta name="twitter:title" content="Linux程序包管理">
+<meta name="twitter:description" content="Linux程序包管理API：Application Program Interface ABI：Application Binary Interface 程序包管理器源代码–&amp;gt;目标二进制格式–&amp;gt;组织成为一个或有限几个“包“文件 安装、升级、卸载、查询、校验 程序包管理器debian：dpt，dpkg，”.deb“ redhat：redhat package manager（rpm），”">
 
 
 
@@ -120,7 +120,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/Linux基础/用户、组和权限管理/">
+  <link rel="canonical" href="http://yoursite.com/Linux基础/Linux程序包管理/">
 
 
 
@@ -130,7 +130,7 @@
   };
 </script>
 
-  <title>用户、组和权限管理 | 啊雷雷&啊玉玉</title>
+  <title>Linux程序包管理 | 啊雷雷&啊玉玉</title>
   
 
 
@@ -389,7 +389,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Linux基础/用户、组和权限管理/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Linux基础/Linux程序包管理/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CLX">
@@ -406,7 +406,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">用户、组和权限管理
+          <h1 class="post-title" itemprop="name headline">Linux程序包管理
 
               
             
@@ -433,7 +433,7 @@
                 
               
 
-              <time title="创建时间：2019-06-25 15:17:10" itemprop="dateCreated datePublished" datetime="2019-06-25T15:17:10+08:00">2019-06-25</time>
+              <time title="创建时间：2020-07-01 15:25:59" itemprop="dateCreated datePublished" datetime="2020-07-01T15:25:59+08:00">2020-07-01</time>
             
 
             
@@ -450,7 +450,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-09-18 10:33:31" itemprop="dateModified" datetime="2019-09-18T10:33:31+08:00">2019-09-18</time>
+                <time title="修改时间：2020-07-02 15:32:38" itemprop="dateModified" datetime="2020-07-02T15:32:38+08:00">2020-07-02</time>
               
             
           </span>
@@ -509,102 +509,52 @@
       
 
       
-        <h3 id="etc-passwd：用户的信息库"><a href="#etc-passwd：用户的信息库" class="headerlink" title="/etc/passwd：用户的信息库"></a>/etc/passwd：用户的信息库</h3><blockquote>
-<p>name:passwd:UID:GID:GECOS:directory:shell<br>name：用户名<br>password：可以是加密的密码，也可是占位符x<br>UID：<br>GID：用户所属的主组的ID号<br>GECOS：注释信息<br>directory：用户的家目录<br>shell：用户的默认shell，登录时默认shell程序</p>
-</blockquote>
-<h3 id="etc-shadow：用户密码"><a href="#etc-shadow：用户密码" class="headerlink" title="/etc/shadow：用户密码"></a>/etc/shadow：用户密码</h3><blockquote>
-<p>用户名：加密的密码：最近一次修改密码的时间：最短使用期限：最长使用期限：警告期段：过期期段：保留字段</p>
-</blockquote>
-<h3 id="etc-group：组的信息库"><a href="#etc-group：组的信息库" class="headerlink" title="/etc/group：组的信息库"></a>/etc/group：组的信息库</h3><blockquote>
-<p>group_name：password：GID：user_list<br>uesr_list：该组的用户成员，以此组为附加组的用户的用户列表<br>相关命令：<br><code>useradd,userdel,usermod,passwd,groupadd,groupdel,groupmod,gpasswd,chage,chsh,id,su</code></p>
-</blockquote>
-<h3 id="添加组删除组命令"><a href="#添加组删除组命令" class="headerlink" title="添加组删除组命令"></a>添加组删除组命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">groupadd [选项] group_name</span><br><span class="line">	-g GID <span class="comment">#设置GID，默认是上一个GID+1</span></span><br><span class="line">	-n new_name <span class="comment">#修改组名</span></span><br><span class="line">groupdel [选项] GROUP</span><br></pre></td></tr></table></figure>
-
-<h3 id="创建、删除用户"><a href="#创建、删除用户" class="headerlink" title="创建、删除用户"></a>创建、删除用户</h3><h4 id="useradd命令：添加用户"><a href="#useradd命令：添加用户" class="headerlink" title="useradd命令：添加用户"></a>useradd命令：添加用户</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">useradd [选项] username</span><br><span class="line">	-u, --uid UID:指定UID</span><br><span class="line">	-g, --gid GROUP：指定基本组ID，此组需要事先存在</span><br><span class="line">	-G, --groups GROUP1[,GROUP2,...[,GROUPN]]：指明用户所属的附加组，多个组之间用逗号分隔</span><br><span class="line">	-c, --comment  COMMENT：指明注释信息</span><br><span class="line">	-d, --home HOME_DIR：指定的路径为用户的家目录，通过复制/etc/skel此目录并重命名实现，指定的家目录路径如果事先存在，则不会为用户复制环境配置文件</span><br><span class="line">	-s, --shell SHELL：指定用户的默认shell，可用的所有shell列表存储在/etc/shells文件中</span><br><span class="line">	-r, --system 创建系统用户</span><br></pre></td></tr></table></figure>
-
-<p><em>注：创建用户时的诸多默认设定配置文件为/etc/login.defs</em></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">useradd -D：显示创建用户的默认配置</span><br><span class="line">useradd -D 选项 ：修改默认选项的值：</span><br><span class="line">	<span class="comment"># 修改的结果保存于/etc/default/useradd文件中；</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="usermod命令：修改用户属性"><a href="#usermod命令：修改用户属性" class="headerlink" title="usermod命令：修改用户属性"></a>usermod命令：修改用户属性</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">usermod [选项] 登录</span><br><span class="line">	-u, --uid UID：修改用户的ID为此处指定的新UID</span><br><span class="line">	-g, --gid GROUP：修改用户所属的基本组</span><br><span class="line">	-G, --groups GROUP1[,GROUP2,...[,GROUPN]]：修改用户所属的附加组，原来的附加组会被覆盖</span><br><span class="line">	-a, --append：与-G一同使用，用于为用户追加新的附加组</span><br><span class="line">	-c, --comment  COMMENT：修改注释信息</span><br><span class="line">	-d, --home HOME_DIR：修改用户的家目录，用户文件不会移动到新目录</span><br><span class="line">	-m, --move-home：只能与-d一同使用，将原来家目录移动为新的家目录</span><br><span class="line">	-s, --shell：修改用户默认shell</span><br><span class="line">	-L, --lock：锁定用户密码</span><br><span class="line">	-U, --unlock：解锁用户密码</span><br></pre></td></tr></table></figure>
-
-<h4 id="userdel命令：删除用户"><a href="#userdel命令：删除用户" class="headerlink" title="userdel命令：删除用户"></a>userdel命令：删除用户</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">userdel [选项] 登录</span><br><span class="line">	-r： 删除用户时一并删除其家目录</span><br></pre></td></tr></table></figure>
-
-<h4 id="passwd命令"><a href="#passwd命令" class="headerlink" title="passwd命令"></a>passwd命令</h4><ol>
-<li>passwd：修改用户自己的密码</li>
-<li>passwd UESRNAME：修改指定用户的密码，但仅有root有此权限</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">-l,-u <span class="comment">#锁定和解锁用户</span></span><br><span class="line">-d <span class="comment">#清除用户密码串</span></span><br><span class="line">-e DATE <span class="comment">#过期期限，日期</span></span><br><span class="line">-i DAYS <span class="comment">#非活动期限</span></span><br><span class="line">-n DAYS <span class="comment">#密码的最短使用期限</span></span><br><span class="line">-x DAYS <span class="comment">#密码的最长使用期限</span></span><br><span class="line">-w DAYS <span class="comment">#警告期限</span></span><br><span class="line">--stdin <span class="comment"># echo "PASSWORD" | passwd -stdin USERNAME</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="gpasswd命令"><a href="#gpasswd命令" class="headerlink" title="gpasswd命令"></a>gpasswd命令</h4><p>组密码文件：/etc/gshedow</p>
-<p>gpasswd [选项] group<br>    -a USERNAME：向组中添加用户<br>    -d USERNAME：从组中移除用户</p>
-<h4 id="newgrp命令：临时切换指定的组为基本组"><a href="#newgrp命令：临时切换指定的组为基本组" class="headerlink" title="newgrp命令：临时切换指定的组为基本组"></a>newgrp命令：临时切换指定的组为基本组</h4><p>newgrp [-] [group]<br>    -：会模拟用户重新登录以实现重新初始化其工作环境：</p>
-<h4 id="chage命令：更改用户名密码过期信息"><a href="#chage命令：更改用户名密码过期信息" class="headerlink" title="chage命令：更改用户名密码过期信息"></a>chage命令：更改用户名密码过期信息</h4><p>chage [选项] 登录名<br>    -d<br>    -E<br>    -W<br>    -m<br>    -M</p>
-<h4 id="id命令：显示用户的真实有效ID"><a href="#id命令：显示用户的真实有效ID" class="headerlink" title="id命令：显示用户的真实有效ID"></a>id命令：显示用户的真实有效ID</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">id [option]...[user]</span><br><span class="line">	-u <span class="comment">#仅显示有效的UID</span></span><br><span class="line">	-g <span class="comment">#仅显示用户的基本组ID</span></span><br><span class="line">	-G <span class="comment">#仅显示用户所属的所有组的ID</span></span><br><span class="line">	-n <span class="comment">#显示名字而非ID</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="su命令：switch-user"><a href="#su命令：switch-user" class="headerlink" title="su命令：switch user"></a>su命令：switch user</h4><p>登录式切换：会通过读取目标用户的配置文件来重新初始化<br>    su - USERNAME<br>    su -l USERNAME<br>非登录式切换：不会读取目标用户的配置文件进行初始化<br>    su USERNAME<br><em>注意：管理员可无密码切换至其他任何用户</em><br>    -c ‘COMMAND’ :仅以指定用户的身份运行此处指定的命令</p>
-<p>其他命令：chsh，chfn，finger，whoami</p>
-<blockquote>
-<p>命令总结：groupadd，groupmod，groupdel，useradd，usermod，userdel，passwd，gpasswd，newgrp，id，su</p>
-</blockquote>
-<h3 id="权限管理"><a href="#权限管理" class="headerlink" title="权限管理"></a>权限管理</h3><h4 id="权限"><a href="#权限" class="headerlink" title="权限"></a>权限</h4><ul>
-<li><p>r：readable，读</p>
-</li>
-<li><p>w：writable，写</p>
-</li>
-<li><p>x：excutable，执行</p>
-<p>  文件</p>
-<pre><code>* r：可获取文件数据
-* w：可修改文件的数据
-* x：可将此文件运行为进行</code></pre><p>  目录</p>
-<pre><code>* r：可使用ls命令获取其下的所有文件列表
-* w：可修改此目录下的文件列表，即创建或删除文件
-* x：可cd至此目录中，且可使用ls -l来获取所有文件的详细属性信息</code></pre><p>权限组合机制</p>
+        <h1 id="Linux程序包管理"><a href="#Linux程序包管理" class="headerlink" title="Linux程序包管理"></a>Linux程序包管理</h1><p>API：Application Program Interface</p>
+<p>ABI：Application Binary Interface</p>
+<h2 id="程序包管理器"><a href="#程序包管理器" class="headerlink" title="程序包管理器"></a>程序包管理器</h2><p>源代码–&gt;目标二进制格式–&gt;组织成为一个或有限几个“包“文件</p>
+<p>安装、升级、卸载、查询、校验</p>
+<h3 id="程序包管理器-1"><a href="#程序包管理器-1" class="headerlink" title="程序包管理器"></a>程序包管理器</h3><p>debian：dpt，dpkg，”.deb“</p>
+<p>redhat：redhat package manager（rpm），”.rpm“</p>
+<p>S.u.S.E：rpm，”.rpm“</p>
+<p>Gentoo：ports</p>
+<p>ArchLinux</p>
+<h3 id="命名格式"><a href="#命名格式" class="headerlink" title="命名格式"></a>命名格式</h3><p>源代码：name-VERSION.tar.gz，VERSION：major.minor.release</p>
+<p>rpm包命名格式：name-VERSION-release.arch.rpm，VERSION：major.minor.release</p>
+<p>release.arch：rpm包的发行号</p>
+<p>archetecture：i386，x64（amd64），ppc，noarch</p>
+<h3 id="前端工具：自动解决依赖关系"><a href="#前端工具：自动解决依赖关系" class="headerlink" title="前端工具：自动解决依赖关系"></a>前端工具：自动解决依赖关系</h3><p>yum：rhel系列系统上rpm包管理器的前端工具</p>
+<p>apt-get(apt-cache)：deb包管理器的前端工具</p>
+<p>zypper：suse的rpm管理器前端工具</p>
+<p>dnf：Fedora 22+系统上rpm包管理器的前端工具</p>
+<h3 id="程序包管理器-2"><a href="#程序包管理器-2" class="headerlink" title="程序包管理器"></a>程序包管理器</h3><p><em>功能：将编译好的应用程序的各组成文件打包成一个或几个程序包文件，从而更方便的实现程序包的安装、升级、卸载、和查询等管理操作</em></p>
 <ul>
-<li>— 000 0</li>
-<li>–x 001 1</li>
-<li>-w- 010 2</li>
-<li>-wx 011 3</li>
-<li>r– 100 4</li>
-<li>r-x 101 5</li>
-<li>rw- 110 6</li>
-<li>rwx 111 7</li>
+<li><p>程序包的组成清单（每个程序包都单独实现）</p>
+<ul>
+<li>文件清单</li>
+<li>安装或卸载时运行的脚本</li>
+</ul>
+</li>
+<li><p>数据库（公共）</p>
+<ul>
+<li>程序包的名称和版本</li>
+<li>依赖关系</li>
+<li>功能说明</li>
+<li>安装生成的各文件的文件路径及校验码信息</li>
+<li>等等</li>
+<li>/var/lib/rpm</li>
 </ul>
 </li>
 </ul>
-<h3 id="权限管理命令"><a href="#权限管理命令" class="headerlink" title="权限管理命令"></a>权限管理命令</h3><h4 id="chmod命令"><a href="#chmod命令" class="headerlink" title="chmod命令"></a>chmod命令</h4><ol>
-<li>chmod [OPTION]… MODE[,MODE]…FILE…<br>三类用户：u（属主）g（属组）o（其他）a（所有）<br> MODE表示法：<pre><code>赋权表示法：直接操作一类用户的所有权限位
-    u=
-    g=
-    o=
-    a=
-授权表示法：直接操作一类用户的一个权限位r，w，x
-    u+，u-
-    g+，g-
-    o+，o-
-    a+，a-</code></pre></li>
-<li>chmod [OPTION] … OCTAL-MODE FILE… 八进制表示法</li>
-<li>chmod [OPTION] … –reference=RFILE FILE…<br>选项：<br> -R，–recursive：递归修改</li>
+<h3 id="获取程序包的途径"><a href="#获取程序包的途径" class="headerlink" title="获取程序包的途径"></a>获取程序包的途径</h3><ol>
+<li>系统发行版的光盘或官方的文件服务器（或镜像站点）</li>
+<li>项目的官方站点</li>
+<li>第三方组织</li>
 </ol>
-<h4 id="从属关系管理命令：chown，chgrp"><a href="#从属关系管理命令：chown，chgrp" class="headerlink" title="从属关系管理命令：chown，chgrp"></a>从属关系管理命令：chown，chgrp</h4><p>1.chown命令：<br>    chown [OPTION] … [OWNER][:[GROUP]] FILE …<br>    chown [OPTION] … –reference=RFILE FILE …<br>    选项：<br>        -R：递归修改<br><em>注：用户对目录有写权限，对目录下的文件没有写权限，则不能修改该文件，可以删除该文件</em><br><strong>只有ROOT可以修改文件的属组属主</strong></p>
-<h4 id="umask：文件的权限反向掩码，遮罩码"><a href="#umask：文件的权限反向掩码，遮罩码" class="headerlink" title="umask：文件的权限反向掩码，遮罩码"></a>umask：文件的权限反向掩码，遮罩码</h4><pre><code>文件：
-    666-umask
-目录：
-    777-umask</code></pre><p><em>注：之所以文件用666去减，表示文件默认不能拥有执行权限，如果减得的结果中有执行权限，则需要将其加1</em><br><strong>umask命令</strong><br>    umask：查看当前umask<br>    umask MASK ：设置umask<br><em>注：此类设定仅对当前shell进程有效</em></p>
-<h4 id="install命令"><a href="#install命令" class="headerlink" title="install命令"></a>install命令</h4><pre><code>install - copy files and set attributes
-单源复制
-    install [OPTION] ... [-T] SOURCE DEST
-多源复制
-    install [OPTION] ... SOURCE ... DIRECTORY
-    install [OPTION] ... -t DIRECTORY SOURCE ...
-创建目录：
-    install [OPTION] ... -d DIRECTORY
-常用选项：
-    -m，--mode=MODE：设定目标文件权限，默认为755：
-    -o，--owner=OWMER：设定目标文件属主
-    -g，--group=GROUP：设定目标文件属组</code></pre><h4 id="mktemp命令"><a href="#mktemp命令" class="headerlink" title="mktemp命令"></a>mktemp命令</h4><pre><code>mktemp - create a temporary file or directory
-mktemp [OPTION] ... [TEMPLATE]
-    常用选项：
-        -d：创建临时目录</code></pre><p><em>注意：mktemp将会创建的临时文件名直接返回，因此，可直接通过命令引用保存起来</em></p>
+<h2 id="Centos系统上rpm命令管理程序包"><a href="#Centos系统上rpm命令管理程序包" class="headerlink" title="Centos系统上rpm命令管理程序包"></a>Centos系统上rpm命令管理程序包</h2><p>安装、升级、卸载、查询和校验、数据库维护</p>
+<h3 id="rpm命令"><a href="#rpm命令" class="headerlink" title="rpm命令"></a>rpm命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">rpm [OPTIONS] [PACKAGE_FILE]</span><br><span class="line">安装：-i,--install</span><br><span class="line">升级：-U,--update,-F,--freshen</span><br><span class="line">卸载：-e,--erase</span><br><span class="line">查询：-q,--query</span><br><span class="line">校验：-V,--verify</span><br><span class="line">数据库维护：--builddb,--initdb</span><br></pre></td></tr></table></figure>
+
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">rpm &#123;-i|--install&#125; [install-options] PACKAGE_FILE ...</span><br><span class="line">rpm -ivh PACKAGE_FILE ...</span><br><span class="line">GENERAL OPTIONS:</span><br><span class="line">-v:verbose,详细信息</span><br><span class="line">-vv：更详细的输出</span><br><span class="line">[install-options]:</span><br><span class="line">四类：--noscripts</span><br><span class="line">	preinstall：安装过程开始之前运行的脚本，%pre，--nopre</span><br><span class="line">	postinstall：安装过程完成之后运行的脚本，%post，--nopost</span><br><span class="line">	preuninstall：卸载过程真正开始执行之前运行的脚本，%preun，--nopreun</span><br><span class="line">	postuninstall：卸载过程完成之后运行的脚本，%postun，--nopostun</span><br><span class="line">--nosignature：不检查包签名信息，不检查来源合法性</span><br><span class="line">--nodigest：不检查包完整性信息</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
@@ -639,8 +589,8 @@ mktemp [OPTION] ... [TEMPLATE]
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Linux基础/bash的基础特性/" rel="next" title="bash的基础特性">
-                <i class="fa fa-chevron-left"></i> bash的基础特性
+              <a href="/Linux基础/Linux任务计划/" rel="next" title="Linux任务计划">
+                <i class="fa fa-chevron-left"></i> Linux任务计划
               </a>
             
           </div>
@@ -648,10 +598,6 @@ mktemp [OPTION] ... [TEMPLATE]
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/shell脚本/shell脚本基础/" rel="prev" title="shell脚本基础">
-                shell脚本基础 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -837,7 +783,7 @@ mktemp [OPTION] ... [TEMPLATE]
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#etc-passwd：用户的信息库"><span class="nav-number">1.</span> <span class="nav-text">/etc/passwd：用户的信息库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#etc-shadow：用户密码"><span class="nav-number">2.</span> <span class="nav-text">/etc/shadow：用户密码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#etc-group：组的信息库"><span class="nav-number">3.</span> <span class="nav-text">/etc/group：组的信息库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加组删除组命令"><span class="nav-number">4.</span> <span class="nav-text">添加组删除组命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建、删除用户"><span class="nav-number">5.</span> <span class="nav-text">创建、删除用户</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#useradd命令：添加用户"><span class="nav-number">5.1.</span> <span class="nav-text">useradd命令：添加用户</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#usermod命令：修改用户属性"><span class="nav-number">5.2.</span> <span class="nav-text">usermod命令：修改用户属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#userdel命令：删除用户"><span class="nav-number">5.3.</span> <span class="nav-text">userdel命令：删除用户</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#passwd命令"><span class="nav-number">5.4.</span> <span class="nav-text">passwd命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#gpasswd命令"><span class="nav-number">5.5.</span> <span class="nav-text">gpasswd命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#newgrp命令：临时切换指定的组为基本组"><span class="nav-number">5.6.</span> <span class="nav-text">newgrp命令：临时切换指定的组为基本组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#chage命令：更改用户名密码过期信息"><span class="nav-number">5.7.</span> <span class="nav-text">chage命令：更改用户名密码过期信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#id命令：显示用户的真实有效ID"><span class="nav-number">5.8.</span> <span class="nav-text">id命令：显示用户的真实有效ID</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#su命令：switch-user"><span class="nav-number">5.9.</span> <span class="nav-text">su命令：switch user</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#权限管理"><span class="nav-number">6.</span> <span class="nav-text">权限管理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#权限"><span class="nav-number">6.1.</span> <span class="nav-text">权限</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#权限管理命令"><span class="nav-number">7.</span> <span class="nav-text">权限管理命令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#chmod命令"><span class="nav-number">7.1.</span> <span class="nav-text">chmod命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#从属关系管理命令：chown，chgrp"><span class="nav-number">7.2.</span> <span class="nav-text">从属关系管理命令：chown，chgrp</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#umask：文件的权限反向掩码，遮罩码"><span class="nav-number">7.3.</span> <span class="nav-text">umask：文件的权限反向掩码，遮罩码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#install命令"><span class="nav-number">7.4.</span> <span class="nav-text">install命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#mktemp命令"><span class="nav-number">7.5.</span> <span class="nav-text">mktemp命令</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Linux程序包管理"><span class="nav-number">1.</span> <span class="nav-text">Linux程序包管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#程序包管理器"><span class="nav-number">1.1.</span> <span class="nav-text">程序包管理器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#程序包管理器-1"><span class="nav-number">1.1.1.</span> <span class="nav-text">程序包管理器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#命名格式"><span class="nav-number">1.1.2.</span> <span class="nav-text">命名格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#前端工具：自动解决依赖关系"><span class="nav-number">1.1.3.</span> <span class="nav-text">前端工具：自动解决依赖关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#程序包管理器-2"><span class="nav-number">1.1.4.</span> <span class="nav-text">程序包管理器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获取程序包的途径"><span class="nav-number">1.1.5.</span> <span class="nav-text">获取程序包的途径</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Centos系统上rpm命令管理程序包"><span class="nav-number">1.2.</span> <span class="nav-text">Centos系统上rpm命令管理程序包</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#rpm命令"><span class="nav-number">1.2.1.</span> <span class="nav-text">rpm命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装"><span class="nav-number">1.2.2.</span> <span class="nav-text">安装</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -1025,7 +971,7 @@ mktemp [OPTION] ... [TEMPLATE]
   
     <script>
   window.livereOptions = {
-    refer: 'Linux基础/用户、组和权限管理/'
+    refer: 'Linux基础/Linux程序包管理/'
   };
   (function(d, s) {
     var j, e = d.getElementsByTagName(s)[0];

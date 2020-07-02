@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-07-01T07:22:22.283Z</updated>
+  <updated>2020-07-02T07:32:38.847Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux程序包管理</title>
+    <link href="http://yoursite.com/Linux%E5%9F%BA%E7%A1%80/Linux%E7%A8%8B%E5%BA%8F%E5%8C%85%E7%AE%A1%E7%90%86/"/>
+    <id>http://yoursite.com/Linux基础/Linux程序包管理/</id>
+    <published>2020-07-01T07:25:59.000Z</published>
+    <updated>2020-07-02T07:32:38.847Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Linux程序包管理"><a href="#Linux程序包管理" class="headerlink" title="Linux程序包管理"></a>Linux程序包管理</h1><p>API：Application Program Interface</p><p>ABI：Application Binary Interface</p><h2 id="程序包管理器"><a href="#程序包管理器" class="headerlink" title="程序包管理器"></a>程序包管理器</h2><p>源代码–&gt;目标二进制格式–&gt;组织成为一个或有限几个“包“文件</p><p>安装、升级、卸载、查询、校验</p><h3 id="程序包管理器-1"><a href="#程序包管理器-1" class="headerlink" title="程序包管理器"></a>程序包管理器</h3><p>debian：dpt，dpkg，”.deb“</p><p>redhat：redhat package manager（rpm），”.rpm“</p><p>S.u.S.E：rpm，”.rpm“</p><p>Gentoo：ports</p><p>ArchLinux</p><h3 id="命名格式"><a href="#命名格式" class="headerlink" title="命名格式"></a>命名格式</h3><p>源代码：name-VERSION.tar.gz，VERSION：major.minor.release</p><p>rpm包命名格式：name-VERSION-release.arch.rpm，VERSION：major.minor.release</p><p>release.arch：rpm包的发行号</p><p>archetecture：i386，x64（amd64），ppc，noarch</p><h3 id="前端工具：自动解决依赖关系"><a href="#前端工具：自动解决依赖关系" class="headerlink" title="前端工具：自动解决依赖关系"></a>前端工具：自动解决依赖关系</h3><p>yum：rhel系列系统上rpm包管理器的前端工具</p><p>apt-get(apt-cache)：deb包管理器的前端工具</p><p>zypper：suse的rpm管理器前端工具</p><p>dnf：Fedora 22+系统上rpm包管理器的前端工具</p><h3 id="程序包管理器-2"><a href="#程序包管理器-2" class="headerlink" title="程序包管理器"></a>程序包管理器</h3><p><em>功能：将编译好的应用程序的各组成文件打包成一个或几个程序包文件，从而更方便的实现程序包的安装、升级、卸载、和查询等管理操作</em></p><ul><li><p>程序包的组成清单（每个程序包都单独实现）</p><ul><li>文件清单</li><li>安装或卸载时运行的脚本</li></ul></li><li><p>数据库（公共）</p><ul><li>程序包的名称和版本</li><li>依赖关系</li><li>功能说明</li><li>安装生成的各文件的文件路径及校验码信息</li><li>等等</li><li>/var/lib/rpm</li></ul></li></ul><h3 id="获取程序包的途径"><a href="#获取程序包的途径" class="headerlink" title="获取程序包的途径"></a>获取程序包的途径</h3><ol><li>系统发行版的光盘或官方的文件服务器（或镜像站点）</li><li>项目的官方站点</li><li>第三方组织</li></ol><h2 id="Centos系统上rpm命令管理程序包"><a href="#Centos系统上rpm命令管理程序包" class="headerlink" title="Centos系统上rpm命令管理程序包"></a>Centos系统上rpm命令管理程序包</h2><p>安装、升级、卸载、查询和校验、数据库维护</p><h3 id="rpm命令"><a href="#rpm命令" class="headerlink" title="rpm命令"></a>rpm命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">rpm [OPTIONS] [PACKAGE_FILE]</span><br><span class="line">安装：-i,--install</span><br><span class="line">升级：-U,--update,-F,--freshen</span><br><span class="line">卸载：-e,--erase</span><br><span class="line">查询：-q,--query</span><br><span class="line">校验：-V,--verify</span><br><span class="line">数据库维护：--builddb,--initdb</span><br></pre></td></tr></table></figure><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">rpm &#123;-i|--install&#125; [install-options] PACKAGE_FILE ...</span><br><span class="line">rpm -ivh PACKAGE_FILE ...</span><br><span class="line">GENERAL OPTIONS:</span><br><span class="line">-v:verbose,详细信息</span><br><span class="line">-vv：更详细的输出</span><br><span class="line">[install-options]:</span><br><span class="line">四类：--noscripts</span><br><span class="line">preinstall：安装过程开始之前运行的脚本，%pre，--nopre</span><br><span class="line">postinstall：安装过程完成之后运行的脚本，%post，--nopost</span><br><span class="line">preuninstall：卸载过程真正开始执行之前运行的脚本，%preun，--nopreun</span><br><span class="line">postuninstall：卸载过程完成之后运行的脚本，%postun，--nopostun</span><br><span class="line">--nosignature：不检查包签名信息，不检查来源合法性</span><br><span class="line">--nodigest：不检查包完整性信息</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;Linux程序包管理&quot;&gt;&lt;a href=&quot;#Linux程序包管理&quot; class=&quot;headerlink&quot; title=&quot;Linux程序包管理&quot;&gt;&lt;/a&gt;Linux程序包管理&lt;/h1&gt;&lt;p&gt;API：Application Program Interface&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+      <category term="Linux基础" scheme="http://yoursite.com/categories/Linux%E5%9F%BA%E7%A1%80/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>Linux任务计划</title>
