@@ -100,17 +100,17 @@
 
 
 
-  <meta name="description" content="CLX的个人站点，主要涉及Linux、K8S、docker等技术方面的学习">
+  <meta name="description" content="将Linux主机接入到网络中IP/NETMASK：本地通信 路由（网关）：跨网络通信 DNS服务器地址：基于主机名的通信 主DNS服务器地址 备用DNS服务器地址 第三备份DNS服务器地址 配置方式静态指令 命令ifcfg家族：  ifconfig：配置IP，NETMASK root：路由 netstat：状态及统计数据查看  iproute2家族  ip OBJECT ​    addr：地址和">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux网络属性配置">
 <meta property="og:url" content="http://yoursite.com/Linux基础/Linux网络属性配置/index.html">
 <meta property="og:site_name" content="啊雷雷&amp;啊玉玉">
-<meta property="og:description" content="CLX的个人站点，主要涉及Linux、K8S、docker等技术方面的学习">
+<meta property="og:description" content="将Linux主机接入到网络中IP/NETMASK：本地通信 路由（网关）：跨网络通信 DNS服务器地址：基于主机名的通信 主DNS服务器地址 备用DNS服务器地址 第三备份DNS服务器地址 配置方式静态指令 命令ifcfg家族：  ifconfig：配置IP，NETMASK root：路由 netstat：状态及统计数据查看  iproute2家族  ip OBJECT ​    addr：地址和">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-07-16T06:32:51.168Z">
+<meta property="og:updated_time" content="2020-07-20T06:21:50.677Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux网络属性配置">
-<meta name="twitter:description" content="CLX的个人站点，主要涉及Linux、K8S、docker等技术方面的学习">
+<meta name="twitter:description" content="将Linux主机接入到网络中IP/NETMASK：本地通信 路由（网关）：跨网络通信 DNS服务器地址：基于主机名的通信 主DNS服务器地址 备用DNS服务器地址 第三备份DNS服务器地址 配置方式静态指令 命令ifcfg家族：  ifconfig：配置IP，NETMASK root：路由 netstat：状态及统计数据查看  iproute2家族  ip OBJECT ​    addr：地址和">
 
 
 
@@ -433,12 +433,24 @@
                 
               
 
-              <time title="创建时间：2020-07-16 11:39:47 / 修改时间：14:32:51" itemprop="dateCreated datePublished" datetime="2020-07-16T11:39:47+08:00">2020-07-16</time>
+              <time title="创建时间：2020-07-16 11:39:47" itemprop="dateCreated datePublished" datetime="2020-07-16T11:39:47+08:00">2020-07-16</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2020-07-20 14:21:50" itemprop="dateModified" datetime="2020-07-20T14:21:50+08:00">2020-07-20</time>
               
             
           </span>
@@ -497,7 +509,214 @@
       
 
       
-        
+        <h1 id="将Linux主机接入到网络中"><a href="#将Linux主机接入到网络中" class="headerlink" title="将Linux主机接入到网络中"></a>将Linux主机接入到网络中</h1><p>IP/NETMASK：本地通信</p>
+<p>路由（网关）：跨网络通信</p>
+<p>DNS服务器地址：基于主机名的通信</p>
+<p>主DNS服务器地址</p>
+<p>备用DNS服务器地址</p>
+<p>第三备份DNS服务器地址</p>
+<h2 id="配置方式"><a href="#配置方式" class="headerlink" title="配置方式"></a>配置方式</h2><p>静态指令</p>
+<h3 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h3><p>ifcfg家族：</p>
+<blockquote>
+<p>ifconfig：配置IP，NETMASK</p>
+<p>root：路由</p>
+<p>netstat：状态及统计数据查看</p>
+</blockquote>
+<p>iproute2家族</p>
+<blockquote>
+<p>ip OBJECT</p>
+<p>​    addr：地址和掩码</p>
+<p>​    link：接口</p>
+<p>​    route：路由</p>
+<p>ss：状态及统计数据查看</p>
+</blockquote>
+<p>centos7：nm（Network Manager）家族</p>
+<blockquote>
+<p>nmcli：命令行工具</p>
+<p>nmtul：text window工具</p>
+</blockquote>
+<p><strong>注意：</strong></p>
+<ol>
+<li>DNS服务器指定，配置文件/etc/resolv.conf</li>
+<li>本地主机名配置：hostnamectl，配置文件/etc/sysconfig/network</li>
+</ol>
+<h3 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h3><blockquote>
+<p>/etc/sysconfig/network-scripts/ifcfg-NETCARD_NAME</p>
+</blockquote>
+<h3 id="动态分配：依赖本地网络中有DHCP服务"><a href="#动态分配：依赖本地网络中有DHCP服务" class="headerlink" title="动态分配：依赖本地网络中有DHCP服务"></a>动态分配：依赖本地网络中有DHCP服务</h3><h1 id="网络接口命名方式"><a href="#网络接口命名方式" class="headerlink" title="网络接口命名方式"></a>网络接口命名方式</h1><h3 id="传统命名"><a href="#传统命名" class="headerlink" title="传统命名"></a>传统命名</h3><p>以太网：ethX，[0,oo)，例如eth0，eth1，…</p>
+<p>ppp网络：pppx，[0,….]，例如ppp0，ppp1，….</p>
+<h3 id="可预测命名方案"><a href="#可预测命名方案" class="headerlink" title="可预测命名方案"></a>可预测命名方案</h3><p><em>支持多种不同的命名机制</em>：Fireware，拓扑接口</p>
+<ul>
+<li>如果Fireware或BIOS为主板上集成的设备索引信息可用，则根据此索引进行命名，如eno1，eno2，…</li>
+<li>如果Fireware或BIOS为PCI-E扩展槽所提供的索引信息可用，且可预测，则根据此索引进行命名，如ens1，ens2，…</li>
+<li>如果硬件接口的物理位置信息可用，则根据此信息命名，如enp2s0，…</li>
+<li>如果用户显示定义，也可工具MAC地址命名，例如enx122161ab2e10，…</li>
+<li>上述均不可用，则使用传统方式命名</li>
+</ul>
+<p>命名格式的组成：</p>
+<ul>
+<li>en：ethernet</li>
+<li>wl：wlan</li>
+<li>ww：wwan</li>
+</ul>
+<p>名称类型：</p>
+<p>o&lt;index&gt;：集成设备的设备引号</p>
+<p>s&lt;slot&gt;：扩展槽的索引号</p>
+<p>x&lt;MAC&gt;：基于MAC地址的命名</p>
+<p>p&lt;bus&gt;s&lt;slot&gt;：基于总线及槽的拓扑结构进行命名</p>
+<h1 id="Linux网络属性配置"><a href="#Linux网络属性配置" class="headerlink" title="Linux网络属性配置"></a>Linux网络属性配置</h1><p>ifcfg命令家族ifconfig，route，netstat</p>
+<h3 id="ifconfig命令"><a href="#ifconfig命令" class="headerlink" title="ifconfig命令"></a>ifconfig命令</h3><p>接口及地址查看和管理</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">ifconfig [INTERFACE]</span><br><span class="line">-a：显示所有接口，包括inactive状态的接口</span><br><span class="line">ifconfig interface [aftype] options | address...</span><br><span class="line">ifconfig IFACE IP/MASK [up]</span><br><span class="line">ifconfig IFACE IP netmask NETMASK</span><br><span class="line">options：[-]promisc</span><br><span class="line">注意：配置立即送往内核中的TCP/IP协议栈，并生效</span><br><span class="line">管理IPv6地址：</span><br><span class="line">add addr/prefixlen</span><br><span class="line">del addr/prefixlen</span><br></pre></td></tr></table></figure>
+
+<h3 id="root命令"><a href="#root命令" class="headerlink" title="root命令"></a>root命令</h3><p>路由查看及管理</p>
+<p>路由条目类型：</p>
+<ul>
+<li>主机路由：目标地址为单个IP</li>
+<li>网络路由：目标地址为IP网络</li>
+<li>默认路由：目标为任意主机，0.0.0.0</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">查看路由</span><br><span class="line">route -n</span><br><span class="line">添加</span><br><span class="line">route add [-net|-host] target [netmask Nm] [gw Gw] [[dev] If]</span><br><span class="line">示例：</span><br><span class="line">route add -net 10.0.0.0/8 gw 192.168.10.1 dev eth1</span><br><span class="line">route add -net 0.0.0.0/0.0.0.0 gw 192.168.10.1</span><br><span class="line">route add default gw 192.168.10.1</span><br><span class="line">删除：</span><br><span class="line">route del [-net|-host] target [netmask Nm] [gw Gw] [[dev] If]</span><br><span class="line">示例：</span><br><span class="line">route del -net 10.0.0.0/8 gw 192.168.10.1</span><br><span class="line">route del default</span><br></pre></td></tr></table></figure>
+
+<h3 id="netstat命令"><a href="#netstat命令" class="headerlink" title="netstat命令"></a>netstat命令</h3><h4 id="显示路由表"><a href="#显示路由表" class="headerlink" title="显示路由表"></a>显示路由表</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">netstat -rn</span><br><span class="line">-r：显示内核路由表</span><br><span class="line">-n：数字格式</span><br></pre></td></tr></table></figure>
+
+<h4 id="显示网络链接"><a href="#显示网络链接" class="headerlink" title="显示网络链接"></a>显示网络链接</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">netstat [--tcp|-t] [--udp|-u][--udplite|-U] [--sctp|-S] [--raw|-w] [--listening|-l] [--all|-a] [--numeric|-n] [--extend|-e[--extend|-e]] [--program|-p]</span><br><span class="line">-t：TCP协议相关的链接，</span><br><span class="line">-u：UDP协议相关的链接</span><br><span class="line">-w：raw socket相关的链接</span><br><span class="line">-l：处于监听状态的链接</span><br><span class="line">-a：所有状态</span><br><span class="line">-n：以数字格式显示IP和Port</span><br><span class="line">-e：扩展格式</span><br><span class="line">-p：显示相关的进程及PID</span><br><span class="line">常用组合：-tan，-uan，-tnl，-unl，-tunlp</span><br></pre></td></tr></table></figure>
+
+<h4 id="显示接口的统计数据"><a href="#显示接口的统计数据" class="headerlink" title="显示接口的统计数据"></a>显示接口的统计数据</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat  &#123;--interfaces|-I|-i&#125;  [--all|-a]  [--extend|-e]  [--verbose|-v]  [--program|-p]  [--numeric|-n]</span><br></pre></td></tr></table></figure>
+
+<h3 id="ifup-ifdown命令"><a href="#ifup-ifdown命令" class="headerlink" title="ifup/ifdown命令"></a>ifup/ifdown命令</h3><blockquote>
+<p>ifup/ifdown &lt;接口&gt;</p>
+</blockquote>
+<p><em>注意：通过配置文件/etc/sysconfig/network-scripts/ifcfg-IFACE来识别接口并完成配置</em></p>
+<h3 id="hostnamectl命令"><a href="#hostnamectl命令" class="headerlink" title="hostnamectl命令"></a>hostnamectl命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hostnamectl status：显示当前主机名</span><br><span class="line">hostnamectl <span class="built_in">set</span>-hostname：设定主机名，永久有效</span><br></pre></td></tr></table></figure>
+
+<h3 id="配置DNS服务器指向"><a href="#配置DNS服务器指向" class="headerlink" title="配置DNS服务器指向"></a>配置DNS服务器指向</h3><p>配置文件：/etc/resolv.conf</p>
+<h4 id="文件格式"><a href="#文件格式" class="headerlink" title="文件格式"></a>文件格式</h4><p>nameserver DNS_SERVER_IP</p>
+<h2 id="ip-route家族"><a href="#ip-route家族" class="headerlink" title="ip route家族"></a>ip route家族</h2><h3 id="ip命令"><a href="#ip命令" class="headerlink" title="ip命令"></a>ip命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">ip [ OPTIONS ] OBJECT &#123; COMMAND | <span class="built_in">help</span> &#125;</span><br><span class="line">OBJECT := &#123; link | address |  route | netns &#125;</span><br><span class="line">注意：OBJECT可以简写，后面的命令也可以简写</span><br><span class="line">ip link：network device configuration</span><br><span class="line">ip link <span class="built_in">set</span> - change device attribute</span><br><span class="line">  dev NAME：指明要管理的设备，dev关键字可省略</span><br><span class="line">  up和down</span><br><span class="line">  multicast on或multicast off：启用或禁用多播功能</span><br><span class="line">  name NAME：重命名接口</span><br><span class="line">  mutu NUMBER：设置mtu的大小，默认为1500</span><br><span class="line">  netns PID：ns为namespace，用于将接口移动到指定的网络名称空间</span><br><span class="line">ip link show - display device attribute</span><br><span class="line">ip link <span class="built_in">help</span> - 显示简要使用帮助</span><br></pre></td></tr></table></figure>
+
+<h4 id="ip-netns"><a href="#ip-netns" class="headerlink" title="ip netns"></a>ip netns</h4><p><em>manage network namespace</em></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ip netns list：列出所有的netns</span><br><span class="line">ip netns add NAME：创建指定的netns</span><br><span class="line">ip netns del NAME：删除指定的netns</span><br><span class="line">ip netns <span class="built_in">exec</span> NAME COMMAND：在指定的netns中运行命令</span><br></pre></td></tr></table></figure>
+
+<h4 id="ip-address"><a href="#ip-address" class="headerlink" title="ip address"></a>ip address</h4><p><em>protocol address management</em></p>
+<ul>
+<li><p>ip address add - add new  protocol  address</p>
+<ul>
+<li>ip addr add  IFADDR dev IFACE<ul>
+<li>label NAME：为额外添加的地址指明接口别名</li>
+<li>broadcast ADDRESS：广播地址，会根据IP和NETMASK自动计算得到</li>
+<li>scope SCOPE_VALUE：global（全局可用），link（接口可用），host（本机可用）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>ip address delete -delete protocol address</p>
+<ul>
+<li>ip addr delete IFADDR dev IFACE</li>
+</ul>
+</li>
+<li><p>ip address show - look at protocol addresses</p>
+<ul>
+<li>ip addr list [IFACE]：显示接口的地址</li>
+</ul>
+</li>
+<li><p>ip address flush - flush protocol addresses</p>
+<ul>
+<li>ip addr flush dev IFACE</li>
+</ul>
+</li>
+</ul>
+<h4 id="ip-route"><a href="#ip-route" class="headerlink" title="ip route"></a>ip route</h4><p><em>routing table management</em></p>
+<p>ip route add - add new route</p>
+<p>ip route change - change route</p>
+<p>ip route replace - change or add new one</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ip route add TYPE PREFIX via GW [dev IFACE] [src SOURCE_IP]</span><br><span class="line">ip route add 192.168.0.0/24 via 10.0.0.1 dev eth1 src 10.0.20.100</span><br><span class="line">ip route add default via GW</span><br></pre></td></tr></table></figure>
+
+<p>ip route delete -delete route</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ip route del TYPE PRIFIX</span><br><span class="line">ip route delete 192.168.1.0/24</span><br></pre></td></tr></table></figure>
+
+<p>ip route show - list routes </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ip route show TYPE PRIFIX</span><br></pre></td></tr></table></figure>
+
+<p>ip route flush - flush routing tables</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ip route flush TYPE PRIFIX</span><br></pre></td></tr></table></figure>
+
+<p>ip route get - get a single route</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ip route get TYPE PRIFIX</span><br><span class="line">ip route get 192.168.0.0/24</span><br></pre></td></tr></table></figure>
+
+<h3 id="ss命令"><a href="#ss命令" class="headerlink" title="ss命令"></a>ss命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">ss [options] [FILTER]</span><br><span class="line">选项</span><br><span class="line">-t：tcp协议的相关连接</span><br><span class="line">-u：udp协议相关的连接</span><br><span class="line">-w：raw socket相关的连接</span><br><span class="line">-l：监听状态的连接</span><br><span class="line">-a：所有状态的连接</span><br><span class="line">-n：数字格式</span><br><span class="line">-p：相关的程序及其PID</span><br><span class="line">-e：扩展格式信息</span><br><span class="line">-m：内存用量</span><br><span class="line">-o：计时器信息</span><br><span class="line">FILTER:=[state TCP-STATE] [EXPRESSION]</span><br></pre></td></tr></table></figure>
+
+<p>TCP常见状态：</p>
+<p>TCP FSM：</p>
+<ul>
+<li>LISTEN：监听</li>
+<li>ESTABLISHED：建立的连接</li>
+<li>FIN_WAIT_1：</li>
+<li>FIN_WAIT_2：</li>
+<li>SYN_SENT：</li>
+<li>SYN_RECV：</li>
+<li>CLOSED：</li>
+</ul>
+<p>EXPRESSION：</p>
+<p>dport=</p>
+<p>sport=</p>
+<p>示例：’( dport = :22 or sport = :22 )’</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ss -tan <span class="string">'( dport = :22 or sport = :22)'</span></span><br><span class="line">ss -tan state ESTABLIEHED</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置文件-1"><a href="#配置文件-1" class="headerlink" title="配置文件"></a>配置文件</h2><p>IP、NETMASK、GW、DNS等属性的配置文件</p>
+<p>/etc/sysconfig/network-script/ifcfg-IFACE</p>
+<p>IFACE：接口名称</p>
+<p>路由的相关配置文件</p>
+<p>/etc/sysconfig/network-script/route-IFACE</p>
+<p>配置文件/etc/sysconfig/network-script/ifcfg-IFACE通过大量参数来定义接口的属性，其可通过vim等文本编辑器直接修改，也可用使用专用的命令进行修改nmtul</p>
+<p>ifcfg-IFACE配置文件参数</p>
+<p>DEVICE：此配置文件对应的设备的名称</p>
+<p>ONBOOT：在系统引导过程中，是否激活此接口</p>
+<p>UUID：此设备的唯一标识</p>
+<p>IPV6INITL：是否初始化IPv6</p>
+<p>BOOTPROTO：激活此接口时使用什么协议来配置接口属性，常用的有dhcp，bootp，static，none</p>
+<p>TYPE：接口类型，常见的有Ethernet，Bridge</p>
+<p>DNS1：第一个DNS服务器指向</p>
+<p>DNS2：备用DNS服务器指向</p>
+<p>DOMAIN：DNS搜索域</p>
+<p>GATEWAY：默认网关</p>
+<p>IPADDR：IP地址</p>
+<p>NETMASK：子网掩码</p>
+<h2 id="网络服务"><a href="#网络服务" class="headerlink" title="网络服务"></a>网络服务</h2><p>network</p>
+<p>NetworkManager</p>
+<h4 id="管理网络服务"><a href="#管理网络服务" class="headerlink" title="管理网络服务"></a>管理网络服务</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl &#123;start|stop|restart|status&#125; SERVICE[.service]</span><br></pre></td></tr></table></figure>
+
+<p>配置文件修改之后，如果要生效，需要重启网络服务</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart network.service</span><br></pre></td></tr></table></figure>
+
+<p>用到非默认网关路由</p>
+<p>/etc/sysconfig/network-script/route-IFACE</p>
+<p>支持两种方式，但不可混用</p>
+<h5 id="每一行一个路由条目"><a href="#每一行一个路由条目" class="headerlink" title="每一行一个路由条目"></a>每一行一个路由条目</h5><p>TARGET via GW</p>
+<h5 id="每三行一个路由条目"><a href="#每三行一个路由条目" class="headerlink" title="每三行一个路由条目"></a>每三行一个路由条目</h5><p>ADDRESS#=TARGET</p>
+<p>NETMASK#=MASK</p>
+<p>GATEWAY#=NEXTHOP</p>
+<h3 id="给接口配置多个地址"><a href="#给接口配置多个地址" class="headerlink" title="给接口配置多个地址"></a>给接口配置多个地址</h3><p>ip addr之外，ifconfig或配置文件都可以</p>
+<ul>
+<li><p>ifconfig IFACE_LABEL IPADDR/NETMASK</p>
+<ul>
+<li>IFACE_LABEL：eth0:0，eth0:1，…</li>
+</ul>
+</li>
+<li><p>为别名添加配置文件</p>
+<ul>
+<li>DEVICE=IFACE</li>
+<li>BOOTPROTO：网上别名不支持动态获取地址<ul>
+<li>static，none</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="nmcli命令"><a href="#nmcli命令" class="headerlink" title="nmcli命令"></a>nmcli命令</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">nmcli [OPTIONS] OBJECT &#123;COMMAND|<span class="built_in">help</span>&#125;</span><br><span class="line">device - show and manage network interface</span><br><span class="line">	COMMAND:=&#123;status|show|connect|disconnect|delete|wifi|wimax&#125;</span><br><span class="line">connection - start,stop,and manage network connections</span><br><span class="line">	COMMAND:=&#123;show|up|down|add|edit|modify|delete|reload|load&#125;</span><br><span class="line">	modify [id|uuid|path] &lt;ID&gt; [+|-]&lt;setting&gt;.&lt;property&gt; &lt;value&gt;</span><br></pre></td></tr></table></figure>
+
+<p>如何修改IP地址等属性</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">nmcli conn modify IFACE[+|-]setting.proerty value</span><br><span class="line">	ipv4.address</span><br><span class="line">	ipv4.gateway</span><br><span class="line">	ipv4.dns1</span><br><span class="line">	ipv4.method</span><br><span class="line">		manual</span><br></pre></td></tr></table></figure>
+
+
       
     </div>
 
@@ -588,8 +807,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -705,6 +933,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#将Linux主机接入到网络中"><span class="nav-number">1.</span> <span class="nav-text">将Linux主机接入到网络中</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#配置方式"><span class="nav-number">1.1.</span> <span class="nav-text">配置方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#命令"><span class="nav-number">1.1.1.</span> <span class="nav-text">命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置文件"><span class="nav-number">1.1.2.</span> <span class="nav-text">配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#动态分配：依赖本地网络中有DHCP服务"><span class="nav-number">1.1.3.</span> <span class="nav-text">动态分配：依赖本地网络中有DHCP服务</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#网络接口命名方式"><span class="nav-number">2.</span> <span class="nav-text">网络接口命名方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#传统命名"><span class="nav-number">2.0.1.</span> <span class="nav-text">传统命名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#可预测命名方案"><span class="nav-number">2.0.2.</span> <span class="nav-text">可预测命名方案</span></a></li></ol></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#Linux网络属性配置"><span class="nav-number">3.</span> <span class="nav-text">Linux网络属性配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ifconfig命令"><span class="nav-number">3.0.1.</span> <span class="nav-text">ifconfig命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#root命令"><span class="nav-number">3.0.2.</span> <span class="nav-text">root命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#netstat命令"><span class="nav-number">3.0.3.</span> <span class="nav-text">netstat命令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#显示路由表"><span class="nav-number">3.0.3.1.</span> <span class="nav-text">显示路由表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#显示网络链接"><span class="nav-number">3.0.3.2.</span> <span class="nav-text">显示网络链接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#显示接口的统计数据"><span class="nav-number">3.0.3.3.</span> <span class="nav-text">显示接口的统计数据</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ifup-ifdown命令"><span class="nav-number">3.0.4.</span> <span class="nav-text">ifup/ifdown命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hostnamectl命令"><span class="nav-number">3.0.5.</span> <span class="nav-text">hostnamectl命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置DNS服务器指向"><span class="nav-number">3.0.6.</span> <span class="nav-text">配置DNS服务器指向</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#文件格式"><span class="nav-number">3.0.6.1.</span> <span class="nav-text">文件格式</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ip-route家族"><span class="nav-number">3.1.</span> <span class="nav-text">ip route家族</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ip命令"><span class="nav-number">3.1.1.</span> <span class="nav-text">ip命令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#ip-netns"><span class="nav-number">3.1.1.1.</span> <span class="nav-text">ip netns</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ip-address"><span class="nav-number">3.1.1.2.</span> <span class="nav-text">ip address</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ip-route"><span class="nav-number">3.1.1.3.</span> <span class="nav-text">ip route</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ss命令"><span class="nav-number">3.1.2.</span> <span class="nav-text">ss命令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置文件-1"><span class="nav-number">3.2.</span> <span class="nav-text">配置文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网络服务"><span class="nav-number">3.3.</span> <span class="nav-text">网络服务</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#管理网络服务"><span class="nav-number">3.3.0.1.</span> <span class="nav-text">管理网络服务</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#每一行一个路由条目"><span class="nav-number">3.3.0.1.1.</span> <span class="nav-text">每一行一个路由条目</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#每三行一个路由条目"><span class="nav-number">3.3.0.1.2.</span> <span class="nav-text">每三行一个路由条目</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#给接口配置多个地址"><span class="nav-number">3.3.1.</span> <span class="nav-text">给接口配置多个地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#nmcli命令"><span class="nav-number">3.3.2.</span> <span class="nav-text">nmcli命令</span></a></li></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
