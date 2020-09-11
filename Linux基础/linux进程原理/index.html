@@ -100,17 +100,17 @@
 
 
 
-  <meta name="description" content="程序的组成部分：二进制程序文件、库文件、配置文件、帮助文件；二进制、库文件是可执行文件库文件不能单独执行，只能被调用时执行配置文件、帮助文件：可被查看其内容的文件  Linux基础知识命令的语法通用格式COMMAND OPTIONS ARGUMENTS例如 1ls -l /etc  命令本身也是可执行程序文件。多数系统程序文件都存放在：/bin,/sbin,/usr/bin,/usr/local">
+  <meta name="description" content="Linux进程和作业管理内核的功用：进程管理、文件系统、网络功能、内存管理、驱动管理、安全功能 Process：运行中的程序的一个副本，存在生命周期 Linux内核存储进程信息的固定格式：task，struct，多个任务的task struct组件的链表：task list 进程创建init父子关系 进程：都由父进程创建fork()，clone() 进程优先级0-1391-99：实时优先级 100">
 <meta property="og:type" content="article">
-<meta property="og:title" content="linux基础（2）">
-<meta property="og:url" content="http://yoursite.com/Linux基础/linux基础（2）/index.html">
+<meta property="og:title" content="linux进程原理">
+<meta property="og:url" content="http://yoursite.com/Linux基础/linux进程原理/index.html">
 <meta property="og:site_name" content="啊雷雷&amp;啊玉玉">
-<meta property="og:description" content="程序的组成部分：二进制程序文件、库文件、配置文件、帮助文件；二进制、库文件是可执行文件库文件不能单独执行，只能被调用时执行配置文件、帮助文件：可被查看其内容的文件  Linux基础知识命令的语法通用格式COMMAND OPTIONS ARGUMENTS例如 1ls -l /etc  命令本身也是可执行程序文件。多数系统程序文件都存放在：/bin,/sbin,/usr/bin,/usr/local">
+<meta property="og:description" content="Linux进程和作业管理内核的功用：进程管理、文件系统、网络功能、内存管理、驱动管理、安全功能 Process：运行中的程序的一个副本，存在生命周期 Linux内核存储进程信息的固定格式：task，struct，多个任务的task struct组件的链表：task list 进程创建init父子关系 进程：都由父进程创建fork()，clone() 进程优先级0-1391-99：实时优先级 100">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-24T09:42:52.267Z">
+<meta property="og:updated_time" content="2020-09-11T06:10:39.671Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="linux基础（2）">
-<meta name="twitter:description" content="程序的组成部分：二进制程序文件、库文件、配置文件、帮助文件；二进制、库文件是可执行文件库文件不能单独执行，只能被调用时执行配置文件、帮助文件：可被查看其内容的文件  Linux基础知识命令的语法通用格式COMMAND OPTIONS ARGUMENTS例如 1ls -l /etc  命令本身也是可执行程序文件。多数系统程序文件都存放在：/bin,/sbin,/usr/bin,/usr/local">
+<meta name="twitter:title" content="linux进程原理">
+<meta name="twitter:description" content="Linux进程和作业管理内核的功用：进程管理、文件系统、网络功能、内存管理、驱动管理、安全功能 Process：运行中的程序的一个副本，存在生命周期 Linux内核存储进程信息的固定格式：task，struct，多个任务的task struct组件的链表：task list 进程创建init父子关系 进程：都由父进程创建fork()，clone() 进程优先级0-1391-99：实时优先级 100">
 
 
 
@@ -120,7 +120,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/Linux基础/linux基础（2）/">
+  <link rel="canonical" href="http://yoursite.com/Linux基础/linux进程原理/">
 
 
 
@@ -130,7 +130,7 @@
   };
 </script>
 
-  <title>linux基础（2） | 啊雷雷&啊玉玉</title>
+  <title>linux进程原理 | 啊雷雷&啊玉玉</title>
   
 
 
@@ -389,7 +389,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Linux基础/linux基础（2）/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/Linux基础/linux进程原理/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="CLX">
@@ -406,7 +406,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">linux基础（2）
+          <h1 class="post-title" itemprop="name headline">linux进程原理
 
               
             
@@ -433,7 +433,7 @@
                 
               
 
-              <time title="创建时间：2019-06-21 15:33:09" itemprop="dateCreated datePublished" datetime="2019-06-21T15:33:09+08:00">2019-06-21</time>
+              <time title="创建时间：2020-07-20 17:09:17" itemprop="dateCreated datePublished" datetime="2020-07-20T17:09:17+08:00">2020-07-20</time>
             
 
             
@@ -450,7 +450,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-06-24 17:42:52" itemprop="dateModified" datetime="2019-06-24T17:42:52+08:00">2019-06-24</time>
+                <time title="修改时间：2020-09-11 14:10:39" itemprop="dateModified" datetime="2020-09-11T14:10:39+08:00">2020-09-11</time>
               
             
           </span>
@@ -509,37 +509,44 @@
       
 
       
-        <blockquote>
-<p>程序的组成部分：二进制程序文件、库文件、配置文件、帮助文件；<br>二进制、库文件是可执行文件<br>库文件不能单独执行，只能被调用时执行<br>配置文件、帮助文件：可被查看其内容的文件</p>
-</blockquote>
-<h2 id="Linux基础知识"><a href="#Linux基础知识" class="headerlink" title="Linux基础知识"></a>Linux基础知识</h2><h3 id="命令的语法通用格式"><a href="#命令的语法通用格式" class="headerlink" title="命令的语法通用格式"></a>命令的语法通用格式</h3><p><em>COMMAND OPTIONS ARGUMENTS</em><br>例如</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -l /etc</span><br></pre></td></tr></table></figure>
-
-<p>命令本身也是可执行程序文件。多数系统程序文件都存放在：<em>/bin,/sbin,/usr/bin,/usr/local/bin,/usr/local/sbin</em><br>普通命令：<em>/bin,/usr/bin,/usr/local/bin</em><br>管理命令：<em>/sbin,/usr/sbin,/usr/local/sbin</em></p>
-<p>命令必须遵循特定格式规范：exe，msi，ELF（linux）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">file /bin/ls</span><br></pre></td></tr></table></figure>
-
-<h4 id="环境变量"><a href="#环境变量" class="headerlink" title="环境变量"></a>环境变量</h4><p><strong>PATH</strong>：查找该路径下是否有用户输入的命令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="variable">$PATH</span></span><br><span class="line">/usr/<span class="built_in">local</span>/sbin:/usr/<span class="built_in">local</span>/bin:/usr/sbin:/usr/bin:usr/lib64/erlang/bin:/usr/lib/rabbitmq/lib/rabbitmq_server-3.4.2/sbin:/root/bin</span><br></pre></td></tr></table></figure>
-
-<p><em>type COMMEND</em>：查看命令类型</p>
-<h3 id="获取命令使用帮助"><a href="#获取命令使用帮助" class="headerlink" title="获取命令使用帮助"></a>获取命令使用帮助</h3><p><strong>内部命令</strong><br><code>help COMMAND</code><br><strong>外部命令</strong><br><code>COMMAND --help</code><br><strong>使用手册</strong>：manual<br><code>man COMMAND</code></p>
-<h4 id="SYNOPSIS命令的options"><a href="#SYNOPSIS命令的options" class="headerlink" title="SYNOPSIS命令的options"></a>SYNOPSIS命令的options</h4><p><code>[]:可选内容
-&lt;&gt;：必须提供的内容
-a|b|c：多选一
-...：同类内容可出现多个</code></p>
-<p><strong>查看命令是否有手册</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">whatis COMMAND</span><br></pre></td></tr></table></figure>
-
-<p><strong>更新数据库</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">makewhatis</span><br></pre></td></tr></table></figure>
-
-<p><strong>翻屏</strong><br>`空格键：向文件尾翻一屏<br>b：向文件首部翻一屏<br>Ctrl+d：向文件尾部翻半屏<br>Ctrl+u：向文件首部翻半屏<br>回车：向文件尾部翻一行<br>k：向文件首部翻一行<br>G：跳转至最后一行</p>
-<p>#G：跳转至指定行<br>1G：跳转至文件首部`</p>
-<p><strong>文本搜索</strong><br><code>/keyword:从文件首部向文件尾部依次查找
-?keyword：从文件尾部向文件首部依次查找
-n：下一个
-N：上一个</code></p>
+        <h1 id="Linux进程和作业管理"><a href="#Linux进程和作业管理" class="headerlink" title="Linux进程和作业管理"></a>Linux进程和作业管理</h1><p>内核的功用：进程管理、文件系统、网络功能、内存管理、驱动管理、安全功能</p>
+<p>Process：运行中的程序的一个副本，存在生命周期</p>
+<p>Linux内核存储进程信息的固定格式：task，struct，多个任务的task struct组件的链表：task list</p>
+<h2 id="进程创建"><a href="#进程创建" class="headerlink" title="进程创建"></a>进程创建</h2><h3 id="init"><a href="#init" class="headerlink" title="init"></a>init</h3><p>父子关系</p>
+<p>进程：都由父进程创建fork()，clone()</p>
+<h3 id="进程优先级"><a href="#进程优先级" class="headerlink" title="进程优先级"></a>进程优先级</h3><h4 id="0-139"><a href="#0-139" class="headerlink" title="0-139"></a>0-139</h4><p>1-99：实时优先级</p>
+<p>100-139：静态优先级</p>
+<p>数字越小，优先级越高</p>
+<p>Nice值：-20，19</p>
+<h3 id="进程内存"><a href="#进程内存" class="headerlink" title="进程内存"></a>进程内存</h3><p><strong>Page Frame</strong>：页框，用存储页面数据存储page</p>
+<p><strong>MMU</strong>：Memory Management Unit</p>
+<h3 id="IPC"><a href="#IPC" class="headerlink" title="IPC"></a>IPC</h3><p><em>Inter Process Communication</em></p>
+<p>同一主机上</p>
+<ul>
+<li>signal</li>
+<li>shm：shared memory</li>
+<li>semerphor</li>
+</ul>
+<p>不同主机上</p>
+<ul>
+<li>rpc：remote procecure call</li>
+<li>socket</li>
+</ul>
+<h2 id="Linux内核：抢占式多任务"><a href="#Linux内核：抢占式多任务" class="headerlink" title="Linux内核：抢占式多任务"></a>Linux内核：抢占式多任务</h2><h3 id="进程类型"><a href="#进程类型" class="headerlink" title="进程类型"></a>进程类型</h3><p>守护进程：在系统引导过程中启动的进程，跟终端无关的进程</p>
+<p>前台进程：通过终端启动的进程</p>
+<p><em>注意：可以把前台启动的进程送往后台，以守护模式运行</em></p>
+<h3 id="进程状态"><a href="#进程状态" class="headerlink" title="进程状态"></a>进程状态</h3><p>运行态：running</p>
+<p>就绪态：ready</p>
+<p>睡眠态：</p>
+<ul>
+<li>可中断：interruptable</li>
+<li>不可中断：uninterruptable</li>
+</ul>
+<p>停止态：暂停于内存中，但不会被调度，除非手动启动之：stopped</p>
+<p>僵死态：zombie </p>
+<h3 id="进程的分类"><a href="#进程的分类" class="headerlink" title="进程的分类"></a>进程的分类</h3><p>CPU-Bound</p>
+<p>IO-Bound</p>
+<p>《linux内核设计与实现》，《深入理解linux内核》</p>
 
       
     </div>
@@ -574,8 +581,8 @@ N：上一个</code></p>
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/uncategorized/你好/" rel="next" title="Hello Welcome">
-                <i class="fa fa-chevron-left"></i> Hello Welcome
+              <a href="/Linux基础/Linux网络属性配置/" rel="next" title="Linux网络属性配置">
+                <i class="fa fa-chevron-left"></i> Linux网络属性配置
               </a>
             
           </div>
@@ -584,8 +591,8 @@ N：上一个</code></p>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/Linux基础/Linux常用命令/" rel="prev" title="Linux常用命令">
-                Linux常用命令 <i class="fa fa-chevron-right"></i>
+              <a href="/Linux基础/linux进程管理/" rel="prev" title="linux进程管理">
+                linux进程管理 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -772,7 +779,7 @@ N：上一个</code></p>
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux基础知识"><span class="nav-number">1.</span> <span class="nav-text">Linux基础知识</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#命令的语法通用格式"><span class="nav-number">1.1.</span> <span class="nav-text">命令的语法通用格式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#环境变量"><span class="nav-number">1.1.1.</span> <span class="nav-text">环境变量</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获取命令使用帮助"><span class="nav-number">1.2.</span> <span class="nav-text">获取命令使用帮助</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#SYNOPSIS命令的options"><span class="nav-number">1.2.1.</span> <span class="nav-text">SYNOPSIS命令的options</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Linux进程和作业管理"><span class="nav-number">1.</span> <span class="nav-text">Linux进程和作业管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#进程创建"><span class="nav-number">1.1.</span> <span class="nav-text">进程创建</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#init"><span class="nav-number">1.1.1.</span> <span class="nav-text">init</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#进程优先级"><span class="nav-number">1.1.2.</span> <span class="nav-text">进程优先级</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#0-139"><span class="nav-number">1.1.2.1.</span> <span class="nav-text">0-139</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#进程内存"><span class="nav-number">1.1.3.</span> <span class="nav-text">进程内存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IPC"><span class="nav-number">1.1.4.</span> <span class="nav-text">IPC</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux内核：抢占式多任务"><span class="nav-number">1.2.</span> <span class="nav-text">Linux内核：抢占式多任务</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#进程类型"><span class="nav-number">1.2.1.</span> <span class="nav-text">进程类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#进程状态"><span class="nav-number">1.2.2.</span> <span class="nav-text">进程状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#进程的分类"><span class="nav-number">1.2.3.</span> <span class="nav-text">进程的分类</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -960,7 +967,7 @@ N：上一个</code></p>
   
     <script>
   window.livereOptions = {
-    refer: 'Linux基础/linux基础（2）/'
+    refer: 'Linux基础/linux进程原理/'
   };
   (function(d, s) {
     var j, e = d.getElementsByTagName(s)[0];
